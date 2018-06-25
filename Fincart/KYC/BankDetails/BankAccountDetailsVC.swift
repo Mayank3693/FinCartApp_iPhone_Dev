@@ -1392,8 +1392,10 @@ class BankAccountDetailsVC: UIViewController,UITextFieldDelegate,UIImagePickerCo
                 
                 let buttonOne = CancelButton(title: "OK"){
                     
-                    let controller=self.storyboard?.instantiateViewController(withIdentifier: "userLoginScreen") as! FinCartLoginVC
-                    self.navigationController?.pushViewController(controller, animated: true)
+                    self.navigationController?.popToRootViewController(animated: true)
+                    
+//                    let controller=self.storyboard?.instantiateViewController(withIdentifier: "userLoginScreen") as! FinCartLoginVC
+//                    self.navigationController?.pushViewController(controller, animated: true)
                 }
                 popup.addButtons([buttonOne])
                 self.present(popup, animated: true, completion: nil)

@@ -347,9 +347,11 @@ public class DigitalSignatureVC: UIViewController {
     }
     func uploadImage(image:UIImage){
 
-        let urlString="\(FinCartMacros.kBaseUrl)\(FinCartMacros.kFinUploadSignature)\(String(describing: FinCartUserDefaults.sharedInstance.retrieveBasicId()))"
+//        let urlString="\(FinCartMacros.kBaseUrl)\(FinCartMacros.kFinUploadSignature)\(String(describing: FinCartUserDefaults.sharedInstance.retrieveBasicId())"
+        
+        let urlString = FinCartMacros.kBaseUrl + FinCartMacros.kFinUploadSignature + FinCartUserDefaults.sharedInstance.retrieveBasicId()!
 
-        let parameters=["Authorization":"Bearer \(String(describing: FinCartUserDefaults.sharedInstance.retrieveAccessToken()))",
+        let parameters=["Authorization":"bearer " + FinCartUserDefaults.sharedInstance.retrieveAccessToken()!,
             "Content-Type": "application/json"]
         
         Alamofire.upload(multipartFormData: { (multipartFormData) in
@@ -357,7 +359,7 @@ public class DigitalSignatureVC: UIViewController {
             for (key, value) in parameters {
                 multipartFormData.append(value.data(using: String.Encoding.utf8)!, withName: key)
             }
-        }, to:urlString,headers:["Authorization": "Bearer \(String(describing: FinCartUserDefaults.sharedInstance.retrieveAccessToken()))"])
+        }, to:urlString,headers:["Authorization": "bearer " + FinCartUserDefaults.sharedInstance.retrieveAccessToken()!])
         { (result) in
             switch result {
             case .success(let upload, _, _):
@@ -436,7 +438,7 @@ public class DigitalSignatureVC: UIViewController {
                                    "Idenif_Type3":idType3
         ]
         print(param)
-        let headers=["Authorization":"Bearer \(String(describing: FinCartUserDefaults.sharedInstance.retrieveAccessToken()))"]
+        let headers=["Authorization":"bearer " + FinCartUserDefaults.sharedInstance.retrieveAccessToken()!]
 
         Alamofire.request(urlString, method: .post, parameters: param, encoding: JSONEncoding.default, headers: headers).validate().responseJSON{
             response in

@@ -245,6 +245,8 @@ class FinCartLoginVC: UIViewController, UITextFieldDelegate{
                         FinCartUserDefaults.sharedInstance.saveUserPassword((self.userDetailsServiceResponse?.cafDetails!["UserPass"])!)
                         FinCartUserDefaults.sharedInstance.saveKycStatus((self.userDetailsServiceResponse?.cafDetails!["kycStatus"])!)
                         FinCartUserDefaults.sharedInstance.saveIsLoggedin(true)
+                        
+                        FinCartUserDefaults.sharedInstance.saveBasicId((self.userDetailsServiceResponse?.cafDetails!["basicId"])!)
                     }catch{}
                     DispatchQueue.main.async(execute: {
                         SVProgressHUD.dismiss()
