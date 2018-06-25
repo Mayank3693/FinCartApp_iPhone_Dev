@@ -1,0 +1,1530 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13143EA40AEDE0C01764646C /* Pods_Fincart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAD406C1DF5F2F2064CC8EA /* Pods_Fincart.framework */; };
+		5C17CE4A1FC16F520013D002 /* FinCartUserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17CE491FC16F520013D002 /* FinCartUserInfoVC.swift */; };
+		5C17CE561FC17B500013D002 /* BBBadgeBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C17CE551FC17A780013D002 /* BBBadgeBarButtonItem.m */; };
+		5CBFB4461FBC81520060AEB2 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CBFB4451FBC814E0060AEB2 /* Reachability.m */; };
+		5CC3B6B81FB70226007458F4 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CC3B6951FB6E7B4007458F4 /* background.jpg */; };
+		5CC3B6B91FB70226007458F4 /* fb-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC3B6941FB6E7B4007458F4 /* fb-icon.png */; };
+		5CC3B6BA1FB70226007458F4 /* g-plus-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC3B6921FB6E7B4007458F4 /* g-plus-icon.png */; };
+		5CC3B6BB1FB70226007458F4 /* linkedin-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC3B6961FB6E7B4007458F4 /* linkedin-icon.png */; };
+		5CC3B6BD1FB70226007458F4 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC3B6991FB6E7B4007458F4 /* logo.png */; };
+		5CC3B6BE1FB70226007458F4 /* singup.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5CC3B69A1FB6E9F8007458F4 /* singup.jpg */; };
+		5CC3B6C01FB70226007458F4 /* password-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC3B6981FB6E7B4007458F4 /* password-icon.png */; };
+		5CC3B6C11FB70226007458F4 /* sign-in-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC3B6911FB6E7B4007458F4 /* sign-in-btn.png */; };
+		5CC3B6C21FB70226007458F4 /* user-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CC3B6931FB6E7B4007458F4 /* user-icon.png */; };
+		5CC3B6C91FB72583007458F4 /* FinCartRegisterationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3B6C81FB72583007458F4 /* FinCartRegisterationVC.swift */; };
+		5CC3B6D51FB73875007458F4 /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3B6D41FB73875007458F4 /* StringConstants.swift */; };
+		5CC3B6DE1FB73955007458F4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3B6DD1FB73954007458F4 /* Utils.swift */; };
+		5CE3496B1FB75471006C36ED /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3B6E61FB75059007458F4 /* SVProgressHUD.m */; };
+		5CE3496C1FB75476006C36ED /* SVRadialGradientLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3B6E81FB75059007458F4 /* SVRadialGradientLayer.m */; };
+		5CE3496D1FB75479006C36ED /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5CC3B6E41FB75059007458F4 /* SVProgressHUD.bundle */; };
+		5CE3496E1FB7547C006C36ED /* SVIndefiniteAnimatedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CC3B6E21FB75059007458F4 /* SVIndefiniteAnimatedView.m */; };
+		61CF3DE71F8007E200D5AA67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CF3DE61F8007E200D5AA67 /* AppDelegate.swift */; };
+		61CF3DE91F8007E200D5AA67 /* FinCartLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CF3DE81F8007E200D5AA67 /* FinCartLoginVC.swift */; };
+		61CF3DEC1F8007E200D5AA67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CF3DEA1F8007E200D5AA67 /* Main.storyboard */; };
+		61CF3DF11F8007E200D5AA67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CF3DEF1F8007E200D5AA67 /* LaunchScreen.storyboard */; };
+		61CF3DFC1F8007E200D5AA67 /* FincartTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CF3DFB1F8007E200D5AA67 /* FincartTests.swift */; };
+		7551810F5B6AE46A21F6CB0C /* Pods_FincartTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8DAFB14C52BB55555289070 /* Pods_FincartTests.framework */; };
+		8A10DDE5205583A700BBAF34 /* FinCartWalkThroughVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A10DDE4205583A700BBAF34 /* FinCartWalkThroughVC.swift */; };
+		8A173D4820691B4300B61219 /* GoalsReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A173D4720691B4300B61219 /* GoalsReview.swift */; };
+		8A1F1E312057F38200A8B645 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1F1E302057F38200A8B645 /* Validation.swift */; };
+		8A3C007E2080D660001A2795 /* FincartGoalCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A3C007D2080D660001A2795 /* FincartGoalCodes.swift */; };
+		8A44CBF220558CCE009D6F76 /* FinCartWalkThroughContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A44CBF120558CCE009D6F76 /* FinCartWalkThroughContentVC.swift */; };
+		8A4650B9200C715400AB21C5 /* FinCartMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4650B8200C715400AB21C5 /* FinCartMacros.swift */; };
+		8A4650BC200C803200AB21C5 /* FinCartUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4650BB200C803200AB21C5 /* FinCartUserDefaults.swift */; };
+		8A562300206A91D0003DF91F /* FundCalculation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5622FF206A91CF003DF91F /* FundCalculation.swift */; };
+		8A562303206DE762003DF91F /* ChildInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A562302206DE762003DF91F /* ChildInfoTableViewCell.swift */; };
+		8A562305206DE786003DF91F /* ChildPlanningTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A562304206DE786003DF91F /* ChildPlanningTableViewCell.swift */; };
+		8A562307206DE79C003DF91F /* ChildStudyPlansDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A562306206DE79C003DF91F /* ChildStudyPlansDetailTableViewCell.swift */; };
+		8A562309206DE97C003DF91F /* ChildBasicInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A562308206DE97C003DF91F /* ChildBasicInfoVC.swift */; };
+		8A56230B206F4D21003DF91F /* KidDataArrayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A56230A206F4D21003DF91F /* KidDataArrayList.swift */; };
+		8A56230D206FCC30003DF91F /* RegisterUserServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A56230C206FCC2F003DF91F /* RegisterUserServiceResponse.swift */; };
+		8A56230F206FD804003DF91F /* AccessTokenServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A56230E206FD804003DF91F /* AccessTokenServiceResponse.swift */; };
+		8A562311206FD86C003DF91F /* UserDetailsServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A562310206FD86C003DF91F /* UserDetailsServiceResponse.swift */; };
+		8A56231520701955003DF91F /* UserInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A56231420701955003DF91F /* UserInfoData.swift */; };
+		8A611698201BA6A400EE5A39 /* have_child.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A611691201BA6A300EE5A39 /* have_child.json */; };
+		8A611699201BA6A400EE5A39 /* single_male.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A611692201BA6A300EE5A39 /* single_male.json */; };
+		8A61169A201BA6A400EE5A39 /* married_female.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A611693201BA6A400EE5A39 /* married_female.json */; };
+		8A61169B201BA6A400EE5A39 /* all_goals_with_retire.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A611694201BA6A400EE5A39 /* all_goals_with_retire.json */; };
+		8A61169C201BA6A400EE5A39 /* all_goals.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A611695201BA6A400EE5A39 /* all_goals.json */; };
+		8A61169D201BA6A400EE5A39 /* married_male.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A611696201BA6A400EE5A39 /* married_male.json */; };
+		8A61169E201BA6A400EE5A39 /* single_female.json in Resources */ = {isa = PBXBuildFile; fileRef = 8A611697201BA6A400EE5A39 /* single_female.json */; };
+		8A6116AC201BA72600EE5A39 /* BaseObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6116A8201BA72500EE5A39 /* BaseObject.swift */; };
+		8A6116AD201BA72600EE5A39 /* QuestionArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6116A9201BA72500EE5A39 /* QuestionArrays.swift */; };
+		8A6116AE201BA72600EE5A39 /* OptionsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6116AA201BA72500EE5A39 /* OptionsArray.swift */; };
+		8A6116AF201BA72600EE5A39 /* JsonBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6116AB201BA72600EE5A39 /* JsonBase.swift */; };
+		8A6AAEE92084CAC000D99815 /* EditGoalsDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6AAEE82084CAC000D99815 /* EditGoalsDetailsVC.swift */; };
+		8A6EE1EB1FFBB80D00BF2FA5 /* FinCartDashboardVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A6EE1EA1FFBB80D00BF2FA5 /* FinCartDashboardVC.swift */; };
+		8A72EDA41FF511DE00218F46 /* BottomBorderUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A72EDA31FF511DE00218F46 /* BottomBorderUITextField.swift */; };
+		8A72EDA61FF522F200218F46 /* RoundRectUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A72EDA51FF522F200218F46 /* RoundRectUIButton.swift */; };
+		8A817A2B205BF5F8008795E3 /* FinCartSingalQuestionnaireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A817A2A205BF5F7008795E3 /* FinCartSingalQuestionnaireVC.swift */; };
+		8A8976BF207259FA00915327 /* ChildWeddingPlanDetailsTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8976BE207259FA00915327 /* ChildWeddingPlanDetailsTableCell.swift */; };
+		8A8976C12072CD0900915327 /* UserGoalStatusServiceResponseElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8976C02072CD0900915327 /* UserGoalStatusServiceResponseElement.swift */; };
+		8A8976C320737EE200915327 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A8976C220737EE100915327 /* Assets.xcassets */; };
+		8A8976C82073981900915327 /* SingleGoalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8976C72073981900915327 /* SingleGoalList.swift */; };
+		8A9922B8208F4841004C4774 /* SavedUserGoalServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9922B7208F4841004C4774 /* SavedUserGoalServiceResponse.swift */; };
+		8AAE389C204AFF4500848F3C /* helvetica-neue-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8AAE389B204AFF4400848F3C /* helvetica-neue-light.ttf */; };
+		8AD5C4A82004B01A00D69BB1 /* FinCartSideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD5C4A72004B01A00D69BB1 /* FinCartSideMenuVC.swift */; };
+		8AD5C4AD2004B37800D69BB1 /* FinCartLeftMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD5C4AC2004B37800D69BB1 /* FinCartLeftMenuVC.swift */; };
+		8AD5C4AE2004B83A00D69BB1 /* RESideMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AD5C4AF2004B83B00D69BB1 /* RESideMenu.framework */; };
+		8AD5C4B52004E90A00D69BB1 /* FinCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD5C4B42004E90A00D69BB1 /* FinCartViewController.swift */; };
+		8AD5C4B82004F05700D69BB1 /* FinCartQuestionnaireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD5C4B72004F05700D69BB1 /* FinCartQuestionnaireVC.swift */; };
+		8AD5C4BC2004FC7C00D69BB1 /* FinCartGoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD5C4BB2004FC7C00D69BB1 /* FinCartGoalsVC.swift */; };
+		8AD5C4BF2004FFE900D69BB1 /* FinCartGoalsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD5C4BE2004FFE900D69BB1 /* FinCartGoalsCollectionViewCell.swift */; };
+		8ADEAA85207BA02200F5127F /* CustomUISlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ADEAA84207BA02200F5127F /* CustomUISlider.swift */; };
+		8AEE526520629CDC00E834B5 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE526420629CDC00E834B5 /* APIManager.swift */; };
+		8AEE526B2063988700E834B5 /* FincartCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE526A2063988700E834B5 /* FincartCommon.swift */; };
+		8AEE526E2065329700E834B5 /* GoalsReviewVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE526D2065329100E834B5 /* GoalsReviewVCViewController.swift */; };
+		8AEE52702067D91200E834B5 /* GoalsReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE526F2067D91200E834B5 /* GoalsReviewTableViewCell.swift */; };
+		8AEE52722068151B00E834B5 /* FundCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE52712068151B00E834B5 /* FundCalculator.swift */; };
+		8AEE52752068159000E834B5 /* FundCalculationResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE52742068159000E834B5 /* FundCalculationResult.swift */; };
+		8AEE5277206816DD00E834B5 /* FundFinance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE5276206816DD00E834B5 /* FundFinance.swift */; };
+		8AF0152D1FFD076800A60957 /* FinancialPlanningCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF0152C1FFD076800A60957 /* FinancialPlanningCell.swift */; };
+		8AF1DBB7205ED42600FE4C71 /* ForgotPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1DBB6205ED42600FE4C71 /* ForgotPasswordVC.swift */; };
+		8AF1DBBC205EF7EF00FE4C71 /* GetOTPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1DBBB205EF7EF00FE4C71 /* GetOTPVC.swift */; };
+		8AF1DBBE205F01B800FE4C71 /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF1DBBD205F01B800FE4C71 /* ResetPasswordVC.swift */; };
+		8AF3663A204E273A008F6207 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF36639204E273A008F6207 /* Colors.swift */; };
+		8AF3663C204E282F008F6207 /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3663B204E282F008F6207 /* Dimensions.swift */; };
+		8AF3663E204E28D0008F6207 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3663D204E28D0008F6207 /* Images.swift */; };
+		BC4682F4204D79C100DC5A6D /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682D6204D79BD00DC5A6D /* EditProfileVC.swift */; };
+		BC4682F5204D79C100DC5A6D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682D7204D79BD00DC5A6D /* ProfileVC.swift */; };
+		BC4682F6204D79C100DC5A6D /* BankAccountDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682DA204D79C000DC5A6D /* BankAccountDetailsVC.swift */; };
+		BC4682F7204D79C100DC5A6D /* BarcodeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682DC204D79C000DC5A6D /* BarcodeData.swift */; };
+		BC4682F8204D79C100DC5A6D /* KycScanOrManualVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682DD204D79C000DC5A6D /* KycScanOrManualVC.swift */; };
+		BC4682F9204D79C100DC5A6D /* KYCScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682DE204D79C000DC5A6D /* KYCScanVC.swift */; };
+		BC4682FA204D79C100DC5A6D /* DigitalSignatureProceed.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682E0204D79C100DC5A6D /* DigitalSignatureProceed.swift */; };
+		BC4682FB204D79C100DC5A6D /* DigitalSignatureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682E1204D79C100DC5A6D /* DigitalSignatureVC.swift */; };
+		BC4682FC204D79C100DC5A6D /* YPDrawSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682E2204D79C100DC5A6D /* YPDrawSignatureView.swift */; };
+		BC4682FD204D79C100DC5A6D /* EKYCWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682E3204D79C100DC5A6D /* EKYCWebView.swift */; };
+		BC4682FF204D79C100DC5A6D /* FatcaDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682E5204D79C100DC5A6D /* FatcaDetailsVC.swift */; };
+		BC468300204D79C100DC5A6D /* FinCartKYCCheckVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682E6204D79C100DC5A6D /* FinCartKYCCheckVC.swift */; };
+		BC468301204D79C100DC5A6D /* EKycFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682E8204D79C100DC5A6D /* EKycFormVC.swift */; };
+		BC468302204D79C100DC5A6D /* KycBasicDetailsFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682E9204D79C100DC5A6D /* KycBasicDetailsFormVC.swift */; };
+		BC468303204D79C100DC5A6D /* AnnualIncomeLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682EB204D79C100DC5A6D /* AnnualIncomeLists.swift */; };
+		BC468304204D79C100DC5A6D /* BankAccountTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682EC204D79C100DC5A6D /* BankAccountTypeVC.swift */; };
+		BC468305204D79C100DC5A6D /* BankNameLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682ED204D79C100DC5A6D /* BankNameLists.swift */; };
+		BC468306204D79C100DC5A6D /* CountryLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682EE204D79C100DC5A6D /* CountryLists.swift */; };
+		BC468307204D79C100DC5A6D /* IDCardsLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682EF204D79C100DC5A6D /* IDCardsLists.swift */; };
+		BC468308204D79C100DC5A6D /* IncomeSourceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682F0204D79C100DC5A6D /* IncomeSourceVC.swift */; };
+		BC468309204D79C100DC5A6D /* KYCInvestorTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682F1204D79C100DC5A6D /* KYCInvestorTypeVC.swift */; };
+		BC46830A204D79C100DC5A6D /* OccupationsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682F2204D79C100DC5A6D /* OccupationsList.swift */; };
+		BC46830B204D79C100DC5A6D /* PoliticallyExposedLists.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682F3204D79C100DC5A6D /* PoliticallyExposedLists.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		61CF3DF81F8007E200D5AA67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 61CF3DDB1F8007E200D5AA67 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 61CF3DE21F8007E200D5AA67;
+			remoteInfo = Fincart;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0216B997F1163C768497A0D8 /* Pods-Fincart.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fincart.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-Fincart/Pods-Fincart.adhoc.xcconfig"; sourceTree = "<group>"; };
+		1DAD406C1DF5F2F2064CC8EA /* Pods_Fincart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fincart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		588B41935F8415628FB38301 /* Pods-Fincart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fincart.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fincart/Pods-Fincart.release.xcconfig"; sourceTree = "<group>"; };
+		5C17CE491FC16F520013D002 /* FinCartUserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinCartUserInfoVC.swift; sourceTree = "<group>"; };
+		5C17CE541FC17A780013D002 /* BBBadgeBarButtonItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBBadgeBarButtonItem.h; sourceTree = "<group>"; };
+		5C17CE551FC17A780013D002 /* BBBadgeBarButtonItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBBadgeBarButtonItem.m; sourceTree = "<group>"; };
+		5CBFB4441FBC814E0060AEB2 /* Reachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		5CBFB4451FBC814E0060AEB2 /* Reachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		5CC3B6911FB6E7B4007458F4 /* sign-in-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sign-in-btn.png"; sourceTree = "<group>"; };
+		5CC3B6921FB6E7B4007458F4 /* g-plus-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "g-plus-icon.png"; sourceTree = "<group>"; };
+		5CC3B6931FB6E7B4007458F4 /* user-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-icon.png"; sourceTree = "<group>"; };
+		5CC3B6941FB6E7B4007458F4 /* fb-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fb-icon.png"; sourceTree = "<group>"; };
+		5CC3B6951FB6E7B4007458F4 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		5CC3B6961FB6E7B4007458F4 /* linkedin-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "linkedin-icon.png"; sourceTree = "<group>"; };
+		5CC3B6981FB6E7B4007458F4 /* password-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password-icon.png"; sourceTree = "<group>"; };
+		5CC3B6991FB6E7B4007458F4 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		5CC3B69A1FB6E9F8007458F4 /* singup.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = singup.jpg; sourceTree = "<group>"; };
+		5CC3B6C81FB72583007458F4 /* FinCartRegisterationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinCartRegisterationVC.swift; sourceTree = "<group>"; tabWidth = 3; };
+		5CC3B6D41FB73875007458F4 /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		5CC3B6DD1FB73954007458F4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		5CC3B6E11FB75059007458F4 /* SVIndefiniteAnimatedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVIndefiniteAnimatedView.h; sourceTree = "<group>"; };
+		5CC3B6E21FB75059007458F4 /* SVIndefiniteAnimatedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVIndefiniteAnimatedView.m; sourceTree = "<group>"; };
+		5CC3B6E31FB75059007458F4 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		5CC3B6E41FB75059007458F4 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		5CC3B6E51FB75059007458F4 /* SVProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		5CC3B6E61FB75059007458F4 /* SVProgressHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		5CC3B6E71FB75059007458F4 /* SVRadialGradientLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVRadialGradientLayer.h; sourceTree = "<group>"; };
+		5CC3B6E81FB75059007458F4 /* SVRadialGradientLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SVRadialGradientLayer.m; sourceTree = "<group>"; };
+		5CC3B6E91FB75146007458F4 /* Fincart-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fincart-Bridging-Header.h"; sourceTree = "<group>"; };
+		6198E6761F80E56500E2EC8C /* Device.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Device.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61CF3DE31F8007E200D5AA67 /* Fincart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fincart.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		61CF3DE61F8007E200D5AA67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		61CF3DE81F8007E200D5AA67 /* FinCartLoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinCartLoginVC.swift; sourceTree = "<group>"; };
+		61CF3DEB1F8007E200D5AA67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		61CF3DF01F8007E200D5AA67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		61CF3DF21F8007E200D5AA67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61CF3DF71F8007E200D5AA67 /* FincartTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FincartTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		61CF3DFB1F8007E200D5AA67 /* FincartTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FincartTests.swift; sourceTree = "<group>"; };
+		61CF3DFD1F8007E200D5AA67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76F4C20B2007A8FCBAA4D926 /* Pods-FincartTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FincartTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FincartTests/Pods-FincartTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7F11A8D43DE85398697A67BC /* Pods-FincartTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FincartTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FincartTests/Pods-FincartTests.release.xcconfig"; sourceTree = "<group>"; };
+		8A10DDE4205583A700BBAF34 /* FinCartWalkThroughVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinCartWalkThroughVC.swift; sourceTree = "<group>"; };
+		8A173D4720691B4300B61219 /* GoalsReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsReview.swift; sourceTree = "<group>"; };
+		8A1F1E302057F38200A8B645 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		8A3C007D2080D660001A2795 /* FincartGoalCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FincartGoalCodes.swift; sourceTree = "<group>"; };
+		8A44CBF120558CCE009D6F76 /* FinCartWalkThroughContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinCartWalkThroughContentVC.swift; sourceTree = "<group>"; };
+		8A4650B8200C715400AB21C5 /* FinCartMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinCartMacros.swift; sourceTree = "<group>"; };
+		8A4650BB200C803200AB21C5 /* FinCartUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinCartUserDefaults.swift; sourceTree = "<group>"; };
+		8A5622FF206A91CF003DF91F /* FundCalculation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundCalculation.swift; sourceTree = "<group>"; };
+		8A562302206DE762003DF91F /* ChildInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildInfoTableViewCell.swift; sourceTree = "<group>"; };
+		8A562304206DE786003DF91F /* ChildPlanningTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildPlanningTableViewCell.swift; sourceTree = "<group>"; };
+		8A562306206DE79C003DF91F /* ChildStudyPlansDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildStudyPlansDetailTableViewCell.swift; sourceTree = "<group>"; };
+		8A562308206DE97C003DF91F /* ChildBasicInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildBasicInfoVC.swift; sourceTree = "<group>"; };
+		8A56230A206F4D21003DF91F /* KidDataArrayList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KidDataArrayList.swift; sourceTree = "<group>"; };
+		8A56230C206FCC2F003DF91F /* RegisterUserServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserServiceResponse.swift; sourceTree = "<group>"; };
+		8A56230E206FD804003DF91F /* AccessTokenServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokenServiceResponse.swift; sourceTree = "<group>"; };
+		8A562310206FD86C003DF91F /* UserDetailsServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsServiceResponse.swift; sourceTree = "<group>"; };
+		8A56231420701955003DF91F /* UserInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoData.swift; sourceTree = "<group>"; };
+		8A611691201BA6A300EE5A39 /* have_child.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = have_child.json; path = Json/have_child.json; sourceTree = "<group>"; };
+		8A611692201BA6A300EE5A39 /* single_male.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = single_male.json; path = Json/single_male.json; sourceTree = "<group>"; };
+		8A611693201BA6A400EE5A39 /* married_female.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = married_female.json; path = Json/married_female.json; sourceTree = "<group>"; };
+		8A611694201BA6A400EE5A39 /* all_goals_with_retire.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = all_goals_with_retire.json; path = Json/all_goals_with_retire.json; sourceTree = "<group>"; };
+		8A611695201BA6A400EE5A39 /* all_goals.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = all_goals.json; path = Json/all_goals.json; sourceTree = "<group>"; };
+		8A611696201BA6A400EE5A39 /* married_male.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = married_male.json; path = Json/married_male.json; sourceTree = "<group>"; };
+		8A611697201BA6A400EE5A39 /* single_female.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = single_female.json; path = Json/single_female.json; sourceTree = "<group>"; };
+		8A6116A8201BA72500EE5A39 /* BaseObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseObject.swift; path = Fincart/JSONObject/BaseObject.swift; sourceTree = SOURCE_ROOT; };
+		8A6116A9201BA72500EE5A39 /* QuestionArrays.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = QuestionArrays.swift; path = Fincart/JSONObject/QuestionArrays.swift; sourceTree = SOURCE_ROOT; };
+		8A6116AA201BA72500EE5A39 /* OptionsArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionsArray.swift; path = Fincart/JSONObject/OptionsArray.swift; sourceTree = SOURCE_ROOT; };
+		8A6116AB201BA72600EE5A39 /* JsonBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JsonBase.swift; path = Fincart/JSONObject/JsonBase.swift; sourceTree = SOURCE_ROOT; };
+		8A6AAEE82084CAC000D99815 /* EditGoalsDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGoalsDetailsVC.swift; sourceTree = "<group>"; };
+		8A6EE1EA1FFBB80D00BF2FA5 /* FinCartDashboardVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinCartDashboardVC.swift; sourceTree = "<group>"; };
+		8A72EDA31FF511DE00218F46 /* BottomBorderUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBorderUITextField.swift; sourceTree = "<group>"; };
+		8A72EDA51FF522F200218F46 /* RoundRectUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundRectUIButton.swift; sourceTree = "<group>"; };
+		8A817A2A205BF5F7008795E3 /* FinCartSingalQuestionnaireVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinCartSingalQuestionnaireVC.swift; sourceTree = "<group>"; };
+		8A8976BE207259FA00915327 /* ChildWeddingPlanDetailsTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChildWeddingPlanDetailsTableCell.swift; sourceTree = "<group>"; };
+		8A8976C02072CD0900915327 /* UserGoalStatusServiceResponseElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGoalStatusServiceResponseElement.swift; sourceTree = "<group>"; };
+		8A8976C220737EE100915327 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A8976C72073981900915327 /* SingleGoalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleGoalList.swift; sourceTree = "<group>"; };
+		8A9922B7208F4841004C4774 /* SavedUserGoalServiceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedUserGoalServiceResponse.swift; sourceTree = "<group>"; };
+		8AAE389B204AFF4400848F3C /* helvetica-neue-light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "helvetica-neue-light.ttf"; sourceTree = "<group>"; };
+		8AD5C4A72004B01A00D69BB1 /* FinCartSideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinCartSideMenuVC.swift; sourceTree = "<group>"; };
+		8AD5C4AC2004B37800D69BB1 /* FinCartLeftMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinCartLeftMenuVC.swift; sourceTree = "<group>"; };
+		8AD5C4AF2004B83B00D69BB1 /* RESideMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RESideMenu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AD5C4B42004E90A00D69BB1 /* FinCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinCartViewController.swift; sourceTree = "<group>"; };
+		8AD5C4B72004F05700D69BB1 /* FinCartQuestionnaireVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinCartQuestionnaireVC.swift; sourceTree = "<group>"; };
+		8AD5C4BB2004FC7C00D69BB1 /* FinCartGoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinCartGoalsVC.swift; sourceTree = "<group>"; };
+		8AD5C4BE2004FFE900D69BB1 /* FinCartGoalsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinCartGoalsCollectionViewCell.swift; sourceTree = "<group>"; };
+		8ADEAA84207BA02200F5127F /* CustomUISlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUISlider.swift; sourceTree = "<group>"; };
+		8AEE526420629CDC00E834B5 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		8AEE526A2063988700E834B5 /* FincartCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FincartCommon.swift; sourceTree = "<group>"; };
+		8AEE526D2065329100E834B5 /* GoalsReviewVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsReviewVCViewController.swift; sourceTree = "<group>"; };
+		8AEE526F2067D91200E834B5 /* GoalsReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsReviewTableViewCell.swift; sourceTree = "<group>"; };
+		8AEE52712068151B00E834B5 /* FundCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundCalculator.swift; sourceTree = "<group>"; };
+		8AEE52742068159000E834B5 /* FundCalculationResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundCalculationResult.swift; sourceTree = "<group>"; };
+		8AEE5276206816DD00E834B5 /* FundFinance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundFinance.swift; sourceTree = "<group>"; };
+		8AF0152C1FFD076800A60957 /* FinancialPlanningCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialPlanningCell.swift; sourceTree = "<group>"; };
+		8AF1DBB6205ED42600FE4C71 /* ForgotPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVC.swift; sourceTree = "<group>"; };
+		8AF1DBBB205EF7EF00FE4C71 /* GetOTPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetOTPVC.swift; sourceTree = "<group>"; };
+		8AF1DBBD205F01B800FE4C71 /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
+		8AF36639204E273A008F6207 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8AF3663B204E282F008F6207 /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
+		8AF3663D204E28D0008F6207 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		A8DAFB14C52BB55555289070 /* Pods_FincartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FincartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC4682D6204D79BD00DC5A6D /* EditProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		BC4682D7204D79BD00DC5A6D /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		BC4682DA204D79C000DC5A6D /* BankAccountDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankAccountDetailsVC.swift; sourceTree = "<group>"; };
+		BC4682DC204D79C000DC5A6D /* BarcodeData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarcodeData.swift; sourceTree = "<group>"; };
+		BC4682DD204D79C000DC5A6D /* KycScanOrManualVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KycScanOrManualVC.swift; sourceTree = "<group>"; };
+		BC4682DE204D79C000DC5A6D /* KYCScanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCScanVC.swift; sourceTree = "<group>"; };
+		BC4682E0204D79C100DC5A6D /* DigitalSignatureProceed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalSignatureProceed.swift; sourceTree = "<group>"; };
+		BC4682E1204D79C100DC5A6D /* DigitalSignatureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DigitalSignatureVC.swift; sourceTree = "<group>"; };
+		BC4682E2204D79C100DC5A6D /* YPDrawSignatureView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YPDrawSignatureView.swift; sourceTree = "<group>"; };
+		BC4682E3204D79C100DC5A6D /* EKYCWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKYCWebView.swift; sourceTree = "<group>"; };
+		BC4682E5204D79C100DC5A6D /* FatcaDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FatcaDetailsVC.swift; sourceTree = "<group>"; };
+		BC4682E6204D79C100DC5A6D /* FinCartKYCCheckVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinCartKYCCheckVC.swift; sourceTree = "<group>"; };
+		BC4682E8204D79C100DC5A6D /* EKycFormVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKycFormVC.swift; sourceTree = "<group>"; };
+		BC4682E9204D79C100DC5A6D /* KycBasicDetailsFormVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KycBasicDetailsFormVC.swift; sourceTree = "<group>"; };
+		BC4682EB204D79C100DC5A6D /* AnnualIncomeLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnualIncomeLists.swift; sourceTree = "<group>"; };
+		BC4682EC204D79C100DC5A6D /* BankAccountTypeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankAccountTypeVC.swift; sourceTree = "<group>"; };
+		BC4682ED204D79C100DC5A6D /* BankNameLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankNameLists.swift; sourceTree = "<group>"; };
+		BC4682EE204D79C100DC5A6D /* CountryLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryLists.swift; sourceTree = "<group>"; };
+		BC4682EF204D79C100DC5A6D /* IDCardsLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDCardsLists.swift; sourceTree = "<group>"; };
+		BC4682F0204D79C100DC5A6D /* IncomeSourceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncomeSourceVC.swift; sourceTree = "<group>"; };
+		BC4682F1204D79C100DC5A6D /* KYCInvestorTypeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KYCInvestorTypeVC.swift; sourceTree = "<group>"; };
+		BC4682F2204D79C100DC5A6D /* OccupationsList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OccupationsList.swift; sourceTree = "<group>"; };
+		BC4682F3204D79C100DC5A6D /* PoliticallyExposedLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PoliticallyExposedLists.swift; sourceTree = "<group>"; };
+		C5C9DF8E73F1311774E0533B /* Pods-FincartTests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FincartTests.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-FincartTests/Pods-FincartTests.adhoc.xcconfig"; sourceTree = "<group>"; };
+		E0D19EE79D5F4FF4F47D1F56 /* Pods-Fincart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fincart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fincart/Pods-Fincart.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		61CF3DE01F8007E200D5AA67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AD5C4AE2004B83A00D69BB1 /* RESideMenu.framework in Frameworks */,
+				13143EA40AEDE0C01764646C /* Pods_Fincart.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61CF3DF41F8007E200D5AA67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7551810F5B6AE46A21F6CB0C /* Pods_FincartTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C17CE401FC167DA0013D002 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				8A611694201BA6A400EE5A39 /* all_goals_with_retire.json */,
+				8A611695201BA6A400EE5A39 /* all_goals.json */,
+				8A611691201BA6A300EE5A39 /* have_child.json */,
+				8A611693201BA6A400EE5A39 /* married_female.json */,
+				8A611696201BA6A400EE5A39 /* married_male.json */,
+				8A611697201BA6A400EE5A39 /* single_female.json */,
+				8A611692201BA6A300EE5A39 /* single_male.json */,
+			);
+			name = Json;
+			sourceTree = "<group>";
+		};
+		5C17CE521FC174700013D002 /* Info Icons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Info Icons";
+			sourceTree = "<group>";
+		};
+		5C17CE531FC17A780013D002 /* BBBadgeBarButtonItem */ = {
+			isa = PBXGroup;
+			children = (
+				5C17CE541FC17A780013D002 /* BBBadgeBarButtonItem.h */,
+				5C17CE551FC17A780013D002 /* BBBadgeBarButtonItem.m */,
+			);
+			path = BBBadgeBarButtonItem;
+			sourceTree = "<group>";
+		};
+		5CBFB4431FBC81380060AEB2 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				5CBFB4441FBC814E0060AEB2 /* Reachability.h */,
+				5CBFB4451FBC814E0060AEB2 /* Reachability.m */,
+			);
+			name = Reachability;
+			sourceTree = "<group>";
+		};
+		5CC3B69C1FB6F221007458F4 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				8AAE389B204AFF4400848F3C /* helvetica-neue-light.ttf */,
+				61CF3DEA1F8007E200D5AA67 /* Main.storyboard */,
+				61CF3DEF1F8007E200D5AA67 /* LaunchScreen.storyboard */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
+		5CC3B69D1FB6F22C007458F4 /* networking */ = {
+			isa = PBXGroup;
+			children = (
+				8AEE526420629CDC00E834B5 /* APIManager.swift */,
+			);
+			name = networking;
+			sourceTree = "<group>";
+		};
+		5CC3B69F1FB6F254007458F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8AAE389D204B090100848F3C /* LoginResponse */,
+				8A6116A7201BA6C600EE5A39 /* JSONObject */,
+				8A77C6B9204D6EFA00860843 /* RegistraionResponse */,
+				8A173D4720691B4300B61219 /* GoalsReview.swift */,
+				8A56230A206F4D21003DF91F /* KidDataArrayList.swift */,
+				8A56231420701955003DF91F /* UserInfoData.swift */,
+				8A8976C02072CD0900915327 /* UserGoalStatusServiceResponseElement.swift */,
+				8A9922B7208F4841004C4774 /* SavedUserGoalServiceResponse.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		5CC3B6A01FB6F260007458F4 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Routing;
+			sourceTree = "<group>";
+		};
+		5CC3B6C31FB70250007458F4 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				5C17CE531FC17A780013D002 /* BBBadgeBarButtonItem */,
+				5CC3B6E01FB75059007458F4 /* SVProgressHUD */,
+				5CBFB4431FBC81380060AEB2 /* Reachability */,
+			);
+			name = External;
+			sourceTree = "<group>";
+		};
+		5CC3B6E01FB75059007458F4 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				5CC3B6E11FB75059007458F4 /* SVIndefiniteAnimatedView.h */,
+				5CC3B6E21FB75059007458F4 /* SVIndefiniteAnimatedView.m */,
+				5CC3B6E31FB75059007458F4 /* SVProgressHUD-Prefix.pch */,
+				5CC3B6E41FB75059007458F4 /* SVProgressHUD.bundle */,
+				5CC3B6E51FB75059007458F4 /* SVProgressHUD.h */,
+				5CC3B6E61FB75059007458F4 /* SVProgressHUD.m */,
+				5CC3B6E71FB75059007458F4 /* SVRadialGradientLayer.h */,
+				5CC3B6E81FB75059007458F4 /* SVRadialGradientLayer.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		61CF3DDA1F8007E200D5AA67 = {
+			isa = PBXGroup;
+			children = (
+				61CF3DE51F8007E200D5AA67 /* Fincart */,
+				61CF3DFA1F8007E200D5AA67 /* FincartTests */,
+				61CF3DE41F8007E200D5AA67 /* Products */,
+				F7279A5D9D50FB13A5E6F40C /* Pods */,
+				7BC52A5C444B28F6682894E4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		61CF3DE41F8007E200D5AA67 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				61CF3DE31F8007E200D5AA67 /* Fincart.app */,
+				61CF3DF71F8007E200D5AA67 /* FincartTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		61CF3DE51F8007E200D5AA67 /* Fincart */ = {
+			isa = PBXGroup;
+			children = (
+				5C17CE401FC167DA0013D002 /* Json */,
+				5CC3B6C31FB70250007458F4 /* External */,
+				5CC3B6A01FB6F260007458F4 /* Routing */,
+				5CC3B69F1FB6F254007458F4 /* Models */,
+				8A72EDA21FF5119900218F46 /* views */,
+				5CC3B69D1FB6F22C007458F4 /* networking */,
+				8AD5C4A62004AFE400D69BB1 /* controller */,
+				8AD5C4B32004E8DD00D69BB1 /* common */,
+				5CC3B69C1FB6F221007458F4 /* resources */,
+				61CF3E061F80081700D5AA67 /* Images */,
+				61CF3DE61F8007E200D5AA67 /* AppDelegate.swift */,
+				61CF3DF21F8007E200D5AA67 /* Info.plist */,
+				5CC3B6DD1FB73954007458F4 /* Utils.swift */,
+				5CC3B6D41FB73875007458F4 /* StringConstants.swift */,
+				5CC3B6E91FB75146007458F4 /* Fincart-Bridging-Header.h */,
+			);
+			path = Fincart;
+			sourceTree = "<group>";
+		};
+		61CF3DFA1F8007E200D5AA67 /* FincartTests */ = {
+			isa = PBXGroup;
+			children = (
+				61CF3DFB1F8007E200D5AA67 /* FincartTests.swift */,
+				61CF3DFD1F8007E200D5AA67 /* Info.plist */,
+			);
+			path = FincartTests;
+			sourceTree = "<group>";
+		};
+		61CF3E061F80081700D5AA67 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8A8976C220737EE100915327 /* Assets.xcassets */,
+				5C17CE521FC174700013D002 /* Info Icons */,
+				5CC3B6951FB6E7B4007458F4 /* background.jpg */,
+				5CC3B6941FB6E7B4007458F4 /* fb-icon.png */,
+				5CC3B6921FB6E7B4007458F4 /* g-plus-icon.png */,
+				5CC3B6961FB6E7B4007458F4 /* linkedin-icon.png */,
+				5CC3B6991FB6E7B4007458F4 /* logo.png */,
+				5CC3B69A1FB6E9F8007458F4 /* singup.jpg */,
+				5CC3B6981FB6E7B4007458F4 /* password-icon.png */,
+				5CC3B6911FB6E7B4007458F4 /* sign-in-btn.png */,
+				5CC3B6931FB6E7B4007458F4 /* user-icon.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		7BC52A5C444B28F6682894E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8AD5C4AF2004B83B00D69BB1 /* RESideMenu.framework */,
+				6198E6761F80E56500E2EC8C /* Device.framework */,
+				1DAD406C1DF5F2F2064CC8EA /* Pods_Fincart.framework */,
+				A8DAFB14C52BB55555289070 /* Pods_FincartTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8A10DDE32055838400BBAF34 /* WalkThrough */ = {
+			isa = PBXGroup;
+			children = (
+				8A10DDE4205583A700BBAF34 /* FinCartWalkThroughVC.swift */,
+				8A44CBF120558CCE009D6F76 /* FinCartWalkThroughContentVC.swift */,
+			);
+			path = WalkThrough;
+			sourceTree = "<group>";
+		};
+		8A4083C92022CEB600DB3193 /* ChildInfoVC */ = {
+			isa = PBXGroup;
+			children = (
+				8A8976BD2072578900915327 /* ChildInfoCells */,
+				8A562308206DE97C003DF91F /* ChildBasicInfoVC.swift */,
+			);
+			name = ChildInfoVC;
+			sourceTree = "<group>";
+		};
+		8A4650BA200C801A00AB21C5 /* userDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				8A4650BB200C803200AB21C5 /* FinCartUserDefaults.swift */,
+				8A1F1E302057F38200A8B645 /* Validation.swift */,
+				8AEE526A2063988700E834B5 /* FincartCommon.swift */,
+				8A3C007D2080D660001A2795 /* FincartGoalCodes.swift */,
+			);
+			path = userDefaults;
+			sourceTree = "<group>";
+		};
+		8A6116A7201BA6C600EE5A39 /* JSONObject */ = {
+			isa = PBXGroup;
+			children = (
+				8A8976C6207397E300915327 /* SingleGoalModel */,
+				8A6116A8201BA72500EE5A39 /* BaseObject.swift */,
+				8A6116AB201BA72600EE5A39 /* JsonBase.swift */,
+				8A6116AA201BA72500EE5A39 /* OptionsArray.swift */,
+				8A6116A9201BA72500EE5A39 /* QuestionArrays.swift */,
+			);
+			path = JSONObject;
+			sourceTree = "<group>";
+		};
+		8A6AAEE7208389D500D99815 /* EditGoalVC */ = {
+			isa = PBXGroup;
+			children = (
+				8A6AAEE82084CAC000D99815 /* EditGoalsDetailsVC.swift */,
+			);
+			path = EditGoalVC;
+			sourceTree = "<group>";
+		};
+		8A72EDA21FF5119900218F46 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				8A72EDA31FF511DE00218F46 /* BottomBorderUITextField.swift */,
+				8A72EDA51FF522F200218F46 /* RoundRectUIButton.swift */,
+				8AF0152C1FFD076800A60957 /* FinancialPlanningCell.swift */,
+				8ADEAA84207BA02200F5127F /* CustomUISlider.swift */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		8A77C6B9204D6EFA00860843 /* RegistraionResponse */ = {
+			isa = PBXGroup;
+			children = (
+				8A56230C206FCC2F003DF91F /* RegisterUserServiceResponse.swift */,
+			);
+			path = RegistraionResponse;
+			sourceTree = "<group>";
+		};
+		8A8976BD2072578900915327 /* ChildInfoCells */ = {
+			isa = PBXGroup;
+			children = (
+				8A562302206DE762003DF91F /* ChildInfoTableViewCell.swift */,
+				8A562304206DE786003DF91F /* ChildPlanningTableViewCell.swift */,
+				8A562306206DE79C003DF91F /* ChildStudyPlansDetailTableViewCell.swift */,
+				8A8976BE207259FA00915327 /* ChildWeddingPlanDetailsTableCell.swift */,
+			);
+			name = ChildInfoCells;
+			sourceTree = "<group>";
+		};
+		8A8976C42073885100915327 /* FullFinancialQuestionnaire */ = {
+			isa = PBXGroup;
+			children = (
+				8AD5C4B72004F05700D69BB1 /* FinCartQuestionnaireVC.swift */,
+			);
+			path = FullFinancialQuestionnaire;
+			sourceTree = "<group>";
+		};
+		8A8976C52073887600915327 /* SingleGoalQuestionnaire */ = {
+			isa = PBXGroup;
+			children = (
+				8A817A2A205BF5F7008795E3 /* FinCartSingalQuestionnaireVC.swift */,
+			);
+			path = SingleGoalQuestionnaire;
+			sourceTree = "<group>";
+		};
+		8A8976C6207397E300915327 /* SingleGoalModel */ = {
+			isa = PBXGroup;
+			children = (
+				8A8976C72073981900915327 /* SingleGoalList.swift */,
+			);
+			name = SingleGoalModel;
+			sourceTree = "<group>";
+		};
+		8AAE389D204B090100848F3C /* LoginResponse */ = {
+			isa = PBXGroup;
+			children = (
+				8A56230E206FD804003DF91F /* AccessTokenServiceResponse.swift */,
+				8A562310206FD86C003DF91F /* UserDetailsServiceResponse.swift */,
+			);
+			path = LoginResponse;
+			sourceTree = "<group>";
+		};
+		8AD5C4A62004AFE400D69BB1 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				8AEE526C2065325B00E834B5 /* GoalsReviewVC */,
+				8AF1DBB5205ED3F200FE4C71 /* ForgotPasswordVC */,
+				8A10DDE32055838400BBAF34 /* WalkThrough */,
+				BC4682D8204D79C000DC5A6D /* KYC */,
+				BC4682D5204D79BD00DC5A6D /* profile */,
+				8AD5C4BA2004FC6700D69BB1 /* GaolsVC */,
+				8AD5C4B92004F15200D69BB1 /* UserInfoVC */,
+				8AD5C4B62004F03300D69BB1 /* QuestionnaireVC */,
+				8AD5C4B22004E89A00D69BB1 /* DashboardVC */,
+				8AD5C4B12004E88800D69BB1 /* RegistrationVC */,
+				8AD5C4B02004E87800D69BB1 /* LoginVC */,
+				8AD5C4AB2004B36100D69BB1 /* LeftMenu */,
+				8AD5C4AA2004B35500D69BB1 /* RootVC */,
+				8A6AAEE7208389D500D99815 /* EditGoalVC */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		8AD5C4AA2004B35500D69BB1 /* RootVC */ = {
+			isa = PBXGroup;
+			children = (
+				8AD5C4A72004B01A00D69BB1 /* FinCartSideMenuVC.swift */,
+			);
+			name = RootVC;
+			sourceTree = "<group>";
+		};
+		8AD5C4AB2004B36100D69BB1 /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				8AD5C4AC2004B37800D69BB1 /* FinCartLeftMenuVC.swift */,
+			);
+			path = LeftMenu;
+			sourceTree = "<group>";
+		};
+		8AD5C4B02004E87800D69BB1 /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				61CF3DE81F8007E200D5AA67 /* FinCartLoginVC.swift */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		8AD5C4B12004E88800D69BB1 /* RegistrationVC */ = {
+			isa = PBXGroup;
+			children = (
+				5CC3B6C81FB72583007458F4 /* FinCartRegisterationVC.swift */,
+			);
+			path = RegistrationVC;
+			sourceTree = "<group>";
+		};
+		8AD5C4B22004E89A00D69BB1 /* DashboardVC */ = {
+			isa = PBXGroup;
+			children = (
+				8A6EE1EA1FFBB80D00BF2FA5 /* FinCartDashboardVC.swift */,
+			);
+			path = DashboardVC;
+			sourceTree = "<group>";
+		};
+		8AD5C4B32004E8DD00D69BB1 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				8AEE52732068156F00E834B5 /* FundCalculation */,
+				8A4650BA200C801A00AB21C5 /* userDefaults */,
+				8AD5C4B42004E90A00D69BB1 /* FinCartViewController.swift */,
+				8A4650B8200C715400AB21C5 /* FinCartMacros.swift */,
+				8AF36639204E273A008F6207 /* Colors.swift */,
+				8AF3663B204E282F008F6207 /* Dimensions.swift */,
+				8AF3663D204E28D0008F6207 /* Images.swift */,
+			);
+			name = common;
+			sourceTree = "<group>";
+		};
+		8AD5C4B62004F03300D69BB1 /* QuestionnaireVC */ = {
+			isa = PBXGroup;
+			children = (
+				8A4083C92022CEB600DB3193 /* ChildInfoVC */,
+				8A8976C42073885100915327 /* FullFinancialQuestionnaire */,
+				8A8976C52073887600915327 /* SingleGoalQuestionnaire */,
+			);
+			path = QuestionnaireVC;
+			sourceTree = "<group>";
+		};
+		8AD5C4B92004F15200D69BB1 /* UserInfoVC */ = {
+			isa = PBXGroup;
+			children = (
+				5C17CE491FC16F520013D002 /* FinCartUserInfoVC.swift */,
+			);
+			path = UserInfoVC;
+			sourceTree = "<group>";
+		};
+		8AD5C4BA2004FC6700D69BB1 /* GaolsVC */ = {
+			isa = PBXGroup;
+			children = (
+				8AD5C4BD2004FFCC00D69BB1 /* GoalsCollectionView */,
+				8AD5C4BB2004FC7C00D69BB1 /* FinCartGoalsVC.swift */,
+			);
+			path = GaolsVC;
+			sourceTree = "<group>";
+		};
+		8AD5C4BD2004FFCC00D69BB1 /* GoalsCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				8AD5C4BE2004FFE900D69BB1 /* FinCartGoalsCollectionViewCell.swift */,
+			);
+			path = GoalsCollectionView;
+			sourceTree = "<group>";
+		};
+		8AEE526C2065325B00E834B5 /* GoalsReviewVC */ = {
+			isa = PBXGroup;
+			children = (
+				8AEE526D2065329100E834B5 /* GoalsReviewVCViewController.swift */,
+				8AEE526F2067D91200E834B5 /* GoalsReviewTableViewCell.swift */,
+			);
+			path = GoalsReviewVC;
+			sourceTree = "<group>";
+		};
+		8AEE52732068156F00E834B5 /* FundCalculation */ = {
+			isa = PBXGroup;
+			children = (
+				8AEE52712068151B00E834B5 /* FundCalculator.swift */,
+				8AEE52742068159000E834B5 /* FundCalculationResult.swift */,
+				8AEE5276206816DD00E834B5 /* FundFinance.swift */,
+				8A5622FF206A91CF003DF91F /* FundCalculation.swift */,
+			);
+			path = FundCalculation;
+			sourceTree = "<group>";
+		};
+		8AF1DBB5205ED3F200FE4C71 /* ForgotPasswordVC */ = {
+			isa = PBXGroup;
+			children = (
+				8AF1DBB6205ED42600FE4C71 /* ForgotPasswordVC.swift */,
+				8AF1DBBB205EF7EF00FE4C71 /* GetOTPVC.swift */,
+				8AF1DBBD205F01B800FE4C71 /* ResetPasswordVC.swift */,
+			);
+			path = ForgotPasswordVC;
+			sourceTree = "<group>";
+		};
+		BC4682D5204D79BD00DC5A6D /* profile */ = {
+			isa = PBXGroup;
+			children = (
+				BC4682D6204D79BD00DC5A6D /* EditProfileVC.swift */,
+				BC4682D7204D79BD00DC5A6D /* ProfileVC.swift */,
+			);
+			path = profile;
+			sourceTree = "<group>";
+		};
+		BC4682D8204D79C000DC5A6D /* KYC */ = {
+			isa = PBXGroup;
+			children = (
+				BC4682D9204D79C000DC5A6D /* BankDetails */,
+				BC4682DB204D79C000DC5A6D /* BarCode */,
+				BC4682DF204D79C000DC5A6D /* DigitalSignature */,
+				BC4682E3204D79C100DC5A6D /* EKYCWebView.swift */,
+				BC4682E5204D79C100DC5A6D /* FatcaDetailsVC.swift */,
+				BC4682E6204D79C100DC5A6D /* FinCartKYCCheckVC.swift */,
+				BC4682E7204D79C100DC5A6D /* Form */,
+				BC4682EA204D79C100DC5A6D /* ListView */,
+			);
+			path = KYC;
+			sourceTree = "<group>";
+		};
+		BC4682D9204D79C000DC5A6D /* BankDetails */ = {
+			isa = PBXGroup;
+			children = (
+				BC4682DA204D79C000DC5A6D /* BankAccountDetailsVC.swift */,
+			);
+			path = BankDetails;
+			sourceTree = "<group>";
+		};
+		BC4682DB204D79C000DC5A6D /* BarCode */ = {
+			isa = PBXGroup;
+			children = (
+				BC4682DC204D79C000DC5A6D /* BarcodeData.swift */,
+				BC4682DD204D79C000DC5A6D /* KycScanOrManualVC.swift */,
+				BC4682DE204D79C000DC5A6D /* KYCScanVC.swift */,
+			);
+			path = BarCode;
+			sourceTree = "<group>";
+		};
+		BC4682DF204D79C000DC5A6D /* DigitalSignature */ = {
+			isa = PBXGroup;
+			children = (
+				BC4682E0204D79C100DC5A6D /* DigitalSignatureProceed.swift */,
+				BC4682E1204D79C100DC5A6D /* DigitalSignatureVC.swift */,
+				BC4682E2204D79C100DC5A6D /* YPDrawSignatureView.swift */,
+			);
+			path = DigitalSignature;
+			sourceTree = "<group>";
+		};
+		BC4682E7204D79C100DC5A6D /* Form */ = {
+			isa = PBXGroup;
+			children = (
+				BC4682E8204D79C100DC5A6D /* EKycFormVC.swift */,
+				BC4682E9204D79C100DC5A6D /* KycBasicDetailsFormVC.swift */,
+			);
+			path = Form;
+			sourceTree = "<group>";
+		};
+		BC4682EA204D79C100DC5A6D /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+				BC4682EB204D79C100DC5A6D /* AnnualIncomeLists.swift */,
+				BC4682EC204D79C100DC5A6D /* BankAccountTypeVC.swift */,
+				BC4682ED204D79C100DC5A6D /* BankNameLists.swift */,
+				BC4682EE204D79C100DC5A6D /* CountryLists.swift */,
+				BC4682EF204D79C100DC5A6D /* IDCardsLists.swift */,
+				BC4682F0204D79C100DC5A6D /* IncomeSourceVC.swift */,
+				BC4682F1204D79C100DC5A6D /* KYCInvestorTypeVC.swift */,
+				BC4682F2204D79C100DC5A6D /* OccupationsList.swift */,
+				BC4682F3204D79C100DC5A6D /* PoliticallyExposedLists.swift */,
+			);
+			path = ListView;
+			sourceTree = "<group>";
+		};
+		F7279A5D9D50FB13A5E6F40C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0D19EE79D5F4FF4F47D1F56 /* Pods-Fincart.debug.xcconfig */,
+				588B41935F8415628FB38301 /* Pods-Fincart.release.xcconfig */,
+				76F4C20B2007A8FCBAA4D926 /* Pods-FincartTests.debug.xcconfig */,
+				7F11A8D43DE85398697A67BC /* Pods-FincartTests.release.xcconfig */,
+				0216B997F1163C768497A0D8 /* Pods-Fincart.adhoc.xcconfig */,
+				C5C9DF8E73F1311774E0533B /* Pods-FincartTests.adhoc.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		61CF3DE21F8007E200D5AA67 /* Fincart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61CF3E001F8007E200D5AA67 /* Build configuration list for PBXNativeTarget "Fincart" */;
+			buildPhases = (
+				7041CEB1957E7EA9B67E2DC5 /* [CP] Check Pods Manifest.lock */,
+				61CF3DDF1F8007E200D5AA67 /* Sources */,
+				61CF3DE01F8007E200D5AA67 /* Frameworks */,
+				61CF3DE11F8007E200D5AA67 /* Resources */,
+				F41F2F61F8BB2DBF14BB274A /* [CP] Embed Pods Frameworks */,
+				E881BCB99243ED4C6187ED7F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Fincart;
+			productName = Fincart;
+			productReference = 61CF3DE31F8007E200D5AA67 /* Fincart.app */;
+			productType = "com.apple.product-type.application";
+		};
+		61CF3DF61F8007E200D5AA67 /* FincartTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 61CF3E031F8007E200D5AA67 /* Build configuration list for PBXNativeTarget "FincartTests" */;
+			buildPhases = (
+				C02C14B9EEA5A5F91B33540C /* [CP] Check Pods Manifest.lock */,
+				61CF3DF31F8007E200D5AA67 /* Sources */,
+				61CF3DF41F8007E200D5AA67 /* Frameworks */,
+				61CF3DF51F8007E200D5AA67 /* Resources */,
+				AA0BA717A14AF8D8F69E5849 /* [CP] Embed Pods Frameworks */,
+				4ECD9F178483623BCCCF471F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				61CF3DF91F8007E200D5AA67 /* PBXTargetDependency */,
+			);
+			name = FincartTests;
+			productName = FincartTests;
+			productReference = 61CF3DF71F8007E200D5AA67 /* FincartTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		61CF3DDB1F8007E200D5AA67 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Aman Taneja";
+				TargetAttributes = {
+					61CF3DE21F8007E200D5AA67 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VZDSVES8VL;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Manual;
+					};
+					61CF3DF61F8007E200D5AA67 = {
+						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 61CF3DE21F8007E200D5AA67;
+					};
+				};
+			};
+			buildConfigurationList = 61CF3DDE1F8007E200D5AA67 /* Build configuration list for PBXProject "Fincart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 61CF3DDA1F8007E200D5AA67;
+			productRefGroup = 61CF3DE41F8007E200D5AA67 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				61CF3DE21F8007E200D5AA67 /* Fincart */,
+				61CF3DF61F8007E200D5AA67 /* FincartTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		61CF3DE11F8007E200D5AA67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5CC3B6BB1FB70226007458F4 /* linkedin-icon.png in Resources */,
+				61CF3DF11F8007E200D5AA67 /* LaunchScreen.storyboard in Resources */,
+				5CC3B6B81FB70226007458F4 /* background.jpg in Resources */,
+				8A611699201BA6A400EE5A39 /* single_male.json in Resources */,
+				8A8976C320737EE200915327 /* Assets.xcassets in Resources */,
+				8A61169B201BA6A400EE5A39 /* all_goals_with_retire.json in Resources */,
+				8A61169D201BA6A400EE5A39 /* married_male.json in Resources */,
+				5CC3B6BE1FB70226007458F4 /* singup.jpg in Resources */,
+				5CC3B6B91FB70226007458F4 /* fb-icon.png in Resources */,
+				8A61169E201BA6A400EE5A39 /* single_female.json in Resources */,
+				8A611698201BA6A400EE5A39 /* have_child.json in Resources */,
+				8A61169A201BA6A400EE5A39 /* married_female.json in Resources */,
+				5CC3B6C01FB70226007458F4 /* password-icon.png in Resources */,
+				5CC3B6C21FB70226007458F4 /* user-icon.png in Resources */,
+				5CC3B6BD1FB70226007458F4 /* logo.png in Resources */,
+				5CE3496D1FB75479006C36ED /* SVProgressHUD.bundle in Resources */,
+				61CF3DEC1F8007E200D5AA67 /* Main.storyboard in Resources */,
+				8AAE389C204AFF4500848F3C /* helvetica-neue-light.ttf in Resources */,
+				5CC3B6C11FB70226007458F4 /* sign-in-btn.png in Resources */,
+				8A61169C201BA6A400EE5A39 /* all_goals.json in Resources */,
+				5CC3B6BA1FB70226007458F4 /* g-plus-icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61CF3DF51F8007E200D5AA67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4ECD9F178483623BCCCF471F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FincartTests/Pods-FincartTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7041CEB1957E7EA9B67E2DC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Fincart-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA0BA717A14AF8D8F69E5849 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FincartTests/Pods-FincartTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C02C14B9EEA5A5F91B33540C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FincartTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E881BCB99243ED4C6187ED7F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Fincart/Pods-Fincart-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fincart/Pods-Fincart-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F41F2F61F8BB2DBF14BB274A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Fincart/Pods-Fincart-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
+				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
+				"${BUILT_PRODUCTS_DIR}/EPSignature/EPSignature.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/PopupDialog/PopupDialog.framework",
+				"${BUILT_PRODUCTS_DIR}/RESideMenu/RESideMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSignatureView/SwiftSignatureView.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyButton/SwiftyButton.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EPSignature.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PopupDialog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RESideMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSignatureView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyButton.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Fincart/Pods-Fincart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		61CF3DDF1F8007E200D5AA67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8AF3663A204E273A008F6207 /* Colors.swift in Sources */,
+				61CF3DE91F8007E200D5AA67 /* FinCartLoginVC.swift in Sources */,
+				8A56230F206FD804003DF91F /* AccessTokenServiceResponse.swift in Sources */,
+				8A4650BC200C803200AB21C5 /* FinCartUserDefaults.swift in Sources */,
+				8AEE526E2065329700E834B5 /* GoalsReviewVCViewController.swift in Sources */,
+				8AF1DBBE205F01B800FE4C71 /* ResetPasswordVC.swift in Sources */,
+				8A72EDA41FF511DE00218F46 /* BottomBorderUITextField.swift in Sources */,
+				5C17CE4A1FC16F520013D002 /* FinCartUserInfoVC.swift in Sources */,
+				8A56230D206FCC30003DF91F /* RegisterUserServiceResponse.swift in Sources */,
+				5CC3B6C91FB72583007458F4 /* FinCartRegisterationVC.swift in Sources */,
+				8A6116AF201BA72600EE5A39 /* JsonBase.swift in Sources */,
+				8A8976C12072CD0900915327 /* UserGoalStatusServiceResponseElement.swift in Sources */,
+				BC468306204D79C100DC5A6D /* CountryLists.swift in Sources */,
+				8AEE52702067D91200E834B5 /* GoalsReviewTableViewCell.swift in Sources */,
+				BC468301204D79C100DC5A6D /* EKycFormVC.swift in Sources */,
+				8AEE52752068159000E834B5 /* FundCalculationResult.swift in Sources */,
+				8A4650B9200C715400AB21C5 /* FinCartMacros.swift in Sources */,
+				BC468308204D79C100DC5A6D /* IncomeSourceVC.swift in Sources */,
+				8A72EDA61FF522F200218F46 /* RoundRectUIButton.swift in Sources */,
+				BC4682F4204D79C100DC5A6D /* EditProfileVC.swift in Sources */,
+				8A817A2B205BF5F8008795E3 /* FinCartSingalQuestionnaireVC.swift in Sources */,
+				61CF3DE71F8007E200D5AA67 /* AppDelegate.swift in Sources */,
+				BC468304204D79C100DC5A6D /* BankAccountTypeVC.swift in Sources */,
+				8A9922B8208F4841004C4774 /* SavedUserGoalServiceResponse.swift in Sources */,
+				8A562303206DE762003DF91F /* ChildInfoTableViewCell.swift in Sources */,
+				8AEE526B2063988700E834B5 /* FincartCommon.swift in Sources */,
+				8AF0152D1FFD076800A60957 /* FinancialPlanningCell.swift in Sources */,
+				8A8976C82073981900915327 /* SingleGoalList.swift in Sources */,
+				5CC3B6D51FB73875007458F4 /* StringConstants.swift in Sources */,
+				BC4682F9204D79C100DC5A6D /* KYCScanVC.swift in Sources */,
+				BC46830A204D79C100DC5A6D /* OccupationsList.swift in Sources */,
+				8A1F1E312057F38200A8B645 /* Validation.swift in Sources */,
+				8A56231520701955003DF91F /* UserInfoData.swift in Sources */,
+				8AF1DBBC205EF7EF00FE4C71 /* GetOTPVC.swift in Sources */,
+				BC468302204D79C100DC5A6D /* KycBasicDetailsFormVC.swift in Sources */,
+				8AF1DBB7205ED42600FE4C71 /* ForgotPasswordVC.swift in Sources */,
+				BC46830B204D79C100DC5A6D /* PoliticallyExposedLists.swift in Sources */,
+				8AD5C4BF2004FFE900D69BB1 /* FinCartGoalsCollectionViewCell.swift in Sources */,
+				BC468303204D79C100DC5A6D /* AnnualIncomeLists.swift in Sources */,
+				5CC3B6DE1FB73955007458F4 /* Utils.swift in Sources */,
+				8AD5C4B82004F05700D69BB1 /* FinCartQuestionnaireVC.swift in Sources */,
+				BC4682F5204D79C100DC5A6D /* ProfileVC.swift in Sources */,
+				8A56230B206F4D21003DF91F /* KidDataArrayList.swift in Sources */,
+				8A6116AE201BA72600EE5A39 /* OptionsArray.swift in Sources */,
+				BC468305204D79C100DC5A6D /* BankNameLists.swift in Sources */,
+				8A562309206DE97C003DF91F /* ChildBasicInfoVC.swift in Sources */,
+				8AD5C4A82004B01A00D69BB1 /* FinCartSideMenuVC.swift in Sources */,
+				BC4682F7204D79C100DC5A6D /* BarcodeData.swift in Sources */,
+				8A6116AC201BA72600EE5A39 /* BaseObject.swift in Sources */,
+				8AF3663E204E28D0008F6207 /* Images.swift in Sources */,
+				BC4682F8204D79C100DC5A6D /* KycScanOrManualVC.swift in Sources */,
+				5CE3496B1FB75471006C36ED /* SVProgressHUD.m in Sources */,
+				8A3C007E2080D660001A2795 /* FincartGoalCodes.swift in Sources */,
+				BC4682FB204D79C100DC5A6D /* DigitalSignatureVC.swift in Sources */,
+				8A6116AD201BA72600EE5A39 /* QuestionArrays.swift in Sources */,
+				8A6AAEE92084CAC000D99815 /* EditGoalsDetailsVC.swift in Sources */,
+				8AEE526520629CDC00E834B5 /* APIManager.swift in Sources */,
+				8A8976BF207259FA00915327 /* ChildWeddingPlanDetailsTableCell.swift in Sources */,
+				BC468300204D79C100DC5A6D /* FinCartKYCCheckVC.swift in Sources */,
+				8AD5C4AD2004B37800D69BB1 /* FinCartLeftMenuVC.swift in Sources */,
+				8A562305206DE786003DF91F /* ChildPlanningTableViewCell.swift in Sources */,
+				8AD5C4B52004E90A00D69BB1 /* FinCartViewController.swift in Sources */,
+				BC4682F6204D79C100DC5A6D /* BankAccountDetailsVC.swift in Sources */,
+				BC4682FF204D79C100DC5A6D /* FatcaDetailsVC.swift in Sources */,
+				5C17CE561FC17B500013D002 /* BBBadgeBarButtonItem.m in Sources */,
+				8ADEAA85207BA02200F5127F /* CustomUISlider.swift in Sources */,
+				BC4682FA204D79C100DC5A6D /* DigitalSignatureProceed.swift in Sources */,
+				5CE3496E1FB7547C006C36ED /* SVIndefiniteAnimatedView.m in Sources */,
+				8AF3663C204E282F008F6207 /* Dimensions.swift in Sources */,
+				8AD5C4BC2004FC7C00D69BB1 /* FinCartGoalsVC.swift in Sources */,
+				BC4682FC204D79C100DC5A6D /* YPDrawSignatureView.swift in Sources */,
+				BC468307204D79C100DC5A6D /* IDCardsLists.swift in Sources */,
+				8A173D4820691B4300B61219 /* GoalsReview.swift in Sources */,
+				BC4682FD204D79C100DC5A6D /* EKYCWebView.swift in Sources */,
+				5CE3496C1FB75476006C36ED /* SVRadialGradientLayer.m in Sources */,
+				5CBFB4461FBC81520060AEB2 /* Reachability.m in Sources */,
+				8AEE5277206816DD00E834B5 /* FundFinance.swift in Sources */,
+				8AEE52722068151B00E834B5 /* FundCalculator.swift in Sources */,
+				8A44CBF220558CCE009D6F76 /* FinCartWalkThroughContentVC.swift in Sources */,
+				8A10DDE5205583A700BBAF34 /* FinCartWalkThroughVC.swift in Sources */,
+				8A6EE1EB1FFBB80D00BF2FA5 /* FinCartDashboardVC.swift in Sources */,
+				8A562311206FD86C003DF91F /* UserDetailsServiceResponse.swift in Sources */,
+				8A562300206A91D0003DF91F /* FundCalculation.swift in Sources */,
+				8A562307206DE79C003DF91F /* ChildStudyPlansDetailTableViewCell.swift in Sources */,
+				BC468309204D79C100DC5A6D /* KYCInvestorTypeVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61CF3DF31F8007E200D5AA67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61CF3DFC1F8007E200D5AA67 /* FincartTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		61CF3DF91F8007E200D5AA67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 61CF3DE21F8007E200D5AA67 /* Fincart */;
+			targetProxy = 61CF3DF81F8007E200D5AA67 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		61CF3DEA1F8007E200D5AA67 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61CF3DEB1F8007E200D5AA67 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		61CF3DEF1F8007E200D5AA67 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				61CF3DF01F8007E200D5AA67 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		61CF3DFE1F8007E200D5AA67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
+			};
+			name = Debug;
+		};
+		61CF3DFF1F8007E200D5AA67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = "";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		61CF3E011F8007E200D5AA67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0D19EE79D5F4FF4F47D1F56 /* Pods-Fincart.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = VZDSVES8VL;
+				INFOPLIST_FILE = Fincart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lc++",
+					"-ObjC",
+					"-l\"z\"",
+					"-l\"c++\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fincart.apps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "c99f83f0-4c7c-4e7f-ad6b-d5ec42ac4377";
+				PROVISIONING_PROFILE_SPECIFIER = Dev_Latest;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		61CF3E021F8007E200D5AA67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 588B41935F8415628FB38301 /* Pods-Fincart.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = VZDSVES8VL;
+				INFOPLIST_FILE = Fincart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lc++",
+					"-ObjC",
+					"-l\"z\"",
+					"-l\"c++\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fincart.apps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1f5788a5-90b4-4ee8-a14d-760025f3d467";
+				PROVISIONING_PROFILE_SPECIFIER = Adhoc_profile;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		61CF3E041F8007E200D5AA67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76F4C20B2007A8FCBAA4D926 /* Pods-FincartTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FincartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amanTaneja.FincartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fincart.app/Fincart";
+			};
+			name = Debug;
+		};
+		61CF3E051F8007E200D5AA67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F11A8D43DE85398697A67BC /* Pods-FincartTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FincartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amanTaneja.FincartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fincart.app/Fincart";
+			};
+			name = Release;
+		};
+		8A7819AC2032EB94008D3442 /* Adhoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = "";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Adhoc;
+		};
+		8A7819AD2032EB94008D3442 /* Adhoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0216B997F1163C768497A0D8 /* Pods-Fincart.adhoc.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = VZDSVES8VL;
+				INFOPLIST_FILE = Fincart/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-lc++",
+					"-ObjC",
+					"-l\"z\"",
+					"-l\"c++\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.fincart.apps;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1f5788a5-90b4-4ee8-a14d-760025f3d467";
+				PROVISIONING_PROFILE_SPECIFIER = Adhoc_profile;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
+				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Adhoc;
+		};
+		8A7819AE2032EB94008D3442 /* Adhoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5C9DF8E73F1311774E0533B /* Pods-FincartTests.adhoc.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FincartTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.amanTaneja.FincartTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Fincart.app/Fincart";
+			};
+			name = Adhoc;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		61CF3DDE1F8007E200D5AA67 /* Build configuration list for PBXProject "Fincart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61CF3DFE1F8007E200D5AA67 /* Debug */,
+				61CF3DFF1F8007E200D5AA67 /* Release */,
+				8A7819AC2032EB94008D3442 /* Adhoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61CF3E001F8007E200D5AA67 /* Build configuration list for PBXNativeTarget "Fincart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61CF3E011F8007E200D5AA67 /* Debug */,
+				61CF3E021F8007E200D5AA67 /* Release */,
+				8A7819AD2032EB94008D3442 /* Adhoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		61CF3E031F8007E200D5AA67 /* Build configuration list for PBXNativeTarget "FincartTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61CF3E041F8007E200D5AA67 /* Debug */,
+				61CF3E051F8007E200D5AA67 /* Release */,
+				8A7819AE2032EB94008D3442 /* Adhoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 61CF3DDB1F8007E200D5AA67 /* Project object */;
+}

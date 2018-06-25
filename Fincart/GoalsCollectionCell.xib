@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GoalsCollectionCell" id="gTV-IL-0wX" customClass="GoalsCollectionCell" customModule="Fincart" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="283" height="104"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="283" height="104"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bak-eZ-njq">
+                        <rect key="frame" x="40" y="10" width="203" height="84"/>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="Bak-eZ-njq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="4eX-14-VXp"/>
+                <constraint firstAttribute="trailing" secondItem="Bak-eZ-njq" secondAttribute="trailing" constant="40" id="aYO-hW-joR"/>
+                <constraint firstAttribute="bottom" secondItem="Bak-eZ-njq" secondAttribute="bottom" constant="10" id="ej0-0a-f76"/>
+                <constraint firstItem="Bak-eZ-njq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="40" id="v9e-AT-DUQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="283" height="104"/>
+            <connections>
+                <outlet property="goalImage" destination="Bak-eZ-njq" id="HcZ-GH-CEQ"/>
+            </connections>
+            <point key="canvasLocation" x="150.5" y="81"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="4.png" width="155" height="84"/>
+    </resources>
+</document>

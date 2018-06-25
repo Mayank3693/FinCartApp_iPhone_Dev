@@ -1,0 +1,617 @@
+{
+    "C5": [
+           {
+           "ques": "Any plans for higher studies?",
+           "anstype": "checkbox",
+           "noOfoptions": 2,
+           "questioncode": "FQ15",
+           "goalcode": "FG5",
+           "defaultOption": "0",
+           "Options": [
+                       {
+                       "key": "1",
+                       "value": "YES"
+                       },
+                       {
+                       "key": "0",
+                       "value": "NO"
+                       }
+                       ],
+           "QuesArray": [
+                         {
+                         "ques": "Where do you want to study?",
+                         "anstype": "checkbox",
+                         "noOfoptions": 5,
+                         "questioncode": "FQ16",
+                         "goalcode": "FG5",
+                         "defaultOption": "",
+                         "Options": [
+                                     {
+                                     "key": "001",
+                                     "value": "USA OR CANADA"
+                                     },
+                                     {
+                                     "key": "002",
+                                     "value": "EUROPE"
+                                     },
+                                     {
+                                     "key": "003",
+                                     "value": "SOUTH EAST ASIA"
+                                     },
+                                     {
+                                     "key": "004",
+                                     "value": "INDIA"
+                                     },
+                                     {
+                                     "key": "005",
+                                     "value": "OTHER"
+                                     }
+                                     ]
+                         },
+                         {
+                         "ques": "How soon do you want to start studying?",
+                         "anstype": "checkbox",
+                         "noOfoptions": 6,
+                         "questioncode": "FQ17",
+                         "goalcode": "FG5",
+                         "defaultOption": "1",
+                         "Options": [
+                                     {
+                                     "key": "1",
+                                     "value": "1 YEAR"
+                                     },
+                                     {
+                                     "key": "2",
+                                     "value": "2 YEARS"
+                                     },
+                                     {
+                                     "key": "3",
+                                     "value": "3 YEARS"
+                                     },
+                                     {
+                                     "key": "4",
+                                     "value": "4 YEARS"
+                                     },
+                                     {
+                                     "key": "5",
+                                     "value": "5 YEARS"
+                                     },
+                                     {
+                                     "key": "6",
+                                     "value": "6 YEARS"
+                                     }
+                                     ]
+                         }
+                         ]
+           },
+           {
+           "ques": "Planning your own wedding?",
+           "anstype": "checkbox",
+           "noOfoptions": 2,
+           "questioncode": "FQ18",
+           "goalcode": "FG7",
+           "defaultOption": "0",
+           "Options": [
+                       {
+                       "key": "1",
+                       "value": "YES"
+                       },
+                       {
+                       "key": "0",
+                       "value": "NO"
+                       }
+                       ],
+           "QuesArray": [
+                         {
+                         "ques": "How soon do you want to get married?",
+                         "anstype": "checkbox",
+                         "noOfoptions": 6,
+                         "questioncode": "FQ19",
+                         "goalcode": "FG7",
+                         "defaultOption": "1",
+                         "Options": [
+                                     {
+                                     "key": "1",
+                                     "value": "1 YEAR"
+                                     },
+                                     {
+                                     "key": "2",
+                                     "value": "2 YEARS"
+                                     },
+                                     {
+                                     "key": "3",
+                                     "value": "3 YEARS"
+                                     },
+                                     {
+                                     "key": "4",
+                                     "value": "4 YEARS"
+                                     },
+                                     {
+                                     "key": "5",
+                                     "value": "5 YEARS"
+                                     },
+                                     {
+                                     "key": "6",
+                                     "value": "6 YEARS"
+                                     }
+                                     ]
+                         },
+                         {
+                         "ques": "How do you want the celebrations?",
+                         "anstype": "checkbox",
+                         "noOfoptions": 3,
+                         "questioncode": "FQ20",
+                         "goalcode": "FG7",
+                         "defaultOption": "",
+                         "Options": [
+                                     {
+                                     "key": "001",
+                                     "value": "SIMPLE"
+                                     },
+                                     {
+                                     "key": "002",
+                                     "value": "MODERATE"
+                                     },
+                                     {
+                                     "key": "003",
+                                     "value": "LAVISH"
+                                     }
+                                     ]
+                         }
+                         ]
+           },
+           {
+           "ques": "Do you want to buy a house?",
+           "anstype": "checkbox",
+           "noOfoptions": 2,
+           "questioncode": "FQ21",
+           "goalcode": "FG4",
+           "defaultOption": "0",
+           "Options": [
+                       {
+                       "key": "1",
+                       "value": "YES"
+                       },
+                       {
+                       "key": "0",
+                       "value": "NO"
+                       }
+                       ],
+           "QuesArray": [
+                         {
+                         "ques": "How soon do you want to buy it?",
+                         "anstype": "incredecre",
+                         "noOfoptions": 1,
+                         "questioncode": "FQ22",
+                         "goalcode": "FG4",
+                         "defaultOption": "1",
+                         "Options": [
+                                     {
+                                     "key": "1",
+                                     "value": "1 YEAR"
+                                     },
+                                     {
+                                     "key": "50",
+                                     "value": "50 YEARS"
+                                     }
+                                     ]
+                         }
+                         ]
+           },
+           {
+           "ques": "Want to get a car?",
+           "anstype": "checkbox",
+           "noOfoptions": 2,
+           "questioncode": "FQ23",
+           "goalcode": "FG3",
+           "defaultOption": "0",
+           "Options": [
+                       {
+                       "key": "1",
+                       "value": "YES"
+                       },
+                       {
+                       "key": "0",
+                       "value": "NO"
+                       }
+                       ],
+           "QuesArray": [
+                         {
+                         "ques": "How soon do you want to buy it?",
+                         "anstype": "incredecre",
+                         "noOfoptions": 1,
+                         "questioncode": "FQ24",
+                         "goalcode": "FG3",
+                         "defaultOption": "1",
+                         "Options": [
+                                     {
+                                     "key": "1",
+                                     "value": "1 YEAR"
+                                     },
+                                     {
+                                     "key": "50",
+                                     "value": "50 YEARS"
+                                     }
+                                     ]
+                         },
+                         {
+                         "ques": "What kind of car are you going for?",
+                         "anstype": "checkbox",
+                         "noOfoptions": 5,
+                         "questioncode": "FQ52",
+                         "goalcode": "FG3",
+                         "defaultOption": "001",
+                         "Options": [
+                                     {
+                                     "key": "001",
+                                     "value": "SMALL"
+                                     },
+                                     {
+                                     "key": "002",
+                                     "value": "HATCHBACK"
+                                     },
+                                     {
+                                     "key": "003",
+                                     "value": "SEDAN"
+                                     },
+                                     {
+                                     "key": "004",
+                                     "value": "SUV"
+                                     },
+                                     {
+                                     "key": "005",
+                                     "value": "LUXURY"
+                                     }
+                                     ]
+                         }
+                         ]
+           },
+           {
+           "ques": "Any travel plans?",
+           "anstype": "checkbox",
+           "noOfoptions": 2,
+           "questioncode": "FQ25",
+           "goalcode": "FG6",
+           "defaultOption": "0",
+           "Options": [
+                       {
+                       "key": "1",
+                       "value": "YES"
+                       },
+                       {
+                       "key": "0",
+                       "value": "NO"
+                       }
+                       ],
+           "QuesArray": [
+                         {
+                         "ques": "With whom?",
+                         "anstype": "checkbox",
+                         "noOfoptions": 3,
+                         "questioncode": "FQ26",
+                         "goalcode": "FG6",
+                         "defaultOption": "",
+                         "Options": [
+                                     {
+                                     "key": "1",
+                                     "value": "SOLO"
+                                     },
+                                     {
+                                     "key": "2",
+                                     "value": "+1"
+                                     },
+                                     {
+                                     "key": "4",
+                                     "value": "FAMILY"
+                                     }
+                                     ]
+                         },
+                         {
+                         "ques": "Where do you want to travel?",
+                         "anstype": "checkbox",
+                         "noOfoptions": 5,
+                         "questioncode": "FQ55",
+                         "goalcode": "FG6",
+                         "defaultOption": "",
+                         "Options": [
+                                     {
+                                     "key": "001",
+                                     "value": "USA OR CANADA"
+                                     },
+                                     {
+                                     "key": "002",
+                                     "value": "AUSTRALIA OR NZ"
+                                     },
+                                     {
+                                     "key": "003",
+                                     "value": "EUROPE"
+                                     },
+                                     {
+                                     "key": "004",
+                                     "value": "SOUTH EAST ASIA"
+                                     },
+                                     {
+                                     "key": "005",
+                                     "value": "INDIA"
+                                     }
+                                     ]
+                         },
+                         {
+                         "ques": "How soon?",
+                         "anstype": "incredecre",
+                         "noOfoptions": 1,
+                         "questioncode": "FQ27",
+                         "goalcode": "FG6",
+                         "defaultOption": "1",
+                         "Options": [
+                                     {
+                                     "key": "1",
+                                     "value": "1 YEAR"
+                                     },
+                                     {
+                                     "key": "50",
+                                     "value": "50 YEARS"
+                                     }
+                                     ]
+                         },
+                         {
+                         "ques": "What kind of plans?",
+                         "anstype": "checkbox",
+                         "noOfoptions": 3,
+                         "questioncode": "FQ28",
+                         "goalcode": "FG6",
+                         "defaultOption": "001",
+                         "Options": [
+                                     {
+                                     "key": "001",
+                                     "value": "BUDGET"
+                                     },
+                                     {
+                                     "key": "002",
+                                     "value": "COMFY"
+                                     },
+                                     {
+                                     "key": "003",
+                                     "value": "LUXURY"
+                                     }
+                                     ]
+                         }
+                         ]
+           },
+           {
+           "ques": "Time to get that bike?",
+           "anstype": "checkbox",
+           "noOfoptions": 2,
+           "questioncode": "FQ29",
+           "goalcode": "FG1",
+           "defaultOption": "0",
+           "Options": [
+                       {
+                       "key": "1",
+                       "value": "YES"
+                       },
+                       {
+                       "key": "0",
+                       "value": "NO"
+                       }
+                       ],
+           "QuesArray": [
+                         {
+                         "ques": "How soon do you want to buy it?",
+                         "anstype": "incredecre",
+                         "noOfoptions": 1,
+                         "questioncode": "FQ30",
+                         "goalcode": "FG1",
+                         "defaultOption": "1",
+                         "Options": [
+                                     {
+                                     "key": "1",
+                                     "value": "1 YEAR"
+                                     },
+                                     {
+                                     "key": "50",
+                                     "value": "50 YEARS"
+                                     }
+                                     ]
+                         },
+                         {
+                         "ques": "What kind of bike do you want?",
+                         "anstype": "checkbox",
+                         "noOfoptions": 5,
+                         "questioncode": "FQ31",
+                         "goalcode": "FG1",
+                         "defaultOption": "250",
+                         "Options": [
+                                     {
+                                     "key": "250",
+                                     "value": "250 CC"
+                                     },
+                                     {
+                                     "key": "500",
+                                     "value": "500 CC"
+                                     },
+                                     {
+                                     "key": "800",
+                                     "value": "800 CC"
+                                     },
+                                     {
+                                     "key": "1000",
+                                     "value": "1000 CC"
+                                     },
+                                     {
+                                     "key": "1200",
+                                     "value": "1200 CC"
+                                     }
+                                     ]
+                         }
+                         ]
+           },
+           {
+           "ques": "Want to start your own business?",
+           "anstype": "checkbox",
+           "noOfoptions": 2,
+           "questioncode": "FQ32",
+           "goalcode": "FG2",
+           "defaultOption": "0",
+           "Options": [
+                       {
+                       "key": "1",
+                       "value": "YES"
+                       },
+                       {
+                       "key": "0",
+                       "value": "NO"
+                       }
+                       ],
+           "QuesArray": [
+                         {
+                         "ques": "How soon?",
+                         "anstype": "incredecre",
+                         "noOfoptions": 1,
+                         "questioncode": "FQ51",
+                         "goalcode": "FG2",
+                         "defaultOption": "1",
+                         "Options": [
+                                     {
+                                     "key": "1",
+                                     "value": "1 YEAR"
+                                     },
+                                     {
+                                     "key": "50",
+                                     "value": "50 YEARS"
+                                     }
+                                     ]
+                         },
+                         {
+                         "ques": "How much money do you need to start?",
+                         "anstype": "scrollincredecre",
+                         "noOfoptions": 2,
+                         "questioncode": "FQ33",
+                         "goalcode": "FG2",
+                         "defaultOption": "1000000",
+                         "Options": [
+                                     {
+                                     "key": "1000000",
+                                     "value": "10 LAC"
+                                     },
+                                     {
+                                     "key": "150000000",
+                                     "value": "1.5 CR"
+                                     }
+                                     ]
+                         },
+                         {
+                         "ques": "How much money do you need to run your business every month?",
+                         "anstype": "textbox",
+                         "noOfoptions": 0,
+                         "questioncode": "FQ34",
+                         "goalcode": "FG2",
+                         "defaultOption": "",
+                         "Options": []
+                         }
+                         ]
+           },
+           {
+           "ques": "What do you want your bank balance in the next 5 years?",
+           "anstype": "checkbox",
+           "noOfoptions": 3,
+           "questioncode": "FQ35",
+           "goalcode": "FG8",
+           "defaultOption": "",
+           "Options": [
+                       {
+                       "key": "32.7",
+                       "value": "32.7 LAC"
+                       },
+                       {
+                       "key": "65.3",
+                       "value": "65.3 LAC"
+                       },
+                       {
+                       "key": "98.0",
+                       "value": "98.0 LAC"
+                       }
+                       ],
+           "QuesArray": []
+           },
+           {
+           "ques": "When do you want to retire?",
+           "anstype": "scrollincredecre",
+           "noOfoptions": 2,
+           "questioncode": "FQ36",
+           "goalcode": "FG9",
+           "defaultOption": "60",
+           "Options": [
+                       {
+                       "key": "40",
+                       "value": "40 YEARS"
+                       },
+                       {
+                       "key": "60",
+                       "value": "60 YEARS"
+                       },
+                       {
+                       "key": "70",
+                       "value": "70 YEARS"
+                       }
+                       ],
+           "QuesArray": []
+           },
+           {
+           "ques": "Is there any another goal you have in mind?",
+           "anstype": "checkbox",
+           "noOfoptions": 2,
+           "questioncode": "FQ37",
+           "goalcode": "FG14",
+           "defaultOption": "0",
+           "Options": [
+                       {
+                       "key": "1",
+                       "value": "YES"
+                       },
+                       {
+                       "key": "0",
+                       "value": "NO"
+                       }
+                       ],
+           "QuesArray": [
+                         {
+                         "ques": "What is it?",
+                         "anstype": "textfield",
+                         "noOfoptions": 0,
+                         "questioncode": "FQ38",
+                         "goalcode": "FG14",
+                         "defaultOption":"",
+                         "Options": []
+                         },
+                         {
+                         "ques": "How much will it cost?",
+                         "anstype": "textfield",
+                         "noOfoptions": 0,
+                         "questioncode": "FQ39",
+                         "goalcode": "FG14",
+                         "defaultOption":"",
+                         "Options": []
+                         },
+                         {
+                         "ques": "How soon do you want to achieve it?",
+                         "anstype": "scrollincredecre",
+                         "noOfoptions": 0,
+                         "questioncode": "FQ40",
+                         "goalcode": "FG14",
+                         "defaultOption": "1",
+                         "Options": [
+                                     {
+                                     "key": "1",
+                                     "value": "1 YEARS"
+                                     },
+                                     {
+                                     "key": "10",
+                                     "value": "10 YEARS"
+                                     }
+                                     ]
+                         }
+                         ]
+           }
+           ]
+}
