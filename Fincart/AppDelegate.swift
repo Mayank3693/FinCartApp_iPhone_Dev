@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         isUserLoggedIn()
         setUpRootViewController()
         
-//        print("Application did finish launching")
+        print("Application did finish launching")
         return true
     }
 
