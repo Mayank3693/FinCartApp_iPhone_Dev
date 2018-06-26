@@ -94,6 +94,7 @@
 		8AF3663A204E273A008F6207 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF36639204E273A008F6207 /* Colors.swift */; };
 		8AF3663C204E282F008F6207 /* Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3663B204E282F008F6207 /* Dimensions.swift */; };
 		8AF3663E204E28D0008F6207 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3663D204E28D0008F6207 /* Images.swift */; };
+		A82214C020E2C63E004D5009 /* SipQuestionireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82214BF20E2C63E004D5009 /* SipQuestionireVC.swift */; };
 		BC4682F4204D79C100DC5A6D /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682D6204D79BD00DC5A6D /* EditProfileVC.swift */; };
 		BC4682F5204D79C100DC5A6D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682D7204D79BD00DC5A6D /* ProfileVC.swift */; };
 		BC4682F6204D79C100DC5A6D /* BankAccountDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682DA204D79C000DC5A6D /* BankAccountDetailsVC.swift */; };
@@ -232,6 +233,7 @@
 		8AF36639204E273A008F6207 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		8AF3663B204E282F008F6207 /* Dimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dimensions.swift; sourceTree = "<group>"; };
 		8AF3663D204E28D0008F6207 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		A82214BF20E2C63E004D5009 /* SipQuestionireVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SipQuestionireVC.swift; sourceTree = "<group>"; };
 		A8DAFB14C52BB55555289070 /* Pods_FincartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FincartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4682D6204D79BD00DC5A6D /* EditProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		BC4682D7204D79BD00DC5A6D /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -408,6 +410,7 @@
 		61CF3DE51F8007E200D5AA67 /* Fincart */ = {
 			isa = PBXGroup;
 			children = (
+				A82214BE20E2C5EC004D5009 /* Quick SIP */,
 				5C17CE401FC167DA0013D002 /* Json */,
 				5CC3B6C31FB70250007458F4 /* External */,
 				5CC3B6A01FB6F260007458F4 /* Routing */,
@@ -715,6 +718,14 @@
 				8AF1DBBD205F01B800FE4C71 /* ResetPasswordVC.swift */,
 			);
 			path = ForgotPasswordVC;
+			sourceTree = "<group>";
+		};
+		A82214BE20E2C5EC004D5009 /* Quick SIP */ = {
+			isa = PBXGroup;
+			children = (
+				A82214BF20E2C63E004D5009 /* SipQuestionireVC.swift */,
+			);
+			name = "Quick SIP";
 			sourceTree = "<group>";
 		};
 		BC4682D5204D79BD00DC5A6D /* profile */ = {
@@ -1098,6 +1109,7 @@
 				8A9922B8208F4841004C4774 /* SavedUserGoalServiceResponse.swift in Sources */,
 				8A562303206DE762003DF91F /* ChildInfoTableViewCell.swift in Sources */,
 				8AEE526B2063988700E834B5 /* FincartCommon.swift in Sources */,
+				A82214C020E2C63E004D5009 /* SipQuestionireVC.swift in Sources */,
 				8AF0152D1FFD076800A60957 /* FinancialPlanningCell.swift in Sources */,
 				8A8976C82073981900915327 /* SingleGoalList.swift in Sources */,
 				5CC3B6D51FB73875007458F4 /* StringConstants.swift in Sources */,

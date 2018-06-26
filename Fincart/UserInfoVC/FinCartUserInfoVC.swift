@@ -18,6 +18,7 @@ class FinCartUserInfoVC: FinCartViewController, UITextFieldDelegate {
     var isSingleGoal: Bool! = false
     var isSingleGoalChild: Bool! = false
     var singleGoalCode: String?
+    var fincartType  = String()
     var childs: Int = 0
     var userInfoData: UserInfoData?
     
@@ -326,6 +327,8 @@ class FinCartUserInfoVC: FinCartViewController, UITextFieldDelegate {
                 setChildLabelValue()
                 hideViews(isMartialStatusHide: false, isChildrenStatusHide: false, isGenderStatusHide: false)
                 
+            }else if (self.fincartType  == "Quick SIP"){
+                hideViews(isMartialStatusHide: true, isChildrenStatusHide: true, isGenderStatusHide: false)
             }else{
                 self.singleStatusButton.isSelected = true
                 hideViews(isMartialStatusHide: false, isChildrenStatusHide: true, isGenderStatusHide: false)
@@ -449,22 +452,27 @@ class FinCartUserInfoVC: FinCartViewController, UITextFieldDelegate {
                             }
                         }
                         else{
-                            if self.userInfoData?.martialStatusCode == "003"{
-                                self.navigateToChildBasicInfoVC(self.childs, isSingleGoal: false, goalCode: "", income: monthlyIncome! * 12)
-                            }
-                            else{
-                                var jsonFile = ""
-                                if self.userInfoData?.martialStatusCode == "002"{
-                                    jsonFile += "married_"
-                                }else{
-                                    jsonFile += "single_"
+                            if self.fincartType == "Quick SIP"{
+                                let vc = self.storyboard?.instantiateViewController(withIdentifier: "SipQuestionireVC") as! SipQuestionireVC
+                                self.navigationController?.pushViewController(vc, animated: true)
+                            }else{
+                                if self.userInfoData?.martialStatusCode == "003"{
+                                    self.navigateToChildBasicInfoVC(self.childs, isSingleGoal: false, goalCode: "", income: monthlyIncome! * 12)
                                 }
-                                if self.userInfoData?.genderStatusCode == "001"{
-                                    jsonFile += "male"
-                                }else{
-                                    jsonFile += "female"
+                                else{
+                                    var jsonFile = ""
+                                    if self.userInfoData?.martialStatusCode == "002"{
+                                        jsonFile += "married_"
+                                    }else{
+                                        jsonFile += "single_"
+                                    }
+                                    if self.userInfoData?.genderStatusCode == "001"{
+                                        jsonFile += "male"
+                                    }else{
+                                        jsonFile += "female"
+                                    }
+                                    self.navigateTofulllFinancialGoalsVC(jsonFile, yesCount: 0, income: monthlyIncome! * 12)
                                 }
-                                self.navigateTofulllFinancialGoalsVC(jsonFile, yesCount: 0, income: monthlyIncome! * 12)
                             }
                         }
                     })
