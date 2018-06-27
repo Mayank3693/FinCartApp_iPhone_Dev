@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4Ek-il-iW0">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4Ek-il-iW0">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -46,7 +47,7 @@
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_thinking" translatesAutoresizingMaskIntoConstraints="NO" id="Qzk-KJ-R5w">
-                                                <rect key="frame" x="213.5" y="40" width="170" height="170"/>
+                                                <rect key="frame" x="213.66666666666663" y="40" width="170" height="170"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="170" id="Bau-Bv-QRm"/>
                                                     <constraint firstAttribute="width" secondItem="Qzk-KJ-R5w" secondAttribute="height" multiplier="1:1" id="z0P-zx-h9s"/>
@@ -344,7 +345,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with your social account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7fI-nX-TGZ">
-                                        <rect key="frame" x="129" y="17" width="241" height="20.5"/>
+                                        <rect key="frame" x="129.33333333333337" y="17" width="240.66666666666663" height="20.333333333333329"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <accessibility key="accessibilityConfiguration" identifier="label_sign_in_social"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -352,13 +353,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZwL-xv-Dy2">
-                                        <rect key="frame" x="0.0" y="45.5" width="500" height="50"/>
+                                        <rect key="frame" x="0.0" y="45.333333333333371" width="500" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFs-HG-yoa">
-                                                <rect key="frame" x="0.0" y="0.0" width="166.5" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lCQ-3d-qnd">
-                                                        <rect key="frame" x="57.5" y="2" width="53" height="45"/>
+                                                        <rect key="frame" x="57.666666666666657" y="2" width="53" height="45"/>
                                                         <accessibility key="accessibilityConfiguration" identifier="button_facebook_login"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="FhX-2f-jqm"/>
@@ -376,10 +377,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sPJ-qd-5Eu">
-                                                <rect key="frame" x="166.5" y="0.0" width="167" height="50"/>
+                                                <rect key="frame" x="166.66666666666669" y="0.0" width="166.66666666666669" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFI-Xc-jk0">
-                                                        <rect key="frame" x="57.5" y="2.5" width="53" height="45"/>
+                                                        <rect key="frame" x="57.333333333333343" y="2.6666666666666288" width="53" height="45"/>
                                                         <accessibility key="accessibilityConfiguration" identifier="button_google_login"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="ZWq-Zd-d2n"/>
@@ -397,10 +398,10 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rQr-eu-WA6">
-                                                <rect key="frame" x="333.5" y="0.0" width="166.5" height="50"/>
+                                                <rect key="frame" x="333.33333333333331" y="0.0" width="166.66666666666669" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="upy-Ro-tpy">
-                                                        <rect key="frame" x="56.5" y="2" width="53" height="45"/>
+                                                        <rect key="frame" x="56.666666666666686" y="2" width="53" height="45"/>
                                                         <accessibility key="accessibilityConfiguration" identifier="button_linkedin_login"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="6bh-SS-RhG"/>
@@ -651,7 +652,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Of the User Info" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQs-mK-yKS">
-                                        <rect key="frame" x="164.5" y="163" width="171" height="30"/>
+                                        <rect key="frame" x="164.66666666666666" y="163" width="170.99999999999997" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="qxE-DA-pYR"/>
                                         </constraints>
@@ -879,14 +880,14 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                 </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To confirm with our strong password policy: password must be minimum of 8 and maximum characters" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="316" translatesAutoresizingMaskIntoConstraints="NO" id="RjI-zQ-qwC">
-                                                <rect key="frame" x="95" y="363" width="308.5" height="29"/>
+                                                <rect key="frame" x="95" y="363" width="308.33333333333331" height="28.666666666666686"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="label_description_password"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AK7-sO-LHj" customClass="RoundRectUIButton" customModule="Fincart" customModuleProvider="target">
-                                                <rect key="frame" x="42" y="409" width="416" height="50"/>
+                                                <rect key="frame" x="42" y="408.66666666666669" width="416" height="50"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="button_signup"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="416" id="UC0-bd-3sf"/>
@@ -910,7 +911,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="button_click_here" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMa-bb-7t0">
-                                                <rect key="frame" x="144" y="475" width="212" height="30"/>
+                                                <rect key="frame" x="144" y="474.66666666666669" width="212" height="30"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="button_already_registered"/>
                                                 <state key="normal" title="Already Registered? Click Here">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -967,7 +968,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with your social account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OX3-cB-X7O">
-                                        <rect key="frame" x="129" y="17" width="241" height="20.5"/>
+                                        <rect key="frame" x="129.33333333333337" y="17" width="240.66666666666663" height="20.333333333333329"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <accessibility key="accessibilityConfiguration" identifier="label_sign_in_social"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -975,13 +976,13 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="J7D-fz-TU7">
-                                        <rect key="frame" x="0.0" y="45.5" width="500" height="50"/>
+                                        <rect key="frame" x="0.0" y="45.333333333333371" width="500" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7W-Qg-Kel">
-                                                <rect key="frame" x="0.0" y="0.0" width="166.5" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDz-ub-l7E">
-                                                        <rect key="frame" x="57.5" y="2" width="53" height="45"/>
+                                                        <rect key="frame" x="57.666666666666657" y="2" width="53" height="45"/>
                                                         <accessibility key="accessibilityConfiguration" identifier="button_facebook_login"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="4rY-cv-VLB"/>
@@ -999,10 +1000,10 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JXA-iR-9ok">
-                                                <rect key="frame" x="166.5" y="0.0" width="167" height="50"/>
+                                                <rect key="frame" x="166.66666666666669" y="0.0" width="166.66666666666669" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Xn-bc-S24">
-                                                        <rect key="frame" x="57.5" y="2.5" width="53" height="45"/>
+                                                        <rect key="frame" x="57.333333333333343" y="2.6666666666666288" width="53" height="45"/>
                                                         <accessibility key="accessibilityConfiguration" identifier="button_google_login"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="45" id="XJY-pS-mj9"/>
@@ -1020,7 +1021,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="loE-HY-Vjd">
-                                                <rect key="frame" x="333.5" y="0.0" width="166.5" height="50"/>
+                                                <rect key="frame" x="333.33333333333331" y="0.0" width="166.66666666666669" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HzZ-LX-Lxv">
                                                         <rect key="frame" x="56" y="2" width="53" height="45"/>
@@ -1164,19 +1165,19 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KE-T2-K2R">
-                                                    <rect key="frame" x="72" y="38" width="337" height="17"/>
+                                                    <rect key="frame" x="72" y="38" width="332" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilc-Vm-JGH">
-                                                    <rect key="frame" x="72" y="55" width="337" height="14.5"/>
+                                                    <rect key="frame" x="72" y="55" width="332" height="14.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons_forward" translatesAutoresizingMaskIntoConstraints="NO" id="pXs-Ym-mnf">
-                                                    <rect key="frame" x="425" y="40" width="20" height="20"/>
+                                                    <rect key="frame" x="420" y="40" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="8rL-aM-jhg"/>
                                                         <constraint firstAttribute="height" constant="20" id="IXC-9y-U1F"/>
@@ -1335,7 +1336,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                         <viewControllerLayoutGuide type="bottom" id="sAo-Bq-RDt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ogU-Ei-6hD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -1710,7 +1711,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ques_ic_family" translatesAutoresizingMaskIntoConstraints="NO" id="Fga-6o-v95">
-                                <rect key="frame" x="179.5" y="120" width="140" height="140"/>
+                                <rect key="frame" x="179.66666666666666" y="120" width="139.99999999999997" height="140"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Fga-6o-v95" secondAttribute="height" multiplier="1:1" id="Ny5-aI-xHM"/>
                                     <constraint firstAttribute="width" constant="140" id="W1L-fx-TPd"/>
@@ -1881,7 +1882,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MKd-Zi-6QR">
-                                                    <rect key="frame" x="0.0" y="0.0" width="460" height="29.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="460" height="29.666666666666668"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wb8-nZ-dkS">
                                                             <rect key="frame" x="0.0" y="0.0" width="401" height="40"/>
@@ -1936,7 +1937,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLl-kA-NFU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="460" height="95.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="460" height="95.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQk-Mg-ah2">
                                                             <rect key="frame" x="0.0" y="0.0" width="460" height="40"/>
@@ -2011,7 +2012,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWM-Qw-TAy">
-                                                    <rect key="frame" x="0.0" y="0.0" width="460" height="95.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="460" height="95.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVZ-cd-vUl">
                                                             <rect key="frame" x="0.0" y="0.0" width="460" height="40"/>
@@ -2174,7 +2175,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
             <objects>
                 <navigationController storyboardIdentifier="goalsReviewNavigationVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xSx-2W-iIl" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bAg-ki-TBc">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -2243,13 +2244,13 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                         <rect key="frame" x="8" y="8" width="452" height="68"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Need to be replaced" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b84-Ka-dHh">
-                                                                <rect key="frame" x="0.0" y="0.0" width="452" height="30.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="452" height="30.666666666666668"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <color key="textColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Need to be replaced" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3gH-iy-5Zb">
-                                                                <rect key="frame" x="0.0" y="38.5" width="452" height="29.5"/>
+                                                                <rect key="frame" x="0.0" y="38.666666666666686" width="452" height="29.333333333333329"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -2315,13 +2316,13 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                                         <rect key="frame" x="121" y="0.0" width="210" height="30"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₹" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bF-Ox-ZS7">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="11" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="10.666666666666666" height="30"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="15667" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AWW-Il-Kga">
-                                                                                <rect key="frame" x="19" y="0.0" width="191" height="30"/>
+                                                                                <rect key="frame" x="18.666666666666657" y="0.0" width="191.33333333333334" height="30"/>
                                                                                 <nil key="textColor"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
@@ -2538,7 +2539,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                                         <rect key="frame" x="0.0" y="0.0" width="452" height="30"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TET-q6-jH0" customClass="DLRadioButton">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="104.5" height="30"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="104.66666666666667" height="30"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                                 <state key="normal" title="LOW">
                                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -2568,7 +2569,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                                                 </connections>
                                                                             </button>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GvQ-Cn-Qyn" customClass="DLRadioButton">
-                                                                                <rect key="frame" x="112.5" y="0.0" width="184.5" height="30"/>
+                                                                                <rect key="frame" x="112.66666666666664" y="0.0" width="184.33333333333337" height="30"/>
                                                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                                 <state key="normal" title="MEDIUM">
                                                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -2657,16 +2658,16 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                         <rect key="frame" x="8" y="8" width="452" height="110"/>
                                                         <subviews>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFH-HG-syd">
-                                                                <rect key="frame" x="0.0" y="0.0" width="452" height="31.5"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="452" height="31.333333333333332"/>
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_time_passing" translatesAutoresizingMaskIntoConstraints="NO" id="2e8-SU-K7c">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="31.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="30" height="31.333333333333332"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="30" id="5EC-vx-GPs"/>
                                                                         </constraints>
                                                                     </imageView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Duration of investment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHO-ux-AFC">
-                                                                        <rect key="frame" x="38" y="0.0" width="414" height="31.5"/>
+                                                                        <rect key="frame" x="38" y="0.0" width="414" height="31.333333333333332"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" red="0.01176470588" green="0.1960784314" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -2684,10 +2685,10 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d5u-9d-X3K">
-                                                                <rect key="frame" x="0.0" y="39.5" width="452" height="31"/>
+                                                                <rect key="frame" x="0.0" y="39.333333333333371" width="452" height="31.333333333333329"/>
                                                                 <subviews>
                                                                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1.5" translatesAutoresizingMaskIntoConstraints="NO" id="kYb-h7-GbM">
-                                                                        <rect key="frame" x="14" y="0.0" width="424" height="32"/>
+                                                                        <rect key="frame" x="14" y="0.0" width="424" height="32.333333333333329"/>
                                                                         <connections>
                                                                             <action selector="selectDurationValue:" destination="ALa-HY-hQ8" eventType="valueChanged" id="UCc-k0-FfG"/>
                                                                         </connections>
@@ -2702,10 +2703,10 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                                 </constraints>
                                                             </view>
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rze-LA-mpa">
-                                                                <rect key="frame" x="0.0" y="78.5" width="452" height="31.5"/>
+                                                                <rect key="frame" x="0.0" y="78.666666666666629" width="452" height="31.333333333333329"/>
                                                                 <subviews>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 YEARS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bB2-pk-Zmd">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="452" height="31.5"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="452" height="31.333333333333332"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" red="0.01176470588" green="0.1960784314" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                         <nil key="highlightedColor"/>
@@ -2823,7 +2824,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <navigationController storyboardIdentifier="FinCartKYCCheckNavigationVC" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rxR-c2-xkt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Foz-fa-6Z4">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.082352941176470587" green="0.3411764705882353" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2843,7 +2844,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
             <objects>
                 <navigationController storyboardIdentifier="finCartGoalsNavigationVC" title="Goals Navigation Controller" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Mkl-xH-DUH" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dOY-f3-8GI">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.082352941176470587" green="0.3411764705882353" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -2866,7 +2867,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                         <viewControllerLayoutGuide type="bottom" id="CLh-c3-0hQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="TTe-Vc-4MG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -3544,7 +3545,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vFD-9O-1ej" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TnG-NR-4wS">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3565,7 +3566,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                         <viewControllerLayoutGuide type="bottom" id="w4B-rv-aKw"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xGW-vH-7hc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -3575,13 +3576,207 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
             </objects>
             <point key="canvasLocation" x="121" y="1380"/>
         </scene>
+        <!--Sip ListVC-->
+        <scene sceneID="xFN-Gi-XBe">
+            <objects>
+                <viewController storyboardIdentifier="SipListVC" id="bRU-cL-DZa" customClass="SipListVC" customModule="Fincart" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AJt-D6-4Na"/>
+                        <viewControllerLayoutGuide type="bottom" id="lWw-c1-POF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WmP-x9-Xjx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ODJ-y7-mDm">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SipListCell" rowHeight="272" id="3QD-Xd-D7t" customClass="SipListCell" customModule="Fincart" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="272"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3QD-Xd-D7t" id="sGW-NK-c8Y">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="271.66666666666669"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GBg-DZ-APt">
+                                                    <rect key="frame" x="60" y="45" width="334" height="208"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quick sip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kza-W3-oyh">
+                                                            <rect key="frame" x="51" y="5" width="260" height="45.666666666666664"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OII-ws-Os4">
+                                                            <rect key="frame" x="40" y="65.666666666666671" width="286" height="75.000000000000014"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CURRENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GV-fU-JRK">
+                                                                    <rect key="frame" x="8" y="7.9999999999999991" width="63" height="15.666666666666664"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INVESTED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NnA-aD-Av0">
+                                                                    <rect key="frame" x="8" y="28.666666666666675" width="63" height="15.666666666666668"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PENDING" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwt-Ma-Lbh">
+                                                                    <rect key="frame" x="8" y="49.333333333333329" width="63" height="15.666666666666671"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="70000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khS-IB-oQv">
+                                                                    <rect key="frame" x="106" y="7.9999999999999991" width="172" height="15.666666666666664"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="600000999900---" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="slG-IP-fOp">
+                                                                    <rect key="frame" x="162" y="49.333333333333329" width="116" height="15.666666666666671"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50000" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhl-a6-Hfy">
+                                                                    <rect key="frame" x="106" y="28.666666666666675" width="172" height="15.666666666666668"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="slG-IP-fOp" firstAttribute="top" secondItem="Nhl-a6-Hfy" secondAttribute="bottom" constant="5" id="0X3-Xf-tqd"/>
+                                                                <constraint firstItem="2GV-fU-JRK" firstAttribute="leading" secondItem="OII-ws-Os4" secondAttribute="leading" constant="8" id="ACn-SA-1N2"/>
+                                                                <constraint firstItem="khS-IB-oQv" firstAttribute="top" secondItem="OII-ws-Os4" secondAttribute="top" constant="8" id="CHr-JT-ddG"/>
+                                                                <constraint firstAttribute="trailing" secondItem="slG-IP-fOp" secondAttribute="trailing" constant="8" id="CJm-00-Ud6"/>
+                                                                <constraint firstItem="NnA-aD-Av0" firstAttribute="height" secondItem="2GV-fU-JRK" secondAttribute="height" id="G01-We-cQl"/>
+                                                                <constraint firstItem="fwt-Ma-Lbh" firstAttribute="width" secondItem="2GV-fU-JRK" secondAttribute="width" id="GUt-Q2-F6d"/>
+                                                                <constraint firstItem="NnA-aD-Av0" firstAttribute="width" secondItem="2GV-fU-JRK" secondAttribute="width" id="KEd-7E-8qG"/>
+                                                                <constraint firstAttribute="trailing" secondItem="khS-IB-oQv" secondAttribute="trailing" constant="8" id="ML1-YR-36X"/>
+                                                                <constraint firstItem="khS-IB-oQv" firstAttribute="height" secondItem="2GV-fU-JRK" secondAttribute="height" id="PLu-po-sYH"/>
+                                                                <constraint firstItem="2GV-fU-JRK" firstAttribute="top" secondItem="OII-ws-Os4" secondAttribute="top" constant="8" id="Qs9-8a-2P8"/>
+                                                                <constraint firstAttribute="trailing" secondItem="Nhl-a6-Hfy" secondAttribute="trailing" constant="8" id="T5V-LS-fjC"/>
+                                                                <constraint firstItem="fwt-Ma-Lbh" firstAttribute="top" secondItem="NnA-aD-Av0" secondAttribute="bottom" constant="5" id="Ucg-O4-LeB"/>
+                                                                <constraint firstAttribute="height" constant="75" id="ZeO-F2-yGN"/>
+                                                                <constraint firstItem="Nhl-a6-Hfy" firstAttribute="top" secondItem="khS-IB-oQv" secondAttribute="bottom" constant="5" id="b5h-2t-nW9"/>
+                                                                <constraint firstItem="NnA-aD-Av0" firstAttribute="leading" secondItem="OII-ws-Os4" secondAttribute="leading" constant="8" id="bO9-cT-5VT"/>
+                                                                <constraint firstItem="khS-IB-oQv" firstAttribute="leading" secondItem="2GV-fU-JRK" secondAttribute="trailing" constant="35" id="cZ3-90-ypH"/>
+                                                                <constraint firstItem="fwt-Ma-Lbh" firstAttribute="leading" secondItem="OII-ws-Os4" secondAttribute="leading" constant="8" id="edn-Xv-Yn4"/>
+                                                                <constraint firstItem="NnA-aD-Av0" firstAttribute="top" secondItem="2GV-fU-JRK" secondAttribute="bottom" constant="5" id="pxX-y9-Ue7"/>
+                                                                <constraint firstItem="fwt-Ma-Lbh" firstAttribute="height" secondItem="2GV-fU-JRK" secondAttribute="height" id="sf9-Oa-DEf"/>
+                                                                <constraint firstItem="Nhl-a6-Hfy" firstAttribute="leading" secondItem="NnA-aD-Av0" secondAttribute="trailing" constant="35" id="x06-IS-RVS"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="q4c-bm-sfD">
+                                                            <rect key="frame" x="14" y="143.66666666666666" width="306" height="28.333333333333343"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bNk-q3-ajO">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="143" height="28.333333333333332"/>
+                                                                    <color key="backgroundColor" red="0.0" green="0.30588235289999999" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <state key="normal" title="MODIFY">
+                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                </button>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oza-vZ-dsP">
+                                                                    <rect key="frame" x="163" y="0.0" width="143" height="28.333333333333332"/>
+                                                                    <color key="backgroundColor" red="0.0" green="0.71764705880000002" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <state key="normal" title="ACTIVATE">
+                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                </button>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suk-Nd-fXN">
+                                                            <rect key="frame" x="0.0" y="178" width="334" height="30.666666666666657"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.30588235289999999" blue="0.67843137249999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <state key="normal" title="Map With Goal">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Suk-Nd-fXN" firstAttribute="centerX" secondItem="GBg-DZ-APt" secondAttribute="centerX" id="1el-Jb-41h"/>
+                                                        <constraint firstItem="Suk-Nd-fXN" firstAttribute="height" secondItem="GBg-DZ-APt" secondAttribute="height" multiplier="27/184" id="3at-Vc-l1o"/>
+                                                        <constraint firstItem="Suk-Nd-fXN" firstAttribute="top" secondItem="q4c-bm-sfD" secondAttribute="bottom" constant="7" id="53d-rA-WJD"/>
+                                                        <constraint firstItem="OII-ws-Os4" firstAttribute="centerY" secondItem="GBg-DZ-APt" secondAttribute="centerY" id="8mU-BC-4Va"/>
+                                                        <constraint firstItem="q4c-bm-sfD" firstAttribute="height" secondItem="GBg-DZ-APt" secondAttribute="height" multiplier="25/184" id="B2r-IF-hgX"/>
+                                                        <constraint firstItem="Suk-Nd-fXN" firstAttribute="width" secondItem="GBg-DZ-APt" secondAttribute="width" id="Ie9-GF-PlW"/>
+                                                        <constraint firstItem="kza-W3-oyh" firstAttribute="top" secondItem="GBg-DZ-APt" secondAttribute="top" constant="5" id="J11-5X-XiC"/>
+                                                        <constraint firstAttribute="trailing" secondItem="kza-W3-oyh" secondAttribute="trailing" constant="23" id="LuC-xH-eRb"/>
+                                                        <constraint firstItem="kza-W3-oyh" firstAttribute="leading" secondItem="GBg-DZ-APt" secondAttribute="leading" constant="51" id="NBF-7B-JUy"/>
+                                                        <constraint firstAttribute="trailing" secondItem="OII-ws-Os4" secondAttribute="trailing" constant="8" id="Pdl-eu-jbf"/>
+                                                        <constraint firstItem="OII-ws-Os4" firstAttribute="leading" secondItem="GBg-DZ-APt" secondAttribute="leading" constant="40" id="PmW-7e-WHs"/>
+                                                        <constraint firstItem="q4c-bm-sfD" firstAttribute="centerX" secondItem="GBg-DZ-APt" secondAttribute="centerX" id="XHz-VW-Mm3"/>
+                                                        <constraint firstItem="OII-ws-Os4" firstAttribute="top" secondItem="kza-W3-oyh" secondAttribute="bottom" constant="15" id="bxr-6j-kDd"/>
+                                                        <constraint firstItem="q4c-bm-sfD" firstAttribute="width" secondItem="GBg-DZ-APt" secondAttribute="width" multiplier="270/295" id="pH2-XY-8r1"/>
+                                                        <constraint firstItem="q4c-bm-sfD" firstAttribute="top" secondItem="OII-ws-Os4" secondAttribute="bottom" constant="3" id="w6W-Kd-bGc"/>
+                                                    </constraints>
+                                                </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sip" translatesAutoresizingMaskIntoConstraints="NO" id="l2w-ks-1ov">
+                                                    <rect key="frame" x="15" y="10" width="80" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="9Id-04-ULa"/>
+                                                        <constraint firstAttribute="width" constant="80" id="MPv-KE-3Wo"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="GBg-DZ-APt" firstAttribute="top" secondItem="sGW-NK-c8Y" secondAttribute="top" constant="45" id="5Jw-BM-GAA"/>
+                                                <constraint firstAttribute="trailing" secondItem="GBg-DZ-APt" secondAttribute="trailing" constant="20" id="9D3-LW-FYk"/>
+                                                <constraint firstItem="l2w-ks-1ov" firstAttribute="top" secondItem="sGW-NK-c8Y" secondAttribute="top" constant="10" id="hpo-D8-0UC"/>
+                                                <constraint firstItem="GBg-DZ-APt" firstAttribute="leading" secondItem="sGW-NK-c8Y" secondAttribute="leading" constant="60" id="rd1-4H-Djq"/>
+                                                <constraint firstAttribute="bottom" secondItem="GBg-DZ-APt" secondAttribute="bottom" constant="18.5" id="rd5-Bb-Rn2"/>
+                                                <constraint firstItem="GBg-DZ-APt" firstAttribute="leading" secondItem="l2w-ks-1ov" secondAttribute="trailing" constant="-35" id="tf0-e1-LNI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="activateBtn" destination="oza-vZ-dsP" id="CxS-ee-7Uy"/>
+                                            <outlet property="cellHeader" destination="kza-W3-oyh" id="8Fs-qQ-Dlm"/>
+                                            <outlet property="currentLabel" destination="khS-IB-oQv" id="WtJ-LX-zer"/>
+                                            <outlet property="investLabel" destination="Nhl-a6-Hfy" id="MV4-B2-ZNx"/>
+                                            <outlet property="mainView" destination="GBg-DZ-APt" id="nIY-FN-BVG"/>
+                                            <outlet property="mapWithGoalBtn" destination="Suk-Nd-fXN" id="iKq-D3-2hn"/>
+                                            <outlet property="modifyBtn" destination="bNk-q3-ajO" id="E4o-wz-kbf"/>
+                                            <outlet property="pendingLabel" destination="slG-IP-fOp" id="Jg9-pi-9AE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="bRU-cL-DZa" id="xbw-ri-YVs"/>
+                                    <outlet property="delegate" destination="bRU-cL-DZa" id="WG4-dT-Ds1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lWw-c1-POF" firstAttribute="top" secondItem="ODJ-y7-mDm" secondAttribute="bottom" id="4Xc-jm-xR9"/>
+                            <constraint firstItem="ODJ-y7-mDm" firstAttribute="top" secondItem="WmP-x9-Xjx" secondAttribute="top" id="AaG-fg-Kou"/>
+                            <constraint firstItem="ODJ-y7-mDm" firstAttribute="leading" secondItem="WmP-x9-Xjx" secondAttribute="leading" id="cFW-XM-eFG"/>
+                            <constraint firstAttribute="trailing" secondItem="ODJ-y7-mDm" secondAttribute="trailing" id="k2h-jB-39s"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="sipListTableView" destination="ODJ-y7-mDm" id="teM-FQ-qPK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tgb-WE-4oU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1080.8" y="1298.5007496251876"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="1fC-np-3fp">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B2m-st-SeP" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SAs-QR-pPK">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3602,7 +3797,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                         <viewControllerLayoutGuide type="bottom" id="9RG-Da-QF1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VQk-bK-7tK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -3618,7 +3813,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7wJ-aV-N5x" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eJV-0c-EU0">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3639,7 +3834,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                         <viewControllerLayoutGuide type="bottom" id="Md2-zs-mVp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="w5P-cv-EiH">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -3655,7 +3850,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FIO-ti-Nfo" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GSt-cW-tc6">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3672,15 +3867,15 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
             <objects>
                 <tableViewController storyboardIdentifier="OccupationsList" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nv7-mF-Qbt" customClass="OccupationsList" customModule="Fincart" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NHU-Ww-j1c">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="FLc-NL-Kmp">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FLc-NL-Kmp" id="bUb-Q7-HJY">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -3702,7 +3897,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QVQ-Oj-Grw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fV5-Nw-7c4">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3719,15 +3914,15 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
             <objects>
                 <tableViewController storyboardIdentifier="AnnualIncomeLists" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vpj-ie-zLj" customClass="AnnualIncomeLists" customModule="Fincart" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="m3x-P8-cAn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="ApK-zE-PNn">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ApK-zE-PNn" id="mKW-6d-iXm">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -3749,7 +3944,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ms9-t0-6pA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iAP-4z-46c">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3770,7 +3965,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                         <viewControllerLayoutGuide type="bottom" id="qGB-dK-vgH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kCj-Ff-p8P">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -3786,7 +3981,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="B4I-RI-KQM" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Xo-Na-cJJ">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3803,15 +3998,15 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
             <objects>
                 <tableViewController storyboardIdentifier="BankAccountTypeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Q4-Ui-pDt" customClass="BankAccountTypeVC" customModule="Fincart" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Jlj-Ic-De0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="QQ5-Op-7F8">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QQ5-Op-7F8" id="oOP-Nl-p4w">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -3833,7 +4028,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EYy-Nl-E3E" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9c2-yX-sja">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3850,15 +4045,15 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
             <objects>
                 <tableViewController storyboardIdentifier="IncomeSourceVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="c62-LS-XCO" customClass="IncomeSourceVC" customModule="Fincart" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AqG-CU-RYG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Dm4-xw-E3j">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dm4-xw-E3j" id="NhR-zP-GHs">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -3880,7 +4075,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OhL-5J-inh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="C7q-ga-iIT">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -3901,11 +4096,11 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                         <viewControllerLayoutGuide type="bottom" id="XpK-Ro-EOV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bvJ-u7-ife">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9c-Km-fuj" customClass="YPDrawSignatureView" customModule="Fincart" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="4" y="34.666666666666686" width="406" height="667"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="667" id="MZk-E6-t42"/>
@@ -3951,15 +4146,15 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
             <objects>
                 <tableViewController storyboardIdentifier="BankNameLists" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GmG-cO-BzD" customClass="BankNameLists" customModule="Fincart" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="i5n-gH-h8c">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="EV6-84-yoX">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="EV6-84-yoX" id="WF2-XZ-r8X">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -3981,7 +4176,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uay-VH-Xnf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hUh-a7-2uh">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4002,7 +4197,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                         <viewControllerLayoutGuide type="bottom" id="FJ7-ln-043"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IrB-LN-Zka">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -4018,7 +4213,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="M4F-KJ-V19" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="apx-68-Z0y">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4035,15 +4230,15 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
             <objects>
                 <tableViewController storyboardIdentifier="CountryLists" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s5S-DG-ohg" customClass="CountryLists" customModule="Fincart" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="8K5-xm-KDG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="RTc-wL-xhv">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RTc-wL-xhv" id="lIy-2Q-tnP">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -4065,7 +4260,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aso-3T-Uv1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fBp-SB-D2S">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4082,15 +4277,15 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
             <objects>
                 <tableViewController storyboardIdentifier="PoliticallyExposedLists" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Eaw-tM-Oew" customClass="PoliticallyExposedLists" customModule="Fincart" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Lem-Hk-oQe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="ZqN-Ya-MRu">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZqN-Ya-MRu" id="Abs-Nx-ZRQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -4112,7 +4307,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="004-yQ-nOe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aSa-wN-YUn">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4133,7 +4328,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                         <viewControllerLayoutGuide type="bottom" id="iUy-HY-kWH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="q4K-1f-QOW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -4149,7 +4344,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DBp-uk-Xrf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fvN-Mv-mLj">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4166,15 +4361,15 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
             <objects>
                 <tableViewController storyboardIdentifier="IDCardsLists" useStoryboardIdentifierAsRestorationIdentifier="YES" id="pWr-Qq-jql" customClass="IDCardsLists" customModule="Fincart" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="FLQ-ou-6aG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Zff-OR-ojw">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zff-OR-ojw" id="qa5-ii-usV">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -4196,7 +4391,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rse-Ma-k4L" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="X0R-vl-u8A">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4217,7 +4412,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                         <viewControllerLayoutGuide type="bottom" id="aZ0-to-WBT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="O8y-JG-ojr">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -4233,7 +4428,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hy4-oo-hC5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QV4-qo-SAX">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4254,7 +4449,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                         <viewControllerLayoutGuide type="bottom" id="NOc-su-Ba2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qmL-rt-HCN">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -4270,7 +4465,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kqi-Ey-vA4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CWp-t3-QL7">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4291,7 +4486,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                         <viewControllerLayoutGuide type="bottom" id="0PF-Dw-8qz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="z2y-Tz-Ifa">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -4307,7 +4502,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Sie-dL-qtI" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Q6Y-Yd-vqS">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -4344,7 +4539,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_sms" translatesAutoresizingMaskIntoConstraints="NO" id="ZPX-3C-SMI">
-                                                <rect key="frame" x="213.5" y="40" width="170" height="170"/>
+                                                <rect key="frame" x="213.66666666666663" y="40" width="170" height="170"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="170" id="KIV-aZ-n7I"/>
                                                     <constraint firstAttribute="width" secondItem="ZPX-3C-SMI" secondAttribute="height" multiplier="1:1" id="fon-Cu-pWY"/>
@@ -4501,7 +4696,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                 </constraints>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_rotation_lock" translatesAutoresizingMaskIntoConstraints="NO" id="w4B-lq-GZ4">
-                                                <rect key="frame" x="213.5" y="40" width="170" height="170"/>
+                                                <rect key="frame" x="213.66666666666663" y="40" width="170" height="170"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="170" id="LDM-4c-Qms"/>
                                                     <constraint firstAttribute="width" secondItem="w4B-lq-GZ4" secondAttribute="height" multiplier="1:1" id="yKs-cV-Ky9"/>
@@ -4635,12 +4830,12 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
         </scene>
     </scenes>
     <resources>
-        <image name="default_user" width="128" height="128"/>
+        <image name="default_user" width="170" height="170"/>
         <image name="down-arrow" width="410" height="410"/>
         <image name="fb-icon.png" width="53" height="53"/>
         <image name="g-plus-icon.png" width="53" height="53"/>
         <image name="header_forget_pass" width="596" height="448"/>
-        <image name="header_image" width="375" height="117"/>
+        <image name="header_image" width="413" height="129"/>
         <image name="ic_bomb" width="600" height="600"/>
         <image name="ic_calendar" width="600" height="600"/>
         <image name="ic_dollar" width="600" height="600"/>
@@ -4651,11 +4846,12 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
         <image name="ic_time_passing" width="600" height="600"/>
         <image name="icon_add" width="48" height="48"/>
         <image name="icon_subtract" width="40" height="40"/>
-        <image name="icons_forward" width="30" height="30"/>
+        <image name="icons_forward" width="26" height="26"/>
         <image name="linkedin-icon.png" width="53" height="53"/>
         <image name="logo.png" width="290" height="60"/>
         <image name="password-icon.png" width="22" height="29"/>
         <image name="ques_ic_family" width="512" height="512"/>
+        <image name="sip" width="171" height="166"/>
         <image name="top_header" width="400" height="193"/>
         <image name="turn_your_money" width="200" height="200"/>
         <image name="user-icon.png" width="29" height="29"/>

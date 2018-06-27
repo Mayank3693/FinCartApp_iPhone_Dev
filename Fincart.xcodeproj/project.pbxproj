@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04AC417120E40EDA00E9BE39 /* SipListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AC417020E40EDA00E9BE39 /* SipListVC.swift */; };
 		13143EA40AEDE0C01764646C /* Pods_Fincart.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DAD406C1DF5F2F2064CC8EA /* Pods_Fincart.framework */; };
 		5C17CE4A1FC16F520013D002 /* FinCartUserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C17CE491FC16F520013D002 /* FinCartUserInfoVC.swift */; };
 		5C17CE561FC17B500013D002 /* BBBadgeBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C17CE551FC17A780013D002 /* BBBadgeBarButtonItem.m */; };
@@ -131,6 +132,7 @@
 
 /* Begin PBXFileReference section */
 		0216B997F1163C768497A0D8 /* Pods-Fincart.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fincart.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-Fincart/Pods-Fincart.adhoc.xcconfig"; sourceTree = "<group>"; };
+		04AC417020E40EDA00E9BE39 /* SipListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SipListVC.swift; sourceTree = "<group>"; };
 		1DAD406C1DF5F2F2064CC8EA /* Pods_Fincart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fincart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		588B41935F8415628FB38301 /* Pods-Fincart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fincart.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fincart/Pods-Fincart.release.xcconfig"; sourceTree = "<group>"; };
 		5C17CE491FC16F520013D002 /* FinCartUserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinCartUserInfoVC.swift; sourceTree = "<group>"; };
@@ -281,6 +283,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04AC416D20E40E4100E9BE39 /* SipListVC */ = {
+			isa = PBXGroup;
+			children = (
+				04AC417020E40EDA00E9BE39 /* SipListVC.swift */,
+			);
+			path = SipListVC;
+			sourceTree = "<group>";
+		};
 		5C17CE401FC167DA0013D002 /* Json */ = {
 			isa = PBXGroup;
 			children = (
@@ -580,6 +590,7 @@
 		8AD5C4A62004AFE400D69BB1 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				04AC416D20E40E4100E9BE39 /* SipListVC */,
 				8AEE526C2065325B00E834B5 /* GoalsReviewVC */,
 				8AF1DBB5205ED3F200FE4C71 /* ForgotPasswordVC */,
 				8A10DDE32055838400BBAF34 /* WalkThrough */,
@@ -1087,6 +1098,7 @@
 				BC468306204D79C100DC5A6D /* CountryLists.swift in Sources */,
 				8AEE52702067D91200E834B5 /* GoalsReviewTableViewCell.swift in Sources */,
 				BC468301204D79C100DC5A6D /* EKycFormVC.swift in Sources */,
+				04AC417120E40EDA00E9BE39 /* SipListVC.swift in Sources */,
 				8AEE52752068159000E834B5 /* FundCalculationResult.swift in Sources */,
 				8A4650B9200C715400AB21C5 /* FinCartMacros.swift in Sources */,
 				BC468308204D79C100DC5A6D /* IncomeSourceVC.swift in Sources */,
