@@ -36,9 +36,14 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
     var userGoalStatusServiceResponseElement: UserGoalStatusServiceResponseElement?
     var firstLoad = true
     var activeTextField: UITextField?
+    var jsonFileName : String?
+    var yesCount: Int?
+    var income: Double?
+    var jsonObject : JsonBase?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        parseJSON()
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false;
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self;
         // Do any additional setup after loading the view.
@@ -68,6 +73,21 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
         border.frame = CGRect(x: 0, y: amountSubView.frame.height - 1, width: amountSubView.frame.width, height: 1)
         amountSubView.layer.addSublayer(border)
         setDataForGoalEdit()
+    }
+    
+    private func parseJSON() {
+        if let path = Bundle.main.path(forResource: jsonFileName, ofType: "json") {
+            do {
+                let jsonData = try NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe)
+                do {
+                    // Decode data to object
+                    let jsonDecoder = JSONDecoder()
+                    jsonObject = try jsonDecoder.decode(JsonBase.self, from: jsonData as Data)
+                }
+                catch {
+                }
+            } catch {}
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -144,15 +164,15 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
     @IBAction func selectDurationValue(_ sender: UISlider) {
         durationSlider.setValue(Float(Int(sender.value)), animated: true)
         durationValueLabel.text = Int(sender.value) == 1 ? String(format : "%d Year", Int(sender.value)) : String(format : "%d Years", Int(sender.value))
-        if (userGoalStatusServiceResponseElement?.goalCode)!.caseInsensitiveCompare(FincartCommon.GOAL_RETIRE) == ComparisonResult.orderedSame{
-            let goalTime = Int(sender.value) -  Int((userGoalStatusServiceResponseElement?.userCurrentAge)!)!
-            userGoalStatusServiceResponseElement?.goaltime = String(format : "%d", goalTime)
-
-        }else if(userGoalStatusServiceResponseElement?.goalCode)!.caseInsensitiveCompare(FincartCommon.GOAL_TIME_OFF) == ComparisonResult.orderedSame{
-            userGoalStatusServiceResponseElement?.sabbaticalStartTime = String(format : "%d", Int(sender.value))
-        }else{
-            userGoalStatusServiceResponseElement?.goaltime = String(format : "%d", Int(sender.value))
-        }
+//        if (userGoalStatusServiceResponseElement?.goalCode)!.caseInsensitiveCompare(FincartCommon.GOAL_RETIRE) == ComparisonResult.orderedSame{
+//            let goalTime = Int(sender.value) -  Int((userGoalStatusServiceResponseElement?.userCurrentAge)!)!
+//            userGoalStatusServiceResponseElement?.goaltime = String(format : "%d", goalTime)
+//
+//        }else if(userGoalStatusServiceResponseElement?.goalCode)!.caseInsensitiveCompare(FincartCommon.GOAL_TIME_OFF) == ComparisonResult.orderedSame{
+//            userGoalStatusServiceResponseElement?.sabbaticalStartTime = String(format : "%d", Int(sender.value))
+//        }else{
+//            userGoalStatusServiceResponseElement?.goaltime = String(format : "%d", Int(sender.value))
+//        }
     }
     
     @objc func sliderEndedTracking(slider: UISlider!) {
@@ -194,13 +214,13 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
         let contentInsets: UIEdgeInsets! = UIEdgeInsets.zero
         UIView.animate(withDuration: 0.3) {
             self.scrollView.contentInset = contentInsets
-            var investAmount = Int(self.amountDetailsTextField.text!)
-            if investAmount! < 500{
+            var investAmount = Int(self.income ?? 0)
+            if investAmount < 500{
                 investAmount = 500
-            }else if investAmount! > 5000000{
+            }else if investAmount > 5000000{
                 investAmount = 5000000
             }
-            self.userGoalStatusServiceResponseElement?.investAmount = String(format: "%d", investAmount!)
+            self.userGoalStatusServiceResponseElement?.investAmount = String(format: "%d", investAmount)
             self.calculateGetAmount("SLIDER")
             self.setDataForGoalEdit()
         }
@@ -216,8 +236,7 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
     private func setDataForGoalEdit(){
 //        goalDescriptionLabel.text = (userGoalStatusServiceResponseElement?.goalName)! + " Achieved :" + (userGoalStatusServiceResponseElement?.goalAchieved)! + " %"
         amountSignLabel.text = "\u{20B9}"
-        amountDetailsTextField.text = userGoalStatusServiceResponseElement?.investAmount
-//        if userGoalStatusServiceResponseElement?.investmentType?.caseInsensitiveCompare("S") == ComparisonResult.orderedSame{
+        amountDetailsTextField.text = "\(self.income!)" //        if userGoalStatusServiceResponseElement?.investmentType?.caseInsensitiveCompare("S") == ComparisonResult.orderedSame{
 //            monthlyModeOfInvestment.isSelected = true
 //        }else{
 //            oneTimeModeOfInvestment.isSelected = true
@@ -229,7 +248,7 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
 //        }else{
 //            highRiskType.isSelected = true
 //        }
-        setAmountAndDuration()
+        //setAmountAndDuration()
     }
 //
     private func setAmountAndDuration(){
@@ -237,22 +256,22 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
         var goalsDetail: String?
         durationSlider.minimumValue = 1
         durationSlider.maximumValue = 100
-//        if (userGoalStatusServiceResponseElement?.goalCode)!.caseInsensitiveCompare(FincartCommon.GOAL_RETIRE) == ComparisonResult.orderedSame{
-//            durationDescriptionLabel.text = "Retirement Age"
-//            goalTime = Int((userGoalStatusServiceResponseElement?.userCurrentAge)!)! +  Int((userGoalStatusServiceResponseElement?.goaltime)!)!
-//            let userCurrentAge = Int((userGoalStatusServiceResponseElement?.userCurrentAge)!)!
-//            durationSlider.minimumValue = Float(userCurrentAge < 40 ? 40 : userCurrentAge)
-//            durationSlider.maximumValue = 70
-//            goalsDetail = String(format: "You will get \u{20B9} %d when you are %d years old", (userGoalStatusServiceResponseElement?.getAmount)!, goalTime!)
-//        }else if (userGoalStatusServiceResponseElement?.goalCode)!.caseInsensitiveCompare(FincartCommon.GOAL_TIME_OFF) == ComparisonResult.orderedSame{
-//            durationDescriptionLabel.text = "Sabbatical Start Time"
-//            goalTime = Int((userGoalStatusServiceResponseElement?.sabbaticalStartTime)!)
-//            goalsDetail = String(format: "You will get \u{20B9} %d after %d years", (userGoalStatusServiceResponseElement?.getAmount)!, goalTime!)
-//        }else{
+        if (userGoalStatusServiceResponseElement?.goalCode)!.caseInsensitiveCompare(FincartCommon.GOAL_RETIRE) == ComparisonResult.orderedSame{
+            durationDescriptionLabel.text = "Retirement Age"
+            goalTime = Int((userGoalStatusServiceResponseElement?.userCurrentAge)!)! +  Int((userGoalStatusServiceResponseElement?.goaltime)!)!
+            let userCurrentAge = Int((userGoalStatusServiceResponseElement?.userCurrentAge)!)!
+            durationSlider.minimumValue = Float(userCurrentAge < 40 ? 40 : userCurrentAge)
+            durationSlider.maximumValue = 70
+            goalsDetail = String(format: "You will get \u{20B9} %d when you are %d years old", (userGoalStatusServiceResponseElement?.getAmount)!, goalTime!)
+        }else if (userGoalStatusServiceResponseElement?.goalCode)!.caseInsensitiveCompare(FincartCommon.GOAL_TIME_OFF) == ComparisonResult.orderedSame{
+            durationDescriptionLabel.text = "Sabbatical Start Time"
+            goalTime = Int((userGoalStatusServiceResponseElement?.sabbaticalStartTime)!)
+            goalsDetail = String(format: "You will get \u{20B9} %d after %d years", (userGoalStatusServiceResponseElement?.getAmount)!, goalTime!)
+        }else{
             durationDescriptionLabel.text = "Duration of investment"
             goalTime = Int((userGoalStatusServiceResponseElement?.goaltime)!)
             goalsDetail = String(format: "You will get \u{20B9} %d after %d years", (userGoalStatusServiceResponseElement?.getAmount)!, goalTime!)
-        //}
+        }
         if firstLoad{
             let height = FincartCommon.calculateHeightForLabel(goalsDetail!, width: self.view.frame.width - 48, font: UIFont.systemFont(ofSize: 15))
            // goalsDetailsViewHeightConstraint.constant = goalsDetailsView.frame.height + (height - 30)
@@ -278,6 +297,7 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
                 userGoalStatusServiceResponseElement?.getAmount = String(format: "%.0f", calculatedResult.sip)
             }else{
                 let calculatedResult = FundCalculation.callMethodForCalculation(userGoalStatusServiceResponseElement!, changeBy: FincartCommon.SLIDER_CHANGE_BY_ONETIME)
+              //  let calculatedResult = FundCalculation.callMethodForCalculation(jsonObject, changeBy: FincartCommon.SLIDER_CHANGE_BY_ONETIME)
                 userGoalStatusServiceResponseElement?.getAmount = String(format: "%.0f", calculatedResult.lumpsum)
             }
         }

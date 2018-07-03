@@ -792,6 +792,7 @@ class FundCalculation: NSObject
                 break
             }
         }
+            //Mayank
         else if userGoalStatusServiceResponseElement.goalCode?.caseInsensitiveCompare(FincartCommon.GOAL_OTHER_CODE) == ComparisonResult.orderedSame {
             switch (changeBy){
             case FincartCommon.BY_MONTHLY:

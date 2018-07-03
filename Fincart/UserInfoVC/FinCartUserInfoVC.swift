@@ -453,8 +453,16 @@ class FinCartUserInfoVC: FinCartViewController, UITextFieldDelegate {
                         }
                         else{
                             if self.fincartType == "Quick SIP"{
-                                let vc = self.storyboard?.instantiateViewController(withIdentifier: "SipQuestionireVC") as! SipQuestionireVC
-                                self.navigationController?.pushViewController(vc, animated: true)
+                                var jsonFile = ""
+                                if self.userInfoData?.genderStatusCode == "001"{
+                                    jsonFile += "male"
+                                }else{
+                                    jsonFile += "female"
+                                }
+                                self.navigateToQuickSipVC(jsonFile, yesCount: 0, income: monthlyIncome! * 12)
+//                                self.navigateToSingleGoalsVC("all_goals_with_retire", goalCode: self.singleGoalCode!, income: monthlyIncome! * 12)
+//                                let vc = self.storyboard?.instantiateViewController(withIdentifier: "SipQuestionireVC") as! SipQuestionireVC
+//                                self.navigationController?.pushViewController(vc, animated: true)
                             }else{
                                 if self.userInfoData?.martialStatusCode == "003"{
                                     self.navigateToChildBasicInfoVC(self.childs, isSingleGoal: false, goalCode: "", income: monthlyIncome! * 12)
@@ -566,6 +574,15 @@ class FinCartUserInfoVC: FinCartViewController, UITextFieldDelegate {
     private func navigateTofulllFinancialGoalsVC(_ json: String, yesCount: Int, income: Double)
     {
         let userInfoVC : FinCartQuestionnaireVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "finCartQuestionnaireVC") as! FinCartQuestionnaireVC;
+        userInfoVC.yesCount = yesCount
+        userInfoVC.jsonFileName = json
+        userInfoVC.income = income
+        self.navigationController?.pushViewController(userInfoVC, animated: true)
+    }
+    
+    private func navigateToQuickSipVC(_ json: String, yesCount: Int, income: Double)
+    {
+        let userInfoVC : SipQuestionireVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SipQuestionireVC") as! SipQuestionireVC;
         userInfoVC.yesCount = yesCount
         userInfoVC.jsonFileName = json
         userInfoVC.income = income
