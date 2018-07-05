@@ -154,9 +154,9 @@ class FinCartDashboardVC: FinCartViewController, UITableViewDataSource, UITableV
                     }else {
                         DispatchQueue.main.async(execute: {
                             SVProgressHUD.dismiss()
-                            let userInfoVC : FinCartUserInfoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "fincartUserInfoVC") as! FinCartUserInfoVC;
-                            userInfoVC.singleGoalCode   = ""
-                            userInfoVC.fincartType      = self.type ?? ""
+                            let userInfoVC : SipQuestionireVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SipQuestionireVC") as! SipQuestionireVC
+//                            userInfoVC.singleGoalCode   = ""
+//                            userInfoVC.fincartType      = self.type ?? ""
                             self.navigationController?.pushViewController(userInfoVC, animated: true)
                         })
                     }

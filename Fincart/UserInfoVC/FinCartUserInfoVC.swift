@@ -585,7 +585,6 @@ class FinCartUserInfoVC: FinCartViewController, UITextFieldDelegate {
         let userInfoVC : SipQuestionireVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SipQuestionireVC") as! SipQuestionireVC;
         userInfoVC.yesCount = yesCount
         userInfoVC.jsonFileName = json
-        userInfoVC.income = income
         self.navigationController?.pushViewController(userInfoVC, animated: true)
     }
 }
