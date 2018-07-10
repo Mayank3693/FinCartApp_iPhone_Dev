@@ -2815,6 +2815,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qy1-Mp-Iru" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="eHm-S8-gFn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3681.5999999999999" y="-1051.5742128935533"/>
         </scene>
@@ -4776,6 +4777,20 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                                             <constraint firstAttribute="width" constant="30" id="3Ul-Yh-VGw"/>
                                                                         </constraints>
                                                                     </imageView>
+                                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ld6-zA-5wE">
+                                                                        <rect key="frame" x="10" y="10" width="36" height="36"/>
+                                                                        <connections>
+                                                                            <action selector="decreaseBtn:" destination="NB4-jz-rRy" eventType="touchUpInside" id="Vh3-uK-KPz"/>
+                                                                            <action selector="decreaseBtn:" destination="eHm-S8-gFn" eventType="touchUpInside" id="WGW-gf-P9Y"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdK-yp-dOI">
+                                                                        <rect key="frame" x="422" y="0.0" width="30" height="30"/>
+                                                                        <connections>
+                                                                            <action selector="increaseBtn:" destination="eHm-S8-gFn" eventType="touchUpInside" id="9RZ-Hd-zMd"/>
+                                                                            <action selector="increaseBtn:" destination="NB4-jz-rRy" eventType="touchUpInside" id="Nev-Qo-oiz"/>
+                                                                        </connections>
+                                                                    </button>
                                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5wj-iq-N0T">
                                                                         <rect key="frame" x="121" y="0.0" width="210" height="30"/>
                                                                         <subviews>
@@ -4817,14 +4832,22 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                                 </subviews>
                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                 <constraints>
+                                                                    <constraint firstItem="Ld6-zA-5wE" firstAttribute="centerX" secondItem="iRN-ye-oSe" secondAttribute="centerX" id="08v-W9-AIB"/>
                                                                     <constraint firstItem="iRN-ye-oSe" firstAttribute="leading" secondItem="TS4-Xn-K7A" secondAttribute="leading" id="2WS-rX-wQz"/>
+                                                                    <constraint firstItem="qdK-yp-dOI" firstAttribute="width" secondItem="v95-VW-C71" secondAttribute="width" id="9hn-cg-OzX"/>
                                                                     <constraint firstAttribute="bottom" secondItem="iRN-ye-oSe" secondAttribute="bottom" id="I41-Cd-CYe"/>
                                                                     <constraint firstAttribute="trailing" secondItem="v95-VW-C71" secondAttribute="trailing" id="KSD-au-6q3"/>
                                                                     <constraint firstItem="5wj-iq-N0T" firstAttribute="top" secondItem="TS4-Xn-K7A" secondAttribute="top" id="P4d-Hh-o7D"/>
                                                                     <constraint firstItem="iRN-ye-oSe" firstAttribute="top" secondItem="TS4-Xn-K7A" secondAttribute="top" id="WFP-rP-XVS"/>
                                                                     <constraint firstAttribute="bottom" secondItem="5wj-iq-N0T" secondAttribute="bottom" id="WgH-ju-7aj"/>
+                                                                    <constraint firstItem="Ld6-zA-5wE" firstAttribute="centerY" secondItem="iRN-ye-oSe" secondAttribute="centerY" id="bbw-AF-Jr9"/>
+                                                                    <constraint firstItem="Ld6-zA-5wE" firstAttribute="width" secondItem="iRN-ye-oSe" secondAttribute="width" id="gER-Bz-gZt"/>
+                                                                    <constraint firstItem="qdK-yp-dOI" firstAttribute="height" secondItem="v95-VW-C71" secondAttribute="height" id="hru-2f-pvU"/>
+                                                                    <constraint firstItem="Ld6-zA-5wE" firstAttribute="height" secondItem="iRN-ye-oSe" secondAttribute="height" id="lgS-DD-ZSd"/>
                                                                     <constraint firstItem="v95-VW-C71" firstAttribute="top" secondItem="TS4-Xn-K7A" secondAttribute="top" id="oKy-sF-lJk"/>
                                                                     <constraint firstAttribute="bottom" secondItem="v95-VW-C71" secondAttribute="bottom" id="pOQ-M0-Zgg"/>
+                                                                    <constraint firstItem="qdK-yp-dOI" firstAttribute="centerY" secondItem="v95-VW-C71" secondAttribute="centerY" id="qw0-Wr-H3Z"/>
+                                                                    <constraint firstItem="qdK-yp-dOI" firstAttribute="centerX" secondItem="v95-VW-C71" secondAttribute="centerX" id="s91-av-dAI"/>
                                                                     <constraint firstItem="5wj-iq-N0T" firstAttribute="centerX" secondItem="TS4-Xn-K7A" secondAttribute="centerX" id="x8b-c3-m7v"/>
                                                                 </constraints>
                                                             </view>
@@ -4993,6 +5016,9 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                 <state key="normal" title="SAVE AND TRANSACT">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="saveTransactBtn:" destination="NB4-jz-rRy" eventType="touchUpInside" id="nTT-l0-gNi"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>

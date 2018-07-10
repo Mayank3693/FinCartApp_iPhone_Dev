@@ -68,6 +68,9 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
 //        }else if self.view.frame.width < 414{
 //            goalImageWidthConstraint.constant = 105
 //        }
+        durationSlider.minimumValue = 1
+        durationSlider.maximumValue = 100
+        durationDescriptionLabel.text = "Duration Age"
         self.scrollView?.contentSize = CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height - 50)
         let border = CALayer()
         border.backgroundColor = UIColor.black.cgColor
@@ -247,34 +250,75 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
         setAmountAndDuration()
     }
 //
+    
+    @IBAction func decreaseBtn(_ sender: Any) {
+//        if  Int(self.income)! > 500{
+//            var income   = Int()
+//            self.income  = "\(Int(self.income) - 500)"
+//            self.addKeyboardNotificationObserver(addObserver: true)
+//
+//        }
+        
+        var investAmount = Int(amountDetailsTextField.text!)
+        if investAmount! < 500{
+            investAmount = 500
+        }else if investAmount! > 5000000{
+            investAmount = 5000000
+        }else{
+            investAmount = investAmount! - 1000
+        }
+        self.income   =  String(format: "%d", investAmount!)
+        calculateGetAmount("SLIDER")
+        setDataForGoalEdit()
+        
+    }
+    
+    @IBAction func increaseBtn(_ sender: Any) {
+        var investAmount = Int(amountDetailsTextField.text!)
+        if investAmount! < 500{
+            investAmount = 500
+        }else if investAmount! > 5000000{
+            investAmount = 5000000
+        }else{
+            investAmount = investAmount! + 1000
+        }
+        self.income   =  String(format: "%d", investAmount!)
+        calculateGetAmount("SLIDER")
+        setDataForGoalEdit()
+    }
+    
+    @IBAction func saveTransactBtn(_ sender: Any) {
+    }
+    
+    
     private func setAmountAndDuration(){
         var goalTime: Int?
         var goalsDetail: String?
-        durationSlider.minimumValue = 1
-        durationSlider.maximumValue = 100
-            durationDescriptionLabel.text = "Retirement Age"
-            goalTime = Int(self.AgeDuration)
-            let userCurrentAge = Int(self.AgeDuration)!
-            durationSlider.minimumValue = Float(userCurrentAge < 40 ? 40 : userCurrentAge)
-            durationSlider.maximumValue = 70
-            goalsDetail = String(format: "You will get \u{20B9} %d when you are %d years old", self.income, goalTime!)
+        goalTime = Int(self.AgeDuration)
+//            let userCurrentAge = Int(self.AgeDuration)!
+//            durationSlider.minimumValue = Float(userCurrentAge < 40 ? 40 : userCurrentAge)
+//            durationSlider.maximumValue = 70
+//            goalsDetail = String(format: "You will get \u{20B9} %d when you are %d years old", self.income, goalTime!)
         
-        if firstLoad{
-            let height = FincartCommon.calculateHeightForLabel(goalsDetail!, width: self.view.frame.width - 48, font: UIFont.systemFont(ofSize: 15))
-           // goalsDetailsViewHeightConstraint.constant = goalsDetailsView.frame.height + (height - 30)
-            firstLoad = false
-        }
+//        if firstLoad{
+//            let height = FincartCommon.calculateHeightForLabel(goalsDetail!, width: self.view.frame.width - 48, font: UIFont.systemFont(ofSize: 15))
+//           // goalsDetailsViewHeightConstraint.constant = goalsDetailsView.frame.height + (height - 30)
+//            firstLoad = false
+//        }
         durationValueLabel.text = String(format: "%d Years", goalTime!)
        // goalDetailsLabel.text = goalsDetail!
         durationSlider.setValue(Float(goalTime!), animated: true)
         //containerViewHeightConstraint.constant = durationDescriptionView.frame.origin.y + durationDescriptionView.frame.height + 10
     }
     private func calculateGetAmount(_ calculationType: String){
+        let Age  = Int(self.durationSlider.value)
+        self.AgeDuration  =  "\(Age)"
         let age  = Double(self.AgeDuration)
         let fundCalculationResult = FundCalculator.otherFund(0.0, gLumpsum: 0, gSip: 0, iLumpsum: 0, iSip: Double(self.income)!, years: age!, type: "R")
         print(fundCalculationResult)
         self.maturityAmount.text   =  String(fundCalculationResult.sip)
-        self.income  =  String(fundCalculationResult.investmentSip)
+        self.income  =  "\(Int(fundCalculationResult.investmentSip))"//String(fundCalculationResult.investmentSip)
+        //String(format: "%f", self.durationSlider.value)
         /*
         if calculationType.caseInsensitiveCompare("MODE") == ComparisonResult.orderedSame{
             if userGoalStatusServiceResponseElement?.investmentType?.caseInsensitiveCompare("S") == ComparisonResult.orderedSame{
