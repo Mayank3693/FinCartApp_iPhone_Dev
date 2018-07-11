@@ -5079,6 +5079,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                         <outlet property="maturityAmount" destination="MxU-qr-U4n" id="zUO-r2-6Uv"/>
                         <outlet property="maturityView" destination="oV6-tw-tTc" id="gvD-TA-h6m"/>
                         <outlet property="scrollView" destination="Wit-WS-3ER" id="5d6-n6-8n4"/>
+                        <outlet property="sipName" destination="ldV-Nu-THb" id="lRu-7r-PQQ"/>
                         <outlet property="subtractImageView" destination="iRN-ye-oSe" id="XZp-c5-huJ"/>
                     </connections>
                 </viewController>

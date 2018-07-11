@@ -14,6 +14,7 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var investmentDetailsView: UIView!
     @IBOutlet weak var durationDescriptionView: UIView!
+    @IBOutlet weak var sipName: UITextField!
     
     @IBOutlet weak var amountDescriptionLabel: UILabel!
     @IBOutlet weak var amountDescriptionImageView: UIImageView!
@@ -31,6 +32,8 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
     @IBOutlet weak var maturityAmount: UITextField!
     
     @IBOutlet weak var maturityView: UIView!
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var userGoalStatusServiceResponseElement: UserGoalStatusServiceResponseElement?
     var firstLoad = true
     var activeTextField: UITextField?
@@ -38,6 +41,7 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
     var yesCount: Int?
     var income         =  String()
     var AgeDuration    =  String()
+    var userInfoData: UserInfoData?
     
     var jsonObject : JsonBase?
     
@@ -45,6 +49,8 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
         super.viewDidLoad()
         self.income  =  "15000"
         self.AgeDuration    =  "15"
+        userInfoData = UserInfoData()
+        userGoalStatusServiceResponseElement  =  userGoalStatusServiceResponseElement
         parseJSON()
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false;
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self;
@@ -288,7 +294,166 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
     }
     
     @IBAction func saveTransactBtn(_ sender: Any) {
+        self.savePersonalDetails()
+        
     }
+    
+    func callReviewDataApi(){
+        FinCartMacros.showSVProgressHUD()
+        let access_token = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
+        APIManager.sharedInstance.saveReview(access_token!, goalReviewData: userGoalStatusServiceResponseElement, success: <#T##(URLResponse, AnyObject?) -> Void#>, failure: <#T##(Error) -> Void#>)
+    }
+    func saveQuickSipDetails(){
+        FinCartMacros.showSVProgressHUD()
+        let access_token = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
+        var answerString = "FG220~FQ38~~" + (self.sipName.text)!
+        answerString += "|" + "FG220~FQ39~" + (self.maturityAmount.text)!
+        answerString += "|" + "FG220~FQ40~" + (self.AgeDuration)
+        var detailsDictionary = Dictionary<String, String>()
+        detailsDictionary.updateValue("", forKey: "GoalCode")
+        detailsDictionary.updateValue("AAPP", forKey: "Device")
+        detailsDictionary.updateValue("", forKey: "BrowserIp")
+        detailsDictionary.updateValue(FinCartUserDefaults.sharedInstance.retrieveUserName()!, forKey: "CreatedByEmail")
+        detailsDictionary.updateValue(FinCartUserDefaults.sharedInstance.retrieveMobile()!, forKey: "CreatedByMobile")
+        detailsDictionary.updateValue("", forKey: "Desc")
+        detailsDictionary.updateValue("", forKey: "AnswerType")
+        detailsDictionary.updateValue("", forKey: "Device_Version")
+        detailsDictionary.updateValue("", forKey: "BrowserId")
+        detailsDictionary.updateValue("", forKey: "CreatedDatetime")
+        detailsDictionary.updateValue("", forKey: "UpdatedByEmail")
+        detailsDictionary.updateValue("", forKey: "UpdatedByMobile")
+        detailsDictionary.updateValue("", forKey: "UpdatedDatetime")
+        detailsDictionary.updateValue("", forKey: "Status")
+        detailsDictionary.updateValue("", forKey: "Code")
+        detailsDictionary.updateValue(answerString, forKey: "Answer")
+        APIManager.sharedInstance.savePersonalInfoData(access_token!, personalDetails: detailsDictionary, success: { (response, data) in
+            if let httpResponse = response as? HTTPURLResponse{
+                if httpResponse.statusCode == 200{
+                    DispatchQueue.main.async(execute: {
+                        SVProgressHUD.dismiss()
+                        self.callReviewDataApi()
+                    })
+                }
+                else
+                {
+                    self.alertController("Error", message: "Something didn't go as expected")
+                }
+            }
+        }) { (error) in
+            DispatchQueue.main.async(execute: {
+                SVProgressHUD.dismiss()
+                self.alertController("Error", message: error.localizedDescription)
+            })
+        }
+    }
+    
+    private func savePersonalDetails(){
+        FinCartMacros.showSVProgressHUD()
+        let access_token = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
+        let monthlyIncome = Double((userInfoData?.monthlySalary)!)
+        let annualIncome = String(format:"%.0f", monthlyIncome! * 12)
+        var answerString = "C5~FQ1~" + (userInfoData?.name)!
+        answerString += "|" + "C5~FQ2~" + (userInfoData?.age)!
+        
+        answerString += "|" + "C5~FQ3~" + (userInfoData?.genderStatusCode)!
+        answerString += "|" + "C5~FQ4~" + (userInfoData?.martialStatusCode)!
+        answerString += "|" + "C5~FQ6~" + String(format: "%d", (userInfoData?.childsCount)!)
+
+        answerString += "|" + "C5~FQ10~" + annualIncome
+        answerString += "|" + "C5~FQ11~" + (userInfoData?.monthlyExpense)!
+        var detailsDictionary = Dictionary<String, String>()
+        detailsDictionary.updateValue("", forKey: "ID")
+        detailsDictionary.updateValue("", forKey: "GoalCode")
+        detailsDictionary.updateValue("AAPP", forKey: "Device")
+        detailsDictionary.updateValue("", forKey: "BrowserIp")
+        detailsDictionary.updateValue(FinCartUserDefaults.sharedInstance.retrieveUserName()!, forKey: "CreatedByEmail")
+        detailsDictionary.updateValue(FinCartUserDefaults.sharedInstance.retrieveMobile()!, forKey: "CreatedByMobile")
+        detailsDictionary.updateValue("", forKey: "Desc")
+        detailsDictionary.updateValue("", forKey: "AnswerType")
+        detailsDictionary.updateValue("", forKey: "Device_Version")
+        detailsDictionary.updateValue("", forKey: "BrowserId")
+        detailsDictionary.updateValue("", forKey: "CreatedDatetime")
+        detailsDictionary.updateValue("", forKey: "UpdatedByEmail")
+        detailsDictionary.updateValue("", forKey: "UpdatedByMobile")
+        detailsDictionary.updateValue("", forKey: "UpdatedDatetime")
+        detailsDictionary.updateValue("", forKey: "Status")
+        detailsDictionary.updateValue("", forKey: "Code")
+        detailsDictionary.updateValue(answerString, forKey: "Answer")
+        
+        APIManager.sharedInstance.savePersonalInfoData(access_token!, personalDetails: detailsDictionary, success: { (response, data) in
+            if let httpResponse = response as? HTTPURLResponse{
+                if httpResponse.statusCode == 200{
+                    DispatchQueue.main.async(execute: {
+                        SVProgressHUD.dismiss()
+                        self.saveQuickSipDetails()
+                    })
+                }
+                else
+                {
+                    self.refreshAccessToken()
+                }
+            }
+        }) { (error) in
+            DispatchQueue.main.async(execute: {
+                SVProgressHUD.dismiss()
+                self.alertController("Error", message: error.localizedDescription)
+            })
+        }
+    }
+    
+    private func refreshAccessToken()
+    {
+        FincartCommon.refreshAccessToken(success: { (responseCode) in
+            if responseCode == 200{
+                self.savePersonalDetails()
+            }else{
+                self.getAccessToken()
+            }
+        }) { (error) in
+            DispatchQueue.main.async(execute: {
+                SVProgressHUD.dismiss()
+                self.alertController("Error", message: error.localizedDescription)
+            })
+        }
+    }
+    
+    private func getAccessToken()
+    {
+        FincartCommon.getAccessToken(success: { (responseCode) in
+            if responseCode == 200{
+                self.savePersonalDetails()
+            }else{
+                DispatchQueue.main.async(execute: {
+                    let alert = UIAlertController(title: "Session Expired", message: "Please login again. ", preferredStyle: UIAlertControllerStyle.alert)
+                    let alertAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.cancel) { (alertAction) in
+                        alert.dismiss(animated: true)
+                        FinCartUserDefaults.sharedInstance.saveAccessToken(nil)
+                        FinCartUserDefaults.sharedInstance.saveRefershToken(nil)
+                        FinCartUserDefaults.sharedInstance.saveTokenType(nil)
+                        self.appDelegate.showLoginScreen()
+                    }
+                    alert.addAction(alertAction)
+                    self.present(alert, animated: true)
+                })
+            }
+        }) { (error) in
+            DispatchQueue.main.async(execute: {
+                SVProgressHUD.dismiss()
+                self.alertController("Error", message: error.localizedDescription)
+            })
+        }
+    }
+    private func alertController(_ title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let alertAction = UIAlertAction.init(title: "Cancel", style: UIAlertActionStyle.cancel) { (alertAction) in
+            alert.dismiss(animated: true)
+        }
+        alert.addAction(alertAction)
+        self.present(alert, animated: true)
+    }
+    
+    
+   
     
     
     private func setAmountAndDuration(){
