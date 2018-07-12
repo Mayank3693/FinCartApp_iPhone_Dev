@@ -34,7 +34,8 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
     @IBOutlet weak var maturityView: UIView!
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    var userGoalStatusServiceResponseElement: UserGoalStatusServiceResponseElement?
+    var userGoalStatusServiceResponseValue: UserGoalStatusServiceResponseElement?
+    var userserviceResponse  :  UserGoalStatusServiceResponse!
     var firstLoad = true
     var activeTextField: UITextField?
     var jsonFileName : String?
@@ -47,10 +48,11 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let finCartUserDefaults = FinCartUserDefaults.sharedInstance
         self.income  =  "15000"
         self.AgeDuration    =  "15"
         userInfoData = UserInfoData()
-        userGoalStatusServiceResponseElement  =  userGoalStatusServiceResponseElement
+        userInfoData?.name = finCartUserDefaults.retrieveUserFullName()
         parseJSON()
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false;
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self;
@@ -300,9 +302,70 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
     
     func callReviewDataApi(){
         FinCartMacros.showSVProgressHUD()
-        let access_token = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
-        APIManager.sharedInstance.saveReview(access_token!, goalReviewData: userGoalStatusServiceResponseElement, success: <#T##(URLResponse, AnyObject?) -> Void#>, failure: <#T##(Error) -> Void#>)
+        let accessToken = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
+        APIManager.sharedInstance.reviewTaggedGoals(accessToken!, success: { (response, data) in
+            if let httpResponse = response as? HTTPURLResponse{
+                if httpResponse.statusCode == 200 && data != nil{
+                    if let StringResponse = String(data: data! as! Data, encoding: String.Encoding.utf8) as String? {
+                        DispatchQueue.main.async(execute: {
+                            SVProgressHUD.dismiss()
+                            do{
+                                self.userserviceResponse  = try UserGoalStatusServiceResponseElement(StringResponse)
+                                //goalsReviewModel = try GoalsReview(jsonString)
+                            }catch{}
+                            
+                        })
+                    }
+                }
+                else if httpResponse.statusCode == 401{
+                    self.alertController("Server Issue", message: "Server is not responding")
+                    //self.refreshAccessToken("reviewTaggedQuestion")
+                }
+            }
+            else{
+                DispatchQueue.main.async(execute: {
+                    SVProgressHUD.dismiss()
+                    self.alertController("Server Issue", message: "Server is not responding")
+                })
+            }
+        }) { (error) in
+            DispatchQueue.main.async(execute: {
+                SVProgressHUD.dismiss()
+                self.alertController("Error", message: error.localizedDescription)
+            })
+        }
     }
+    
+    
+    func callSingleSaveApi(){
+        FinCartMacros.showSVProgressHUD()
+        let accessToken = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
+        APIManager.sharedInstance.saveSingleReview(accessToken!, goalReviewData: self.userserviceResponse, success: { (response, data) in
+            if let httpResponse = response as? HTTPURLResponse{
+                if httpResponse.statusCode == 200{
+                    DispatchQueue.main.async(execute: {
+                        SVProgressHUD.dismiss()
+                        self.appDelegate.showDashboardScreen()
+                    })
+                }
+                else if (httpResponse.statusCode == 401){
+                    self.refreshAccessToken("save")
+                }else{
+                    DispatchQueue.main.async(execute: {
+                        SVProgressHUD.dismiss()
+                        self.alertController("Server Error", message: "Server is temporary available")
+                    })
+                }
+            }
+        }) { (error) in
+            DispatchQueue.main.async(execute: {
+                SVProgressHUD.dismiss()
+                self.alertController("Error", message: error.localizedDescription)
+            })
+        }
+    }
+        
+    
     func saveQuickSipDetails(){
         FinCartMacros.showSVProgressHUD()
         let access_token = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
@@ -349,18 +412,19 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
     
     private func savePersonalDetails(){
         FinCartMacros.showSVProgressHUD()
-        let access_token = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
-        let monthlyIncome = Double((userInfoData?.monthlySalary)!)
-        let annualIncome = String(format:"%.0f", monthlyIncome! * 12)
+        let access_token  = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
+        let monthlyIncome = 50000.0
+//        let monthlyIncome = Double((userInfoData?.monthlySalary)!)
+        let annualIncome = String(format:"%.0f", monthlyIncome * 12)
         var answerString = "C5~FQ1~" + (userInfoData?.name)!
-        answerString += "|" + "C5~FQ2~" + (userInfoData?.age)!
+        answerString += "|" + "C5~FQ2~" + (userInfoData?.age ?? "25")
         
-        answerString += "|" + "C5~FQ3~" + (userInfoData?.genderStatusCode)!
-        answerString += "|" + "C5~FQ4~" + (userInfoData?.martialStatusCode)!
-        answerString += "|" + "C5~FQ6~" + String(format: "%d", (userInfoData?.childsCount)!)
+        answerString += "|" + "C5~FQ3~" + (userInfoData?.genderStatusCode ?? "001")
+        answerString += "|" + "C5~FQ4~" + (userInfoData?.martialStatusCode ?? "001")
+        answerString += "|" + "C5~FQ6~" + String(format: "%d", (userInfoData?.childsCount ?? 0))
 
         answerString += "|" + "C5~FQ10~" + annualIncome
-        answerString += "|" + "C5~FQ11~" + (userInfoData?.monthlyExpense)!
+        answerString += "|" + "C5~FQ11~" + (userInfoData?.monthlyExpense ?? "10000")
         var detailsDictionary = Dictionary<String, String>()
         detailsDictionary.updateValue("", forKey: "ID")
         detailsDictionary.updateValue("", forKey: "GoalCode")

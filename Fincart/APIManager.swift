@@ -182,6 +182,8 @@ class APIManager: NSObject {
         dataTask.resume()
     }
     
+    
+    
     func removeReviewGoal(_ accessToken: String, goalCode: String, success: @escaping (_ response: URLResponse, _ data: AnyObject?) -> Void, failure: @escaping (_ error: Error) -> Void)
     {
         let stringURL = baseURL + FinCartMacros.kRemoveReviewGoals
