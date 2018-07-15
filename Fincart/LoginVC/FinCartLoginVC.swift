@@ -209,10 +209,13 @@ class FinCartLoginVC: UIViewController, UITextFieldDelegate{
                 if httpResponse.statusCode == 200 && data != nil{
                     do
                     {
+                        let StringResponse = String(data: data! as! Data, encoding: String.Encoding.utf8) as String?
+                        print(StringResponse)
                         self.accessTokenServiceResponse = try AccessTokenServiceResponse(data: data as! Data)
                         FinCartUserDefaults.sharedInstance.saveAccessToken(self.accessTokenServiceResponse?.accessToken)
                         FinCartUserDefaults.sharedInstance.saveRefershToken(self.accessTokenServiceResponse?.refreshToken)
                         FinCartUserDefaults.sharedInstance.saveTokenType(self.accessTokenServiceResponse?.tokenType)
+                        
                         self.fetchUserDetails()
                     }catch{}
                 }
@@ -237,6 +240,21 @@ class FinCartLoginVC: UIViewController, UITextFieldDelegate{
             if let httpResponse = response as? HTTPURLResponse{
                 if httpResponse.statusCode == 200 && data != nil{
                     do{
+                        let StringResponse = String(data: data! as! Data, encoding: String.Encoding.utf8) as String?
+                        print(StringResponse)
+                        
+                        do {
+                            if let jsonArray = try JSONSerialization.jsonObject(with: data as! Data, options: []) as? [String : Any]//try JSONSerialization.jsonObject(with: data, options : []) as? [Dictionary<String,Any>]
+                            {
+                                print(jsonArray)
+                                UserDefaults.standard.set(jsonArray["isQuickSip"] as! Int, forKey: "IsQuickSip")
+                            } else {
+                                print("bad json")
+                            }
+                        } catch let error as NSError {
+                            print(error)
+                        }
+                        
                         self.userDetailsServiceResponse = try UserDetailsServiceResponse(data: data as! Data)
                         FinCartUserDefaults.sharedInstance.saveUserFullName((self.userDetailsServiceResponse?.cafDetails!["ClientName"])!)
                         FinCartUserDefaults.sharedInstance.saveMobile((self.userDetailsServiceResponse?.cafDetails!["Mobile"])!)
@@ -244,6 +262,8 @@ class FinCartLoginVC: UIViewController, UITextFieldDelegate{
                         FinCartUserDefaults.sharedInstance.saveUserImageURL((self.userDetailsServiceResponse?.cafDetails!["profilePic"])!)
                         FinCartUserDefaults.sharedInstance.saveUserPassword((self.userDetailsServiceResponse?.cafDetails!["UserPass"])!)
                         FinCartUserDefaults.sharedInstance.saveKycStatus((self.userDetailsServiceResponse?.cafDetails!["kycStatus"])!)
+
+//                        FinCartUserDefaults.sharedInstance.saveIsQuickSip(self.userDetailsServiceResponse?.isQuickSipVal)//saveIsQuickSip(self.userDetailsServiceResponse)
                         FinCartUserDefaults.sharedInstance.saveIsLoggedin(true)
                         
                         FinCartUserDefaults.sharedInstance.saveBasicId((self.userDetailsServiceResponse?.cafDetails!["basicId"])!)

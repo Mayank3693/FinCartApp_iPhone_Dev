@@ -16,9 +16,9 @@ class FinCartDashboardVC: FinCartViewController, UITableViewDataSource, UITableV
     var type:String?
     var savedUserGoalServiceResponse: SavedUserGoalServiceResponse?
     
-    var titlesArray : [String] = ["FULL FINANCIAL PLANNING", "GOALS", "TAX SAVING INSURANCE", "TURN YOUR MONEY INTO MORE MONEY"]
-    var descriptionArray : [String] = ["FULL FINANCIAL PLANNING", "FULL FINANCIAL PLANNING", "FULL FINANCIAL PLANNING", "FULL FINANCIAL PLANNING"]
-    var descImageArray : [String] = ["full_finanicial", "goals", "tax_saving", "tax_saving"];
+    var titlesArray : [String] = ["Quick SIP","GOALS", "FULL FINANCIAL PLANNING"]
+    var descriptionArray : [String] = ["PLAN YOUR QUICK SIP", "PLAN YOUR SPECIFIC GOALS", "FULL FINANCIAL PLANNING"]
+    var descImageArray : [String] = ["full_finanicial", "goals", "full_finanicial"];
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
@@ -96,7 +96,7 @@ class FinCartDashboardVC: FinCartViewController, UITableViewDataSource, UITableV
             // hide the header
             return 80
         default:
-            return 60
+            return 100
         }
         
     }
@@ -104,7 +104,7 @@ class FinCartDashboardVC: FinCartViewController, UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
         case 0:
-            type = "Full Finacial"
+            type = "Quick SIP"
             resetTaggedQuestions()
             break;
         case 1:
@@ -112,11 +112,9 @@ class FinCartDashboardVC: FinCartViewController, UITableViewDataSource, UITableV
             resetTaggedQuestions()
             break;
         case 2:
-            let userInfoVC : FinCartUserInfoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "fincartUserInfoVC") as! FinCartUserInfoVC;
-            self.navigationController?.pushViewController(userInfoVC, animated: true)
-        case 3:
-            let userInfoVC : FinCartUserInfoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "fincartUserInfoVC") as! FinCartUserInfoVC;
-            self.navigationController?.pushViewController(userInfoVC, animated: true)
+            type = "Full Finacial"
+            resetTaggedQuestions()
+            break;
         default: break
         }
     }
@@ -153,11 +151,12 @@ class FinCartDashboardVC: FinCartViewController, UITableViewDataSource, UITableV
                 if httpResponse.statusCode == 200{
                     if self.type?.caseInsensitiveCompare("Single Goal") == ComparisonResult.orderedSame{
                         self.fetchSavedUserGoalsCode()
-                    }else{
+                    }else {
                         DispatchQueue.main.async(execute: {
                             SVProgressHUD.dismiss()
-                            let userInfoVC : FinCartUserInfoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "fincartUserInfoVC") as! FinCartUserInfoVC;
-                            userInfoVC.singleGoalCode = ""
+                            let userInfoVC : SipQuestionireVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SipQuestionireVC") as! SipQuestionireVC
+//                            userInfoVC.singleGoalCode   = ""
+//                            userInfoVC.fincartType      = self.type ?? ""
                             self.navigationController?.pushViewController(userInfoVC, animated: true)
                         })
                     }

@@ -182,6 +182,8 @@ class APIManager: NSObject {
         dataTask.resume()
     }
     
+    
+    
     func removeReviewGoal(_ accessToken: String, goalCode: String, success: @escaping (_ response: URLResponse, _ data: AnyObject?) -> Void, failure: @escaping (_ error: Error) -> Void)
     {
         let stringURL = baseURL + FinCartMacros.kRemoveReviewGoals
@@ -231,6 +233,53 @@ class APIManager: NSObject {
     func saveSingleReview(_ accessToken: String, goalReviewData: GoalsReviewElement, success: @escaping (_ response: URLResponse, _ data: AnyObject?) -> Void, failure: @escaping (_ error: Error) -> Void)
     {
         var request: URLRequest = URLRequest(url: URL(string: baseURL + FinCartMacros.kSaveSingleGoalURL)!)
+        request.setValue("bearer " + accessToken, forHTTPHeaderField: "Authorization")
+        request.httpMethod = "POST"
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        do {
+            let jsonEncoder = JSONEncoder()
+            jsonEncoder.outputFormatting = .prettyPrinted
+            let json = try jsonEncoder.encode(goalReviewData)
+            request.httpBody = json
+        } catch let error {
+            failure(error)
+        }
+        let dataTask = intialiseURLSession().dataTask(with: request) { (data, response, error) in
+            if error != nil{
+                failure(error!)
+            }else{
+                success(response!, data as AnyObject)
+            }
+        }
+        dataTask.resume()
+    }
+    // Done By Mayank for Quick Sip
+    func saveSingleQuickSipData(_ accessToken: String, urlStr : String, goalReviewData: UserGoalStatusServiceResponseElement, success: @escaping (_ response: URLResponse, _ data: AnyObject?) -> Void, failure: @escaping (_ error: Error) -> Void)
+    {
+        var request: URLRequest = URLRequest(url: URL(string: baseURL + urlStr)!)
+        request.setValue("bearer " + accessToken, forHTTPHeaderField: "Authorization")
+        request.httpMethod = "POST"
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        do {
+            let jsonEncoder = JSONEncoder()
+            jsonEncoder.outputFormatting = .prettyPrinted
+            let json = try jsonEncoder.encode(goalReviewData)
+            request.httpBody = json
+        } catch let error {
+            failure(error)
+        }
+        let dataTask = intialiseURLSession().dataTask(with: request) { (data, response, error) in
+            if error != nil{
+                failure(error!)
+            }else{
+                success(response!, data as AnyObject)
+            }
+        }
+        dataTask.resume()
+    }
+    func saveQuickSipData(_ accessToken: String, urlStr : String, goalReviewData: UserGoalStatusServiceResponse, success: @escaping (_ response: URLResponse, _ data: AnyObject?) -> Void, failure: @escaping (_ error: Error) -> Void)
+    {
+        var request: URLRequest = URLRequest(url: URL(string: baseURL + urlStr)!)
         request.setValue("bearer " + accessToken, forHTTPHeaderField: "Authorization")
         request.httpMethod = "POST"
         request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")

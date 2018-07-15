@@ -226,6 +226,14 @@ class FinCartUserDefaults : NSObject{
         }
         UserDefaults.standard.synchronize()
     }
+    func saveIsQuickSip(_ isQuickSip: Bool!){
+        if isQuickSip ==  nil {
+            UserDefaults.standard.removeObject(forKey: FinCartMacros.kIsQuickSip)
+        }else{
+            UserDefaults.standard.set(isQuickSip, forKey: FinCartMacros.kIsQuickSip)
+        }
+        UserDefaults.standard.synchronize()
+    }
     
     func saveIsLoggedin(_ isLoggedIn: Bool!){
         if isLoggedIn ==  nil {
@@ -794,6 +802,9 @@ class FinCartUserDefaults : NSObject{
     }
     func retrieveIsGoalStatus() -> Bool {
         return UserDefaults.standard.bool(forKey: FinCartMacros.kIsGoal)
+    }
+    func retrieveIsQuickSipStatus() -> Bool {
+        return UserDefaults.standard.bool(forKey: FinCartMacros.kIsQuickSip)
     }
     func saveImage(_ image: UIImage, _withName: String, _withExtension: String, _directoryPath: String){
         if _withExtension.caseInsensitiveCompare("png") == ComparisonResult.orderedSame {

@@ -33,7 +33,9 @@ class FinCartMacros{
     static let kFinResetTaggedQuestions = "api/question/reset/taggedquestions"
     static let kFinBulkTagsURL = "api/question/bulk/tag"
     static let kQuestionTagURL = "api/question/tag"
+    //Mayank
     static let kReviewTaggedGoals = "api/goal/review"
+    //
     static let kRemoveReviewGoals = "api/goal/remove/{goalcode}"
     static let kSaveReviewURL = "api/goal/save/app"
     static let kUserGoalStatusURL = "api/goal/fetch/all/app"
@@ -45,6 +47,7 @@ class FinCartMacros{
     static let kIsUserRegistered = "isUserRegistered"
     static let kIsUserLoggedIn = "isUserLoggedIn"
     static let kIsGoal = "isGoal"
+    static let kIsQuickSip  =  "isQuickSip"
     static let kIsFirstTimeLogin = "isFirstTimeLogin"
     static let kIsDeviceRegistered = "isDeviceRegistered"
     static let kUserName = "username"
