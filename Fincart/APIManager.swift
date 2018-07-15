@@ -277,6 +277,29 @@ class APIManager: NSObject {
         }
         dataTask.resume()
     }
+    
+    // Done By Pankaj for Quick Sip
+    func getQuickSipData(_ accessToken: String, urlStr : String, success: @escaping (_ response: URLResponse, _ data: AnyObject?) -> Void, failure: @escaping (_ error: Error) -> Void)
+    {
+        var request: URLRequest = URLRequest(url: URL(string: baseURL + urlStr)!)
+        request.setValue("bearer " + accessToken, forHTTPHeaderField: "Authorization")
+        request.httpMethod = "GET"
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
+        do {
+            let jsonEncoder = JSONEncoder()
+            jsonEncoder.outputFormatting = .prettyPrinted
+//            let json = try jsonEncoder.encode(goalReviewData)
+//            request.httpBody = json
+        } 
+        let dataTask = intialiseURLSession().dataTask(with: request) { (data, response, error) in
+            if error != nil{
+                failure(error!)
+            }else{
+                success(response!, data as AnyObject)
+            }
+        }
+        dataTask.resume()
+    }
     func saveQuickSipData(_ accessToken: String, urlStr : String, goalReviewData: UserGoalStatusServiceResponse, success: @escaping (_ response: URLResponse, _ data: AnyObject?) -> Void, failure: @escaping (_ error: Error) -> Void)
     {
         var request: URLRequest = URLRequest(url: URL(string: baseURL + urlStr)!)

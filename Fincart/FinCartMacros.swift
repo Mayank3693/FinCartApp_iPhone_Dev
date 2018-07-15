@@ -42,7 +42,7 @@ class FinCartMacros{
     static let kSaveSingleGoalURL = "api/goal/save/single/app"
     static let kUpdateEditGoal = "api/goal/update/app"
     static let kFetchSavedGoalsCode = "/api/goal/fetchSavedGoalCodes"
-    
+    static let kFetchSipList = "api/goal/fetch/quicksip/all"
     //MARKS:- API's params and user defaults keys
     static let kIsUserRegistered = "isUserRegistered"
     static let kIsUserLoggedIn = "isUserLoggedIn"
@@ -118,7 +118,7 @@ class FinCartMacros{
     static let kBranch = "Branch"
     static let kKycStatus = "KycStatus"
     
-    static func showSVProgressHUD()
+    class func showSVProgressHUD()
     {
         SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.black)
         SVProgressHUD.setBackgroundColor(UIColor.white)

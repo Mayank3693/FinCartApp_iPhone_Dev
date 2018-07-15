@@ -301,7 +301,7 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
     }
     
     func callReviewDataApi(){
-        FinCartMacros.showSVProgressHUD()
+//        FinCartMacros.showSVProgressHUD()
         let accessToken = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
         APIManager.sharedInstance.reviewTaggedGoals(accessToken!, success: { (response, data) in
             if let httpResponse = response as? HTTPURLResponse{
@@ -346,7 +346,7 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
     // Mayank Comitted
     
     func callSingleSaveApi(){
-        FinCartMacros.showSVProgressHUD()
+//        FinCartMacros.showSVProgressHUD()
         let accessToken = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
         APIManager.sharedInstance.saveSingleQuickSipData(accessToken!,urlStr : FinCartMacros.kSaveSingleGoalURL, goalReviewData: self.userserviceResponse[0], success: { (response, data) in
             if let httpResponse = response as? HTTPURLResponse{
@@ -433,12 +433,13 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
             if let httpResponse = response as? HTTPURLResponse{
                 if httpResponse.statusCode == 200{
                     DispatchQueue.main.async(execute: {
-                        SVProgressHUD.dismiss()
+                        
                         self.callReviewDataApi()
                     })
                 }
                 else
                 {
+                    SVProgressHUD.dismiss()
                     self.alertController("Error", message: "Something didn't go as expected")
                 }
             }
@@ -451,7 +452,7 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
     }
     
     private func savePersonalDetails(){
-        FinCartMacros.showSVProgressHUD()
+//        FinCartMacros.showSVProgressHUD()
         let access_token  = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
         let monthlyIncome = 50000.0
 //        let monthlyIncome = Double((userInfoData?.monthlySalary)!)
@@ -488,7 +489,7 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
             if let httpResponse = response as? HTTPURLResponse{
                 if httpResponse.statusCode == 200{
                     DispatchQueue.main.async(execute: {
-                        SVProgressHUD.dismiss()
+//                        SVProgressHUD.dismiss()
                         self.saveQuickSipDetails()
                     })
                 }

@@ -18,7 +18,7 @@ class FinCartViewController: UIViewController{
             var selector: Selector! = nil
             //SEL selector = NULL;
             
-            if (viewControllerCount ==  1)
+            if (viewControllerCount ==  1 || viewControllerCount == 3)
             {
                 imageName = "menu";
                 selector = #selector(showMenu(_:))

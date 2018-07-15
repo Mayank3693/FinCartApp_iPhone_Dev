@@ -153,6 +153,8 @@ class FinCartDashboardVC: FinCartViewController, UITableViewDataSource, UITableV
                         self.fetchSavedUserGoalsCode()
                     }else {
                         DispatchQueue.main.async(execute: {
+                            
+                        
                             SVProgressHUD.dismiss()
                             let userInfoVC : SipQuestionireVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SipQuestionireVC") as! SipQuestionireVC
 //                            userInfoVC.singleGoalCode   = ""
