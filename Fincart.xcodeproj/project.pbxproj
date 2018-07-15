@@ -874,7 +874,7 @@
 				TargetAttributes = {
 					61CF3DE21F8007E200D5AA67 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = VZDSVES8VL;
+						DevelopmentTeam = 2P9N9P2QS2;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Manual;
 					};
@@ -1321,9 +1321,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ravinesh Raj (K2TFWDRZJF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ravinesh Raj (K2TFWDRZJF)";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = VZDSVES8VL;
+				DEVELOPMENT_TEAM = 2P9N9P2QS2;
 				INFOPLIST_FILE = Fincart/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1334,10 +1335,10 @@
 					"-l\"z\"",
 					"-l\"c++\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fincart.apps;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TheToothFairy.TheToothFairy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "c99f83f0-4c7c-4e7f-ad6b-d5ec42ac4377";
-				PROVISIONING_PROFILE_SPECIFIER = Dev_Latest;
+				PROVISIONING_PROFILE = "92393864-53be-4581-8e26-1ed3606c633f";
+				PROVISIONING_PROFILE_SPECIFIER = com.dev.com;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -1351,9 +1352,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ravinesh Raj (K2TFWDRZJF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ravinesh Raj (K2TFWDRZJF)";
 				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = VZDSVES8VL;
+				DEVELOPMENT_TEAM = 2P9N9P2QS2;
 				INFOPLIST_FILE = Fincart/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1364,10 +1366,10 @@
 					"-l\"z\"",
 					"-l\"c++\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fincart.apps;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TheToothFairy.TheToothFairy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1f5788a5-90b4-4ee8-a14d-760025f3d467";
-				PROVISIONING_PROFILE_SPECIFIER = Adhoc_profile;
+				PROVISIONING_PROFILE = "92393864-53be-4581-8e26-1ed3606c633f";
+				PROVISIONING_PROFILE_SPECIFIER = com.dev.com;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -1462,7 +1464,8 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Ravinesh Raj (K2TFWDRZJF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ravinesh Raj (K2TFWDRZJF)";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = VZDSVES8VL;
 				INFOPLIST_FILE = Fincart/Info.plist;
@@ -1476,10 +1479,10 @@
 					"-l\"z\"",
 					"-l\"c++\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.fincart.apps;
+				PRODUCT_BUNDLE_IDENTIFIER = com.TheToothFairy.TheToothFairy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "1f5788a5-90b4-4ee8-a14d-760025f3d467";
-				PROVISIONING_PROFILE_SPECIFIER = Adhoc_profile;
+				PROVISIONING_PROFILE = "92393864-53be-4581-8e26-1ed3606c633f";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/$(PROJECT_NAME)-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
