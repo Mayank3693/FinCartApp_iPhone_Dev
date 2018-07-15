@@ -13,17 +13,20 @@ class UserDetailsServiceResponse: Codable {
     let cafDetails: [String: String?]?
     let totalCart: TotalCart?
     let isgoal: Bool?
+    let isQuickSipVal : Bool?
     
     enum CodingKeys: String, CodingKey {
         case cafDetails = "CafDetails"
         case totalCart = "TotalCart"
         case isgoal
+        case isQuickSipVal
     }
     
-    init(cafDetails: [String: String?]?, totalCart: TotalCart?, isgoal: Bool?) {
+    init(cafDetails: [String: String?]?, totalCart: TotalCart?, isgoal: Bool?, isQuickSip : Bool?) {
         self.cafDetails = cafDetails
         self.totalCart = totalCart
         self.isgoal = isgoal
+        self.isQuickSipVal  = isQuickSip
     }
 }
 
@@ -47,7 +50,7 @@ class TotalCart: Codable {
 extension UserDetailsServiceResponse {
     convenience init(data: Data) throws {
         let me = try JSONDecoder().decode(UserDetailsServiceResponse.self, from: data)
-        self.init(cafDetails: me.cafDetails, totalCart: me.totalCart, isgoal: me.isgoal)
+        self.init(cafDetails: me.cafDetails, totalCart: me.totalCart, isgoal: me.isgoal,isQuickSip : me.isQuickSipVal)
     }
     
     convenience init(_ json: String, using encoding: String.Encoding = .utf8) throws {

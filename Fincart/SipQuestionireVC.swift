@@ -309,8 +309,15 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
                     if let StringResponse = String(data: data! as! Data, encoding: String.Encoding.utf8) as String? {
                         DispatchQueue.main.async(execute: {
                             SVProgressHUD.dismiss()
+                            print(StringResponse)
                             do{
-                                self.userserviceResponse  = try UserGoalStatusServiceResponseElement(StringResponse)
+                                self.userserviceResponse  = try UserGoalStatusServiceResponse(StringResponse)
+                                let isQuickSip  = UserDefaults.standard.value(forKey: "IsQuickSip") as! Int
+                                if isQuickSip == 1{
+                                    self.callSingleSaveApi()
+                                }else{
+                                    self.callSaveApi()
+                                }
                                 //goalsReviewModel = try GoalsReview(jsonString)
                             }catch{}
                             
@@ -336,11 +343,12 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
         }
     }
     
+    // Mayank Comitted
     
     func callSingleSaveApi(){
         FinCartMacros.showSVProgressHUD()
         let accessToken = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
-        APIManager.sharedInstance.saveSingleReview(accessToken!, goalReviewData: self.userserviceResponse, success: { (response, data) in
+        APIManager.sharedInstance.saveSingleQuickSipData(accessToken!,urlStr : FinCartMacros.kSaveSingleGoalURL, goalReviewData: self.userserviceResponse[0], success: { (response, data) in
             if let httpResponse = response as? HTTPURLResponse{
                 if httpResponse.statusCode == 200{
                     DispatchQueue.main.async(execute: {
@@ -349,7 +357,8 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
                     })
                 }
                 else if (httpResponse.statusCode == 401){
-                    self.refreshAccessToken("save")
+                    print("ahjdsgfge")
+                   // self.refreshAccessToken("save")
                 }else{
                     DispatchQueue.main.async(execute: {
                         SVProgressHUD.dismiss()
@@ -364,7 +373,35 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
             })
         }
     }
-        
+   
+    func callSaveApi(){
+        FinCartMacros.showSVProgressHUD()
+        let accessToken = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
+        APIManager.sharedInstance.saveQuickSipData(accessToken!, urlStr: FinCartMacros.kSaveReviewURL, goalReviewData: self.userserviceResponse, success: { (response, data) in
+            if let httpResponse = response as? HTTPURLResponse{
+                if httpResponse.statusCode == 200{
+                    DispatchQueue.main.async(execute: {
+                        SVProgressHUD.dismiss()
+                        self.appDelegate.showDashboardScreen()
+                    })
+                }
+                else if (httpResponse.statusCode == 401){
+                    print("ahjdsgfge")
+                    // self.refreshAccessToken("save")
+                }else{
+                    DispatchQueue.main.async(execute: {
+                        SVProgressHUD.dismiss()
+                        self.alertController("Server Error", message: "Server is temporary available")
+                    })
+                }
+            }
+        }) { (error) in
+            DispatchQueue.main.async(execute: {
+                SVProgressHUD.dismiss()
+                self.alertController("Error", message: error.localizedDescription)
+            })
+        }
+    }
     
     func saveQuickSipDetails(){
         FinCartMacros.showSVProgressHUD()

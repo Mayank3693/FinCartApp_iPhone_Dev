@@ -47,6 +47,7 @@ class FinCartMacros{
     static let kIsUserRegistered = "isUserRegistered"
     static let kIsUserLoggedIn = "isUserLoggedIn"
     static let kIsGoal = "isGoal"
+    static let kIsQuickSip  =  "isQuickSip"
     static let kIsFirstTimeLogin = "isFirstTimeLogin"
     static let kIsDeviceRegistered = "isDeviceRegistered"
     static let kUserName = "username"
