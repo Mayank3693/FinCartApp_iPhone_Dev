@@ -73,6 +73,8 @@ class FinCartSideMenuVC : RESideMenu, RESideMenuDelegate, FinCartLeftMenuVCDeleg
     //MARKS: - FinCartLeftMenuVCDelegate Protocol
     func leftMenu(_ leftMenuVC: FinCartLeftMenuVC!, selectionIndex: NSInteger) {
         switch selectionIndex {
+        case 0:
+            showSummary()
         case 6:
             showKYC()
             break
@@ -89,6 +91,12 @@ class FinCartSideMenuVC : RESideMenu, RESideMenuDelegate, FinCartLeftMenuVCDeleg
     //MARKS: -
     public func populateDashboard(){
         let contentVC = self.storyboard?.instantiateViewController(withIdentifier: "contentVC")
+        self.setContentViewController(contentVC, animated: true)
+        self.hideViewController()
+    }
+    
+    public func showSummary(){
+        let contentVC = self.storyboard?.instantiateViewController(withIdentifier: "SummaryVC")
         self.setContentViewController(contentVC, animated: true)
         self.hideViewController()
     }

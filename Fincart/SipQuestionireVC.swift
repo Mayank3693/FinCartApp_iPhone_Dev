@@ -385,7 +385,7 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
                 if httpResponse.statusCode == 200{
                     DispatchQueue.main.async(execute: {
                         SVProgressHUD.dismiss()
-                        self.appDelegate.showDashboardScreen()
+                        //self.appDelegate.showDashboardScreen()
                     })
                 }
                 else if (httpResponse.statusCode == 401){

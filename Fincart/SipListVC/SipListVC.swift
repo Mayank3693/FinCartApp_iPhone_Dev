@@ -8,105 +8,134 @@
 
 import UIKit
 
-class SipListVC: FinCartViewController,UITableViewDelegate,UITableViewDataSource {
-var userserviceResponse  :  UserGoalStatusServiceResponse!
-    var goalArr = [[String:Any]]()
+class SipListVC: FinCartViewController,UITableViewDelegate,UITableViewDataSource,SipListDelegate {
+
     @IBOutlet weak var sipListTableView: UITableView!
+    @IBOutlet weak var mapTableView: UITableView!
+    @IBOutlet weak var goalView: UIView!
+    @IBOutlet weak var emptyView: UIView!
+    @IBOutlet weak var createGoal: UIButton!
+    @IBOutlet weak var mapGoalBtn: UIButton!
+    
+    var userserviceResponse  :  UserGoalStatusServiceResponse!
+    var goalArr    =   [[String:Any]]()
+    var mapArray   =   [[String : Any]]()
+    var goalId     =   Int()
+    var selectGoal =   Int()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.goalView.isHidden  = true
+        self.emptyView.isHidden  = true
         setUpBackButton()
-       callGetSipApi()
-        // Do any additional setup after loading the view.
+        callGetSipApi(urlStr : FinCartMacros.kFetchSipList,apiName : "GetSip")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func viewDidLayoutSubviews() {
+        self.createGoal.layer.cornerRadius  = 11
+    }
     //Table view Data source
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return goalArr.count
+        if tableView == self.mapTableView {
+            return mapArray.count
+        }else{
+            return goalArr.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = sipListTableView.dequeueReusableCell(withIdentifier: "SipListCell") as! SipListCell
-//        "InvestedAmount": "0",
-//        "CurrentAmount": "0",
-//        "PendingAmount": "822240"
         
-        cell.cellHeader.text = "Other Achieved: 0%"
-        if let achives = goalArr[indexPath.row]["GoalAchieved"] as? String{
-            cell.cellHeader.text = String(format: "Other Achieved: %@%", achives)
+        if tableView == self.mapTableView {
+            let cell = mapTableView.dequeueReusableCell(withIdentifier: "MapCell") as! MapCell
+            return cell
+        }else{
+           let cell = sipListTableView.dequeueReusableCell(withIdentifier: "SipListCell") as! SipListCell
+            cell.delegate  =   self
+            cell.tag       =   indexPath.row
+            cell.cellHeader.text = "Other Achieved: 0%"
+            if let achives = goalArr[indexPath.row]["GoalAchieved"] as? String{
+                cell.cellHeader.text = String(format: "Other Achieved: %@%", achives)
+            }
+            cell.currentLabel.text = String(format: "₹ %@", goalArr[indexPath.row]["CurrentAmount"] as! String)
+            cell.investLabel.text = String(format: "₹ %@", goalArr[indexPath.row]["InvestedAmount"] as! String)
+            cell.pendingLabel.text = String(format: "₹ %@", goalArr[indexPath.row]["PendingAmount"] as! String)
+            return cell
         }
-        
-
-
-        cell.currentLabel.text = String(format: "₹ %@", goalArr[indexPath.row]["CurrentAmount"] as! String)
-        
-        cell.investLabel.text = String(format: "₹ %@", goalArr[indexPath.row]["InvestedAmount"] as! String)
-        cell.pendingLabel.text = String(format: "₹ %@", goalArr[indexPath.row]["PendingAmount"] as! String)
-        
-        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if tableView == self.mapTableView {
+            self.selectGoal  =  indexPath.row
+        }
+    }
+    func mapWithGoal(index: Int) {
+        self.callGetSipApi(urlStr: FinCartMacros.kMapDataList, apiName: "MapList")
+        self.goalId  =   self.goalArr[index]["ID"] as! Int
+        self.goalView.isHidden  = true
+    }
+    @IBAction func mapGoalAct(_ sender: Any) {
+        self.callGetSipApi(urlStr: FinCartMacros.kMapDataList, apiName: "MapGoal")
     }
     
+    @IBAction func cancelBtnAct(_ sender: Any) {
+        self.goalView.isHidden   =  true
+    }
     
     // Pankaj Comitted
     
-    func callGetSipApi(){
+    func callGetSipApi(urlStr : String,apiName : String){
         FinCartMacros.showSVProgressHUD()
         let accessToken = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
-        APIManager.sharedInstance.getQuickSipData(accessToken!,urlStr : FinCartMacros.kFetchSipList, success: { (response, data) in
+        APIManager.sharedInstance.getQuickSipData(accessToken!,urlStr : urlStr, success: { (response, data) in
             if let httpResponse = response as? HTTPURLResponse{
                 if httpResponse.statusCode == 200{
                     DispatchQueue.main.async(execute: {
                         SVProgressHUD.dismiss()
-                        
-                        
-                        
-                        
                         if let json = try? JSONSerialization.jsonObject(with: (data as! Data), options: JSONSerialization.ReadingOptions.allowFragments) as Any? {
-                            
                             if let jsonDict = json as? [String: Any] {
-                                
-                                self.goalArr = jsonDict["UserGoal"] as! [[String:Any]]
-                                self.sipListTableView.reloadData()
-                                print(self.goalArr)
+                                if apiName == "GetSip"{
+                                    self.goalArr = jsonDict["UserGoal"] as! [[String:Any]]
+                                    self.sipListTableView.reloadData()
+                                    print(self.goalArr)
+                                }else{
+                                    self.emptyView.isHidden   =  true
+                                    self.goalView.isHidden    =  false
+                                    self.mapGoalBtn.isHidden  =  false
+                                    self.mapArray   =  jsonDict["UserGoal"] as! [[String:Any]]
+                                    self.mapTableView.reloadData()
+                                    print(self.mapArray)
+                                }
                             } else {
-                                
+                                if apiName == "MapList"{
+                                    self.goalView.isHidden    =  false
+                                    self.emptyView.isHidden   =  false
+                                    self.mapGoalBtn.isHidden  =  true
+                                    self.mapTableView.reloadData()
+                                }
                                 print("Error in parsing")
                             }
                         }
                         else{
+                            if apiName == "MapList"{
+                                self.goalView.isHidden   =  false
+                                self.emptyView.isHidden   =  false
+                                self.mapTableView.reloadData()
+                            }
                             //SSCommonClass.ToastShowMessage(msg: "SERVER SIDE ERROR!",viewController: nil)
                             print("SERVER SIDE ERROR!")
-//                            SSCommonClass.dismissProgress()
                         }
-                        
-                        
-                        
-                        
-//                        if let StringResponse = String(data: data! as! Data, encoding: String.Encoding.utf8) as String? {
-//                            DispatchQueue.main.async(execute: {
-//                                SVProgressHUD.dismiss()
-//                                print(StringResponse)
-//                                do{
-//                                    self.userserviceResponse  = try UserGoalStatusServiceResponse(StringResponse)
-//                                   
-//                                    //goalsReviewModel = try GoalsReview(jsonString)
-//                                }catch{}
-//                                
-//                            })
-//                        }
-                        
-                        
-                        
-//                        let sipList: SipListVC! = self.storyboard?.instantiateViewController(withIdentifier: "SipListVC") as! SipListVC
-//                        self.navigationController?.pushViewController(sipList, animated: true)
-                        //                        self.appDelegate.showDashboardScreen()
                     })
                 }
                 else if (httpResponse.statusCode == 401){
                     print("ahjdsgfge")
+                    if apiName == "MapList"{
+                        self.goalView.isHidden   =  false
+                        self.emptyView.isHidden   =  false
+                        self.mapTableView.reloadData()
+                    }
                     // self.refreshAccessToken("save")
                 }else{
                     DispatchQueue.main.async(execute: {
@@ -134,6 +163,12 @@ var userserviceResponse  :  UserGoalStatusServiceResponse!
     @IBAction func saveAndTranAction(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func createGoalBtn(_ sender: Any) {
+        let vc   =  self.storyboard?.instantiateViewController(withIdentifier: "fincartGoalsVC") as! FinCartGoalsVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -146,7 +181,13 @@ var userserviceResponse  :  UserGoalStatusServiceResponse!
 
 }
 
+protocol SipListDelegate {
+    func mapWithGoal(index :Int)
+//    func modify(index :Int)
+//    func Activte(index :Int)
+}
 class SipListCell: UITableViewCell {
+    var delegate  :  SipListDelegate?
     @IBOutlet weak var cellHeader: UILabel!
     @IBOutlet weak var investLabel: UILabel!
     @IBOutlet weak var currentLabel: UILabel!
@@ -161,11 +202,38 @@ class SipListCell: UITableViewCell {
         modifyBtn.layer.cornerRadius = 10.0
         mainView.layer.cornerRadius = 10.0
         mapWithGoalBtn.layer.cornerRadius = 10.0
-        
     }
-
-
-    
+    @IBAction func modifyBtn(_ sender: Any) {
+       // self.delegate?.modify(index: self.tag)
+    }
+    @IBAction func activateBtn(_ sender: Any) {
+       // self.delegate?.Activte(index: self.tag)
+    }
+    @IBAction func mapBtn(_ sender: Any) {
+        self.delegate?.mapWithGoal(index: self.tag)
+    }
     
     
 }
+
+class MapCell: UITableViewCell {
+
+    @IBOutlet weak var selectImage: UIImageView!
+    @IBOutlet weak var goalLabel: UILabel!
+    
+    override func awakeFromNib() {
+        print("abcd")
+    }
+    
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+        if selected == true{
+            self.selectImage.image   =  UIImage.init(named: "select")
+        }else{
+            self.selectImage.image   =  UIImage.init(named: "dot")
+        }
+        
+        // Configure the view for the selected state
+    }
+}
+

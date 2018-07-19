@@ -287,6 +287,8 @@ class FinCartRegisterationVC: UIViewController, UITextFieldDelegate {
                         FinCartUserDefaults.sharedInstance.saveUserName((self.userDetailsServiceResponse?.cafDetails!["UserId"])!)
                         FinCartUserDefaults.sharedInstance.saveUserImageURL((self.userDetailsServiceResponse?.cafDetails!["profilePic"])!)
                         FinCartUserDefaults.sharedInstance.saveUserPassword((self.userDetailsServiceResponse?.cafDetails!["UserPass"])!)
+                       
+                            UserDefaults.standard.set("1", forKey: "firstTime")
                         FinCartUserDefaults.sharedInstance.saveKycStatus((self.userDetailsServiceResponse?.cafDetails!["kycStatus"])!)
                         FinCartUserDefaults.sharedInstance.saveIsLoggedin(true)
                     }catch{}

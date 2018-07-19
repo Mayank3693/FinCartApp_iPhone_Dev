@@ -103,7 +103,7 @@ class FinCartGoalsVC: FinCartViewController, UICollectionViewDelegate, UICollect
     }
     
     private func mapFetchedUserSavedGoalsCode(){
-        for index in 0 ..< (self.savedUserGoalServiceResponse?.count)!{
+        for index in 0 ..< (self.savedUserGoalServiceResponse?.count ?? 0){
             self.goalsFetchedArray?.append((self.savedUserGoalServiceResponse?[index].goalCode)!)
         }
     }

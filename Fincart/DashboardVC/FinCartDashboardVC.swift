@@ -156,10 +156,13 @@ class FinCartDashboardVC: FinCartViewController, UITableViewDataSource, UITableV
                             
                         
                             SVProgressHUD.dismiss()
-                            let userInfoVC : SipQuestionireVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SipQuestionireVC") as! SipQuestionireVC
-//                            userInfoVC.singleGoalCode   = ""
-//                            userInfoVC.fincartType      = self.type ?? ""
-                            self.navigationController?.pushViewController(userInfoVC, animated: true)
+                            if UserDefaults.standard.value(forKey: "firstTime") as? String ?? "0" == "1"{
+                                let userInfoVC : SipQuestionireVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SipQuestionireVC") as! SipQuestionireVC
+                                self.navigationController?.pushViewController(userInfoVC, animated: true)
+                            }else{
+                                let sipList: SipListVC! = self.storyboard?.instantiateViewController(withIdentifier: "SipListVC") as! SipListVC
+                                self.navigationController?.pushViewController(sipList, animated: true)
+                            }
                         })
                     }
                 }
