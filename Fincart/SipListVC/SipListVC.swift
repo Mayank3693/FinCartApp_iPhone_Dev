@@ -16,6 +16,8 @@ class SipListVC: FinCartViewController,UITableViewDelegate,UITableViewDataSource
     @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var createGoal: UIButton!
     @IBOutlet weak var mapGoalBtn: UIButton!
+    let COMPLETE_PROFILE_TAG = 1
+    let ACTIVATE_SIP_TAG = 2
     
     var userserviceResponse  :  UserGoalStatusServiceResponse!
     var goalArr    =   [[String:Any]]()
@@ -28,6 +30,11 @@ class SipListVC: FinCartViewController,UITableViewDelegate,UITableViewDataSource
         self.goalView.isHidden  = true
         self.emptyView.isHidden  = true
         setUpBackButton()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         callGetSipApi(urlStr : FinCartMacros.kFetchSipList,apiName : "GetSip")
     }
 
@@ -53,6 +60,8 @@ class SipListVC: FinCartViewController,UITableViewDelegate,UITableViewDataSource
             let cell = mapTableView.dequeueReusableCell(withIdentifier: "MapCell") as! MapCell
             return cell
         }else{
+            
+//            FinCartUserDefaults.sharedInstance.saveKycStatus((self.userDetailsServiceResponse?.cafDetails!["kycStatus"])!)
            let cell = sipListTableView.dequeueReusableCell(withIdentifier: "SipListCell") as! SipListCell
             cell.delegate  =   self
             cell.tag       =   indexPath.row
@@ -63,6 +72,27 @@ class SipListVC: FinCartViewController,UITableViewDelegate,UITableViewDataSource
             cell.currentLabel.text = String(format: "₹ %@", goalArr[indexPath.row]["CurrentAmount"] as! String)
             cell.investLabel.text = String(format: "₹ %@", goalArr[indexPath.row]["InvestedAmount"] as! String)
             cell.pendingLabel.text = String(format: "₹ %@", goalArr[indexPath.row]["PendingAmount"] as! String)
+              let kycStatus = FinCartUserDefaults.sharedInstance.retrieveKycStatus()
+            
+            cell.activateBtn.tag = indexPath.row
+            
+            if(kycStatus == "Y"){
+                
+                cell.activateBtn.addTarget(self, action: #selector(activateSipAction), for: .touchUpInside)
+                
+                cell.activateBtn.setTitle("ACTIVATE", for: UIControlState.normal)
+                
+            }
+            else{
+                 cell.activateBtn.addTarget(self, action: #selector(completeProfileAction), for: .touchUpInside)
+                cell.activateBtn.setTitle("COMPLETE PROFILE", for: UIControlState.normal)
+                
+            }
+            
+            
+            
+//            saveKycStatus((self.userDetailsServiceResponse?.cafDetails!["kycStatus"])!)
+            
             return cell
         }
     }
@@ -83,6 +113,16 @@ class SipListVC: FinCartViewController,UITableViewDelegate,UITableViewDataSource
     @IBAction func cancelBtnAct(_ sender: Any) {
         self.goalView.isHidden   =  true
     }
+    
+    @objc func activateSipAction() {
+        
+    }
+    @objc func completeProfileAction() {
+        let contentVC=self.storyboard?.instantiateViewController(withIdentifier: "FinCartKYCCheckNavigationVC")
+        self.present(contentVC!, animated: true, completion: nil)
+    }
+    
+    
     
     // Pankaj Comitted
     

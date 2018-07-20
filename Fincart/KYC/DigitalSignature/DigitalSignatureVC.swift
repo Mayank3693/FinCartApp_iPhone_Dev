@@ -447,8 +447,12 @@ public class DigitalSignatureVC: UIViewController {
                 print(response.result.value!)
                 SVProgressHUD.dismiss()
                 self.signatureView.clear()
-                let controller=self.storyboard?.instantiateViewController(withIdentifier: "FinCartKYCCheckVC") as! FinCartKYCCheckVC
-                self.navigationController?.pushViewController(controller, animated: true)
+                FinCartUserDefaults.sharedInstance.saveKycStatus("Y")
+                self.dismiss(animated: true, completion: nil)
+                
+                
+//                let controller=self.storyboard?.instantiateViewController(withIdentifier: "FinCartKYCCheckVC") as! FinCartKYCCheckVC
+//                self.navigationController?.pushViewController(controller, animated: true)
             }
             
             else if response.result.isFailure{
