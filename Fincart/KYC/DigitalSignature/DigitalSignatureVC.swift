@@ -370,6 +370,7 @@ public class DigitalSignatureVC: UIViewController {
                 })
                 
                 upload.responseJSON { response in
+                    SVProgressHUD.dismiss()
                     print("success")
                     print(response)   // result of response serialization
                     self.appFullSave()
