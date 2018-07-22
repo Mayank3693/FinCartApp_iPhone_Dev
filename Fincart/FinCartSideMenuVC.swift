@@ -96,7 +96,7 @@ class FinCartSideMenuVC : RESideMenu, RESideMenuDelegate, FinCartLeftMenuVCDeleg
     }
     
     public func showSummary(){
-        let contentVC = self.storyboard?.instantiateViewController(withIdentifier: "SummaryVC")
+        let contentVC = self.storyboard?.instantiateViewController(withIdentifier: "SummaryNavigation")
         self.setContentViewController(contentVC, animated: true)
         self.hideViewController()
     }

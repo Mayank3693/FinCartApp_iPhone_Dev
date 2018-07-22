@@ -8,47 +8,82 @@
 
 import UIKit
 
-class SummaryVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
+class SummaryVC: FinCartViewController,UIGestureRecognizerDelegate{
     
-    @IBOutlet weak var tableView: UITableView!
+   
+    @IBOutlet weak var pieView: UIView!
+    @IBOutlet weak var investAmount: UILabel!
+    @IBOutlet weak var worthAmount: UILabel!
+    @IBOutlet weak var gainAmount: UILabel!
+    @IBOutlet weak var cagrAmount: UILabel!
     
-    var summaryArray  =  [[String : Any]]()
+    @IBOutlet weak var investView: UIView!
+    @IBOutlet weak var worthView: UIView!
+    @IBOutlet weak var gainView: UIView!
+    @IBOutlet weak var cagr: UIView!
+    @IBOutlet weak var popUpView: UIView!
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    var summaryData   =  [String : Any]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false;
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self;
+        self.popUpView.isHidden   =   true
+        self.setUpPieChart()
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        setUpBackButton()
+        setupOpaqueNavigationBar()
         self.callGetSummaryApi(urlStr: FinCartMacros.kMapSummaryList, apiName: "")
     }
 
-    /*
-    // MARK: - Navigation
+    override func viewDidLayoutSubviews() {
+        self.setOpacity(view: self.investView)
+        self.setOpacity(view: self.worthView)
+        self.setOpacity(view: self.gainView)
+        self.setOpacity(view: self.cagr)
+    }
+    func setUpPieChart(){
+        let pieChartView = PieChartView()
+        pieChartView.layer.layoutIfNeeded()
+        pieChartView.frame = CGRect(x: 90, y: 60, width: pieView.frame.size.width, height: pieView.frame.size.width)
+        pieChartView.center   =  CGPoint(x: view.frame.width / 2, y: 120)
+        pieChartView.segments = [
+            Segment(color: .red, name: "57 %",  value: 57),
+            Segment(color: .blue, name : "37 %",  value: 30),
+        ]
+        self.view.addSubview(pieChartView)
+    }
+   
+    func setData(){
+        
+        self.investAmount.text   =    "₹ \(self.convertValue(amount: self.summaryData["initialval"] as? String ?? "0"))"
+        self.worthAmount.text    =    "₹ \(self.convertValue(amount: self.summaryData["currentval"] as? String ?? "0"))"
+        self.gainAmount.text     =    "₹ \(self.convertValue(amount: self.summaryData["gain"] as? String ?? "0"))"
+        self.cagrAmount.text     =    "\(self.convertValue(amount: self.summaryData["CAGR"] as? String ?? "0")) %"
+    }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func convertValue(amount : String)-> Double{
+        let amountFloat : Float? = Float(amount)
+        let amountInt : Int?  =  Int(amountFloat!)
+        return Double(amountInt!)
     }
-    */
+    
+    @IBAction func fullViewBtn(_ sender: Any) {
+        let  vc    =   self.storyboard?.instantiateViewController(withIdentifier: "FullViewFirstVC") as! FullViewFirstVC
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return summaryArray.count
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell   =  self.tableView.dequeueReusableCell(withIdentifier: "SummaryCell", for: indexPath) as! SummaryCell
-        return cell
-    }
     
     func callGetSummaryApi(urlStr : String,apiName : String){
         FinCartMacros.showSVProgressHUD()
@@ -59,13 +94,16 @@ class SummaryVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
                     DispatchQueue.main.async(execute: {
                         SVProgressHUD.dismiss()
                         if let json = try? JSONSerialization.jsonObject(with: (data as! Data), options: JSONSerialization.ReadingOptions.allowFragments) as Any? {
-                            if let jsonDict = json as? [String: Any] {
-                                    self.summaryArray = jsonDict["UserGoal"] as! [[String:Any]]
-                                    self.tableView.reloadData()
-                                    print(self.summaryArray)
+                            if let jsonDict = json as? [[String: Any]] {
+                                self.summaryData   =   jsonDict[0] 
+                                    print(self.summaryData)
+                                    self.setData()
+                            }else{
+                                self.popUpView.isHidden  =  false
                             }
                         }
                         else{
+                            self.popUpView.isHidden  =  false
                             //SSCommonClass.ToastShowMessage(msg: "SERVER SIDE ERROR!",viewController: nil)
                             print("SERVER SIDE ERROR!")
                         }
@@ -73,9 +111,9 @@ class SummaryVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
                 }
                 else if (httpResponse.statusCode == 401){
                     print("ahjdsgfge")
-                    SVProgressHUD.dismiss()
-                    self.alertController("Server Error", message: "Server is temporary not available")
-                    // self.refreshAccessToken("save")
+//                    SVProgressHUD.dismiss()
+//                    self.alertController("Server Error", message: "Server is temporary not available")
+                    self.refreshAccessToken()
                 }else{
                     DispatchQueue.main.async(execute: {
                         SVProgressHUD.dismiss()
@@ -91,6 +129,49 @@ class SummaryVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         }
     }
     
+    
+    private func refreshAccessToken()
+    {
+        FincartCommon.refreshAccessToken(success: { (responseCode) in
+            if responseCode != 200{
+                self.getAccessToken()
+            }
+        }) { (error) in
+            DispatchQueue.main.async(execute: {
+                SVProgressHUD.dismiss()
+                self.alertController("Error", message: error.localizedDescription)
+            })
+        }
+    }
+    
+    private func getAccessToken()
+    {
+        FincartCommon.getAccessToken(success: { (responseCode) in
+            if responseCode != 200{
+                DispatchQueue.main.async(execute: {
+                    SVProgressHUD.dismiss()
+                    let alert = UIAlertController(title: "Session Expired", message: "Please login again. ", preferredStyle: UIAlertControllerStyle.alert)
+                    let alertAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.cancel) { (alertAction) in
+                        alert.dismiss(animated: true)
+                        FinCartUserDefaults.sharedInstance.saveAccessToken(nil)
+                        FinCartUserDefaults.sharedInstance.saveRefershToken(nil)
+                        FinCartUserDefaults.sharedInstance.saveTokenType(nil)
+                        self.appDelegate.showLoginScreen()
+                    }
+                    alert.addAction(alertAction)
+                    self.present(alert, animated: true)
+                })
+
+            }
+        }) { (error) in
+            DispatchQueue.main.async(execute: {
+                SVProgressHUD.dismiss()
+                self.alertController("Error", message: error.localizedDescription)
+            })
+        }
+    }
+    
+    
     private func alertController(_ title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         let alertAction = UIAlertAction.init(title: "Cancel", style: UIAlertActionStyle.cancel) { (alertAction) in
@@ -100,14 +181,4 @@ class SummaryVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         self.present(alert, animated: true)
     }
     
-}
-
-class SummaryCell : UITableViewCell {
-    @IBOutlet weak var investImg: UIImageView!
-    @IBOutlet weak var imavestName: UILabel!
-    @IBOutlet weak var investAmount: UILabel!
-    
-    override func awakeFromNib() {
-        print("abcd")
-    }
 }

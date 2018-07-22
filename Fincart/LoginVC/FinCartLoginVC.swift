@@ -34,6 +34,7 @@ class FinCartLoginVC: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,6 +43,8 @@ class FinCartLoginVC: UIViewController, UITextFieldDelegate{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.userName.text   =   "Sanjay.harika@gmail.com"
+        self.userPassword.text  = "Fincart@2907"
         // Hide the navigation bar for current view controller
         self.contentViewHeightConstraint.constant = self.registerNowButton.frame.origin.y + self.registerNowButton.frame.size.height
         self.signButtonWidthConstraint.constant = self.view.frame.size.width - 32

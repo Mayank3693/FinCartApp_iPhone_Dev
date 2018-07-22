@@ -14,6 +14,7 @@ pod 'SwiftSignatureView'
 pod 'SwiftSoup'
 pod 'GoogleSignIn'
 pod 'FBSDKLoginKit'
+pod 'CarbonKit'
 
   target 'FincartTests' do
     inherit! :search_paths

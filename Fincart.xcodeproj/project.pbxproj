@@ -97,6 +97,10 @@
 		8AF3663E204E28D0008F6207 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AF3663D204E28D0008F6207 /* Images.swift */; };
 		A82214C020E2C63E004D5009 /* SipQuestionireVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82214BF20E2C63E004D5009 /* SipQuestionireVC.swift */; };
 		A82D139720FFC774002544F1 /* SummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82D139620FFC774002544F1 /* SummaryVC.swift */; };
+		A841D6EF2102746700B5BFC8 /* Piechart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841D6EE2102746700B5BFC8 /* Piechart.swift */; };
+		A866A6AF21050B8B000019B2 /* FullViewFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866A6AE21050B8B000019B2 /* FullViewFirstVC.swift */; };
+		A866A6B221050E60000019B2 /* FullViewSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866A6B121050E60000019B2 /* FullViewSecondVC.swift */; };
+		A866A6B421050EF9000019B2 /* FullViewThirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866A6B321050EF9000019B2 /* FullViewThirdVC.swift */; };
 		BC4682F4204D79C100DC5A6D /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682D6204D79BD00DC5A6D /* EditProfileVC.swift */; };
 		BC4682F5204D79C100DC5A6D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682D7204D79BD00DC5A6D /* ProfileVC.swift */; };
 		BC4682F6204D79C100DC5A6D /* BankAccountDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682DA204D79C000DC5A6D /* BankAccountDetailsVC.swift */; };
@@ -238,6 +242,10 @@
 		8AF3663D204E28D0008F6207 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		A82214BF20E2C63E004D5009 /* SipQuestionireVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SipQuestionireVC.swift; sourceTree = "<group>"; };
 		A82D139620FFC774002544F1 /* SummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryVC.swift; sourceTree = "<group>"; };
+		A841D6EE2102746700B5BFC8 /* Piechart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piechart.swift; sourceTree = "<group>"; };
+		A866A6AE21050B8B000019B2 /* FullViewFirstVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullViewFirstVC.swift; sourceTree = "<group>"; };
+		A866A6B121050E60000019B2 /* FullViewSecondVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullViewSecondVC.swift; sourceTree = "<group>"; };
+		A866A6B321050EF9000019B2 /* FullViewThirdVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullViewThirdVC.swift; sourceTree = "<group>"; };
 		A8DAFB14C52BB55555289070 /* Pods_FincartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FincartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4682D6204D79BD00DC5A6D /* EditProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		BC4682D7204D79BD00DC5A6D /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -348,6 +356,7 @@
 			isa = PBXGroup;
 			children = (
 				8AEE526420629CDC00E834B5 /* APIManager.swift */,
+				A841D6EE2102746700B5BFC8 /* Piechart.swift */,
 			);
 			name = networking;
 			sourceTree = "<group>";
@@ -745,9 +754,20 @@
 		A82D139520FFC74C002544F1 /* Summary */ = {
 			isa = PBXGroup;
 			children = (
+				A866A6B021050B97000019B2 /* FullView */,
 				A82D139620FFC774002544F1 /* SummaryVC.swift */,
 			);
 			path = Summary;
+			sourceTree = "<group>";
+		};
+		A866A6B021050B97000019B2 /* FullView */ = {
+			isa = PBXGroup;
+			children = (
+				A866A6AE21050B8B000019B2 /* FullViewFirstVC.swift */,
+				A866A6B121050E60000019B2 /* FullViewSecondVC.swift */,
+				A866A6B321050EF9000019B2 /* FullViewThirdVC.swift */,
+			);
+			path = FullView;
 			sourceTree = "<group>";
 		};
 		BC4682D5204D79BD00DC5A6D /* profile */ = {
@@ -871,8 +891,6 @@
 				61CF3DF31F8007E200D5AA67 /* Sources */,
 				61CF3DF41F8007E200D5AA67 /* Frameworks */,
 				61CF3DF51F8007E200D5AA67 /* Resources */,
-				AA0BA717A14AF8D8F69E5849 /* [CP] Embed Pods Frameworks */,
-				4ECD9F178483623BCCCF471F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -966,21 +984,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4ECD9F178483623BCCCF471F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FincartTests/Pods-FincartTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7041CEB1957E7EA9B67E2DC5 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -997,21 +1000,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AA0BA717A14AF8D8F69E5849 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FincartTests/Pods-FincartTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C02C14B9EEA5A5F91B33540C /* [CP] Check Pods Manifest.lock */ = {
@@ -1059,6 +1047,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Fincart/Pods-Fincart-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/CarbonKit/CarbonKit.framework",
 				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
 				"${BUILT_PRODUCTS_DIR}/DynamicBlurView/DynamicBlurView.framework",
 				"${BUILT_PRODUCTS_DIR}/EPSignature/EPSignature.framework",
@@ -1078,6 +1067,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CarbonKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DynamicBlurView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EPSignature.framework",
@@ -1124,6 +1114,7 @@
 				8AEE52752068159000E834B5 /* FundCalculationResult.swift in Sources */,
 				8A4650B9200C715400AB21C5 /* FinCartMacros.swift in Sources */,
 				BC468308204D79C100DC5A6D /* IncomeSourceVC.swift in Sources */,
+				A841D6EF2102746700B5BFC8 /* Piechart.swift in Sources */,
 				8A72EDA61FF522F200218F46 /* RoundRectUIButton.swift in Sources */,
 				BC4682F4204D79C100DC5A6D /* EditProfileVC.swift in Sources */,
 				8A817A2B205BF5F8008795E3 /* FinCartSingalQuestionnaireVC.swift in Sources */,
@@ -1134,6 +1125,7 @@
 				8AEE526B2063988700E834B5 /* FincartCommon.swift in Sources */,
 				A82214C020E2C63E004D5009 /* SipQuestionireVC.swift in Sources */,
 				8AF0152D1FFD076800A60957 /* FinancialPlanningCell.swift in Sources */,
+				A866A6B221050E60000019B2 /* FullViewSecondVC.swift in Sources */,
 				8A8976C82073981900915327 /* SingleGoalList.swift in Sources */,
 				5CC3B6D51FB73875007458F4 /* StringConstants.swift in Sources */,
 				BC4682F9204D79C100DC5A6D /* KYCScanVC.swift in Sources */,
@@ -1141,6 +1133,7 @@
 				8A1F1E312057F38200A8B645 /* Validation.swift in Sources */,
 				8A56231520701955003DF91F /* UserInfoData.swift in Sources */,
 				8AF1DBBC205EF7EF00FE4C71 /* GetOTPVC.swift in Sources */,
+				A866A6AF21050B8B000019B2 /* FullViewFirstVC.swift in Sources */,
 				BC468302204D79C100DC5A6D /* KycBasicDetailsFormVC.swift in Sources */,
 				8AF1DBB7205ED42600FE4C71 /* ForgotPasswordVC.swift in Sources */,
 				BC46830B204D79C100DC5A6D /* PoliticallyExposedLists.swift in Sources */,
@@ -1152,6 +1145,7 @@
 				8A56230B206F4D21003DF91F /* KidDataArrayList.swift in Sources */,
 				8A6116AE201BA72600EE5A39 /* OptionsArray.swift in Sources */,
 				BC468305204D79C100DC5A6D /* BankNameLists.swift in Sources */,
+				A866A6B421050EF9000019B2 /* FullViewThirdVC.swift in Sources */,
 				8A562309206DE97C003DF91F /* ChildBasicInfoVC.swift in Sources */,
 				8AD5C4A82004B01A00D69BB1 /* FinCartSideMenuVC.swift in Sources */,
 				A82D139720FFC774002544F1 /* SummaryVC.swift in Sources */,
