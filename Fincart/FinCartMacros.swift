@@ -45,6 +45,7 @@ class FinCartMacros{
     static let kFetchSipList = "api/goal/fetch/quicksip/all"
     static let kMapDataList    = "api/goal/fetch/0/0"
     static let kMapSummaryList = "api/invest/snapshot"
+    static let kGoalAllList = "api/goal/all"
     //MARKS:- API's params and user defaults keys
     static let kIsUserRegistered = "isUserRegistered"
     static let kIsUserLoggedIn = "isUserLoggedIn"

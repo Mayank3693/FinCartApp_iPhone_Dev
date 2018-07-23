@@ -75,6 +75,10 @@ class FinCartSideMenuVC : RESideMenu, RESideMenuDelegate, FinCartLeftMenuVCDeleg
         switch selectionIndex {
         case 0:
             showSummary()
+            break
+        case 1:
+            GoalList()
+            break
         case 6:
             showKYC()
             break
@@ -108,11 +112,18 @@ class FinCartSideMenuVC : RESideMenu, RESideMenuDelegate, FinCartLeftMenuVCDeleg
         self.hideViewController()
     }
     
+    private func GoalList()
+    {
+        let contentVC=self.storyboard?.instantiateViewController(withIdentifier: "GoalNavigation")
+        self.setContentViewController(contentVC, animated: true)
+        self.hideViewController()
+    }
+    
     private func showGoals()
     {
         let contentVC=self.storyboard?.instantiateViewController(withIdentifier: "finCartGoalsNavigationVC")
         self.setContentViewController(contentVC, animated: true)
-        self.hideViewController()
+
     }
     
     private func logout(){

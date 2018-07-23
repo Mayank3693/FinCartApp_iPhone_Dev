@@ -79,8 +79,8 @@ class SummaryVC: FinCartViewController,UIGestureRecognizerDelegate{
     }
     
     @IBAction func fullViewBtn(_ sender: Any) {
-        let  vc    =   self.storyboard?.instantiateViewController(withIdentifier: "FullViewFirstVC") as! FullViewFirstVC
-        self.navigationController?.pushViewController(vc, animated: true)
+//        let  vc    =   self.storyboard?.instantiateViewController(withIdentifier: "FullViewFirstVC") as! FullViewFirstVC
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 
