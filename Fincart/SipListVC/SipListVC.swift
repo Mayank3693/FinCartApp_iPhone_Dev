@@ -116,6 +116,11 @@ class SipListVC: FinCartViewController,UITableViewDelegate,UITableViewDataSource
     
     @objc func activateSipAction() {
         
+        let contentVC=self.storyboard?.instantiateViewController(withIdentifier: "TransactVC") as! TransactVC
+        self.navigationController?.pushViewController(contentVC, animated: true)
+//        self.present(contentVC!, animated: true, completion: nil)
+        
+        
     }
     @objc func completeProfileAction() {
         let contentVC=self.storyboard?.instantiateViewController(withIdentifier: "FinCartKYCCheckNavigationVC")
