@@ -16,6 +16,7 @@ class GoalList: FinCartViewController,UITableViewDelegate,UITableViewDataSource 
     @IBOutlet weak var createGoal: UIButton!
     
     var goalArr    =   [[String:Any]]()
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var goalId     =   Int()
     var selectGoal =   Int()
     
@@ -23,8 +24,13 @@ class GoalList: FinCartViewController,UITableViewDelegate,UITableViewDataSource 
         super.viewDidLoad()
         self.goalView.isHidden  = true
         self.emptyView.isHidden  = true
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         setUpBackButton()
-        callGetSipApi(urlStr : FinCartMacros.kGoalAllList,apiName : "GetSip")
+        setupOpaqueNavigationBar()
+        callGetSipApi(urlStr : FinCartMacros.kUserGoalStatusURL,apiName : "GetSip")
     }
     
     override func didReceiveMemoryWarning() {
@@ -38,12 +44,23 @@ class GoalList: FinCartViewController,UITableViewDelegate,UITableViewDataSource 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return goalArr.count
     }
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return self.sipListTableView.frame.size.height/2 - 8
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = sipListTableView.dequeueReusableCell(withIdentifier: "cell") as! GoalCell
             //cell.delegate  =   self
+            do {
+               let url = URL(string: goalArr[indexPath.row]["GoalImage"] as? String ?? "")
+               let data = try Data(contentsOf: url!)
+               cell.mainImage.image = UIImage(data: data)
+            }
+            catch{
+               print(error)
+            }
             cell.tag       =   indexPath.row
-            cell.cellHeader.text = "Other Achieved: 0%"
+            cell.cellHeader.text = "\(goalArr[indexPath.row]["GoalName"] as! String) Achieved: \(goalArr[indexPath.row]["GoalAchieved"] as! String)%"
+            cell.desLabel.text   =  "You will get ₹ \(goalArr[indexPath.row]["GetAmount"] as! String) after completion of goal."
             if let achives = goalArr[indexPath.row]["GoalAchieved"] as? String{
                 cell.cellHeader.text = String(format: "Other Achieved: %@%", achives)
             }
@@ -91,11 +108,7 @@ class GoalList: FinCartViewController,UITableViewDelegate,UITableViewDataSource 
                 }
                 else if (httpResponse.statusCode == 401){
                     print("ahjdsgfge")
-                    if apiName == "MapList"{
-                        self.goalView.isHidden   =  false
-                        self.emptyView.isHidden   =  false
-                    }
-                    // self.refreshAccessToken("save")
+                     self.refreshAccessToken()
                 }else{
                     DispatchQueue.main.async(execute: {
                         SVProgressHUD.dismiss()
@@ -110,6 +123,48 @@ class GoalList: FinCartViewController,UITableViewDelegate,UITableViewDataSource 
             })
         }
     }
+    
+    private func refreshAccessToken()
+    {
+        FincartCommon.refreshAccessToken(success: { (responseCode) in
+            if responseCode != 200{
+                self.getAccessToken()
+            }
+        }) { (error) in
+            DispatchQueue.main.async(execute: {
+                SVProgressHUD.dismiss()
+                self.alertController("Error", message: error.localizedDescription)
+            })
+        }
+    }
+    
+    private func getAccessToken()
+    {
+        FincartCommon.getAccessToken(success: { (responseCode) in
+            if responseCode != 200{
+                DispatchQueue.main.async(execute: {
+                    SVProgressHUD.dismiss()
+                    let alert = UIAlertController(title: "Session Expired", message: "Please login again. ", preferredStyle: UIAlertControllerStyle.alert)
+                    let alertAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.cancel) { (alertAction) in
+                        alert.dismiss(animated: true)
+                        FinCartUserDefaults.sharedInstance.saveAccessToken(nil)
+                        FinCartUserDefaults.sharedInstance.saveRefershToken(nil)
+                        FinCartUserDefaults.sharedInstance.saveTokenType(nil)
+                        self.appDelegate.showLoginScreen()
+                    }
+                    alert.addAction(alertAction)
+                    self.present(alert, animated: true)
+                })
+                
+            }
+        }) { (error) in
+            DispatchQueue.main.async(execute: {
+                SVProgressHUD.dismiss()
+                self.alertController("Error", message: error.localizedDescription)
+            })
+        }
+    }
+    
     
     private func alertController(_ title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)

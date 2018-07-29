@@ -23,6 +23,8 @@ class GoalCell: UITableViewCell {
     @IBOutlet weak var modifyBtn: UIButton!
     @IBOutlet weak var activateBtn: UIButton!
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var mainImage: UIImageView!
+    @IBOutlet weak var desLabel: UILabel!
     
     override func awakeFromNib() {
         activateBtn.layer.cornerRadius = 10.0
@@ -30,6 +32,12 @@ class GoalCell: UITableViewCell {
         mainView.layer.cornerRadius = 10.0
     }
 
+    override func layoutSubviews() {
+        mainView.layer.shadowColor = UIColor.black.cgColor
+        mainView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        mainView.layer.shadowOpacity = 0.6
+        mainView.layer.shadowRadius = 5
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

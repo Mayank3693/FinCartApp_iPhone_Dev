@@ -79,8 +79,8 @@ class SummaryVC: FinCartViewController,UIGestureRecognizerDelegate{
     }
     
     @IBAction func fullViewBtn(_ sender: Any) {
-//        let  vc    =   self.storyboard?.instantiateViewController(withIdentifier: "FullViewFirstVC") as! FullViewFirstVC
-//        self.navigationController?.pushViewController(vc, animated: true)
+        let  vc    =   self.storyboard?.instantiateViewController(withIdentifier: "SummaryDetail") as! SummaryDetail
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
 
@@ -111,8 +111,6 @@ class SummaryVC: FinCartViewController,UIGestureRecognizerDelegate{
                 }
                 else if (httpResponse.statusCode == 401){
                     print("ahjdsgfge")
-//                    SVProgressHUD.dismiss()
-//                    self.alertController("Server Error", message: "Server is temporary not available")
                     self.refreshAccessToken()
                 }else{
                     DispatchQueue.main.async(execute: {

@@ -99,6 +99,14 @@
 		A8250F6E21066CDD00F54709 /* GoalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8250F6D21066CDD00F54709 /* GoalList.swift */; };
 		A8250F7021066CF400F54709 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8250F6F21066CF400F54709 /* GoalCell.swift */; };
 		A82D139720FFC774002544F1 /* SummaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82D139620FFC774002544F1 /* SummaryVC.swift */; };
+		A82ED971210787E900495207 /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82ED969210787E800495207 /* HeaderCell.swift */; };
+		A82ED972210787E900495207 /* HeaderDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82ED96A210787E800495207 /* HeaderDetailCell.xib */; };
+		A82ED973210787E900495207 /* HeaderDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82ED96B210787E900495207 /* HeaderDetailCell.swift */; };
+		A82ED974210787E900495207 /* FullViewFirstVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82ED96C210787E900495207 /* FullViewFirstVC.swift */; };
+		A82ED975210787E900495207 /* FullViewThirdVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82ED96D210787E900495207 /* FullViewThirdVC.swift */; };
+		A82ED976210787E900495207 /* SummaryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82ED96E210787E900495207 /* SummaryDetail.swift */; };
+		A82ED977210787E900495207 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82ED96F210787E900495207 /* HeaderCell.xib */; };
+		A82ED978210787E900495207 /* FullViewSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82ED970210787E900495207 /* FullViewSecondVC.swift */; };
 		A841D6EF2102746700B5BFC8 /* Piechart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841D6EE2102746700B5BFC8 /* Piechart.swift */; };
 		BC4682F4204D79C100DC5A6D /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682D6204D79BD00DC5A6D /* EditProfileVC.swift */; };
 		BC4682F5204D79C100DC5A6D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682D7204D79BD00DC5A6D /* ProfileVC.swift */; };
@@ -243,6 +251,14 @@
 		A8250F6D21066CDD00F54709 /* GoalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalList.swift; sourceTree = "<group>"; };
 		A8250F6F21066CF400F54709 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 		A82D139620FFC774002544F1 /* SummaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryVC.swift; sourceTree = "<group>"; };
+		A82ED969210787E800495207 /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
+		A82ED96A210787E800495207 /* HeaderDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderDetailCell.xib; sourceTree = "<group>"; };
+		A82ED96B210787E900495207 /* HeaderDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderDetailCell.swift; sourceTree = "<group>"; };
+		A82ED96C210787E900495207 /* FullViewFirstVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullViewFirstVC.swift; sourceTree = "<group>"; };
+		A82ED96D210787E900495207 /* FullViewThirdVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullViewThirdVC.swift; sourceTree = "<group>"; };
+		A82ED96E210787E900495207 /* SummaryDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryDetail.swift; sourceTree = "<group>"; };
+		A82ED96F210787E900495207 /* HeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
+		A82ED970210787E900495207 /* FullViewSecondVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullViewSecondVC.swift; sourceTree = "<group>"; };
 		A841D6EE2102746700B5BFC8 /* Piechart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piechart.swift; sourceTree = "<group>"; };
 		A8DAFB14C52BB55555289070 /* Pods_FincartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FincartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4682D6204D79BD00DC5A6D /* EditProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
@@ -771,6 +787,14 @@
 		A866A6B021050B97000019B2 /* FullView */ = {
 			isa = PBXGroup;
 			children = (
+				A82ED96C210787E900495207 /* FullViewFirstVC.swift */,
+				A82ED970210787E900495207 /* FullViewSecondVC.swift */,
+				A82ED96D210787E900495207 /* FullViewThirdVC.swift */,
+				A82ED969210787E800495207 /* HeaderCell.swift */,
+				A82ED96F210787E900495207 /* HeaderCell.xib */,
+				A82ED96B210787E900495207 /* HeaderDetailCell.swift */,
+				A82ED96A210787E800495207 /* HeaderDetailCell.xib */,
+				A82ED96E210787E900495207 /* SummaryDetail.swift */,
 			);
 			path = FullView;
 			sourceTree = "<group>";
@@ -958,6 +982,7 @@
 				5CC3B6BB1FB70226007458F4 /* linkedin-icon.png in Resources */,
 				61CF3DF11F8007E200D5AA67 /* LaunchScreen.storyboard in Resources */,
 				5CC3B6B81FB70226007458F4 /* background.jpg in Resources */,
+				A82ED977210787E900495207 /* HeaderCell.xib in Resources */,
 				8A611699201BA6A400EE5A39 /* single_male.json in Resources */,
 				8A8976C320737EE200915327 /* Assets.xcassets in Resources */,
 				8A61169B201BA6A400EE5A39 /* all_goals_with_retire.json in Resources */,
@@ -966,6 +991,7 @@
 				5CC3B6B91FB70226007458F4 /* fb-icon.png in Resources */,
 				8A61169E201BA6A400EE5A39 /* single_female.json in Resources */,
 				8A611698201BA6A400EE5A39 /* have_child.json in Resources */,
+				A82ED972210787E900495207 /* HeaderDetailCell.xib in Resources */,
 				8A61169A201BA6A400EE5A39 /* married_female.json in Resources */,
 				5CC3B6C01FB70226007458F4 /* password-icon.png in Resources */,
 				5CC3B6C21FB70226007458F4 /* user-icon.png in Resources */,
@@ -1102,6 +1128,7 @@
 			files = (
 				8AF3663A204E273A008F6207 /* Colors.swift in Sources */,
 				61CF3DE91F8007E200D5AA67 /* FinCartLoginVC.swift in Sources */,
+				A82ED973210787E900495207 /* HeaderDetailCell.swift in Sources */,
 				8A56230F206FD804003DF91F /* AccessTokenServiceResponse.swift in Sources */,
 				8A4650BC200C803200AB21C5 /* FinCartUserDefaults.swift in Sources */,
 				8AEE526E2065329700E834B5 /* GoalsReviewVCViewController.swift in Sources */,
@@ -1124,6 +1151,7 @@
 				8A72EDA61FF522F200218F46 /* RoundRectUIButton.swift in Sources */,
 				BC4682F4204D79C100DC5A6D /* EditProfileVC.swift in Sources */,
 				8A817A2B205BF5F8008795E3 /* FinCartSingalQuestionnaireVC.swift in Sources */,
+				A82ED974210787E900495207 /* FullViewFirstVC.swift in Sources */,
 				61CF3DE71F8007E200D5AA67 /* AppDelegate.swift in Sources */,
 				BC468304204D79C100DC5A6D /* BankAccountTypeVC.swift in Sources */,
 				8A9922B8208F4841004C4774 /* SavedUserGoalServiceResponse.swift in Sources */,
@@ -1143,8 +1171,10 @@
 				A8250F7021066CF400F54709 /* GoalCell.swift in Sources */,
 				BC46830B204D79C100DC5A6D /* PoliticallyExposedLists.swift in Sources */,
 				8AD5C4BF2004FFE900D69BB1 /* FinCartGoalsCollectionViewCell.swift in Sources */,
+				A82ED978210787E900495207 /* FullViewSecondVC.swift in Sources */,
 				BC468303204D79C100DC5A6D /* AnnualIncomeLists.swift in Sources */,
 				5CC3B6DE1FB73955007458F4 /* Utils.swift in Sources */,
+				A82ED976210787E900495207 /* SummaryDetail.swift in Sources */,
 				8AD5C4B82004F05700D69BB1 /* FinCartQuestionnaireVC.swift in Sources */,
 				BC4682F5204D79C100DC5A6D /* ProfileVC.swift in Sources */,
 				8A56230B206F4D21003DF91F /* KidDataArrayList.swift in Sources */,
@@ -1159,6 +1189,7 @@
 				BC4682F8204D79C100DC5A6D /* KycScanOrManualVC.swift in Sources */,
 				5CE3496B1FB75471006C36ED /* SVProgressHUD.m in Sources */,
 				8A3C007E2080D660001A2795 /* FincartGoalCodes.swift in Sources */,
+				A82ED975210787E900495207 /* FullViewThirdVC.swift in Sources */,
 				BC4682FB204D79C100DC5A6D /* DigitalSignatureVC.swift in Sources */,
 				8A6116AD201BA72600EE5A39 /* QuestionArrays.swift in Sources */,
 				8A6AAEE92084CAC000D99815 /* EditGoalsDetailsVC.swift in Sources */,
@@ -1176,6 +1207,7 @@
 				5CE3496E1FB7547C006C36ED /* SVIndefiniteAnimatedView.m in Sources */,
 				8AF3663C204E282F008F6207 /* Dimensions.swift in Sources */,
 				8AD5C4BC2004FC7C00D69BB1 /* FinCartGoalsVC.swift in Sources */,
+				A82ED971210787E900495207 /* HeaderCell.swift in Sources */,
 				BC4682FC204D79C100DC5A6D /* YPDrawSignatureView.swift in Sources */,
 				BC468307204D79C100DC5A6D /* IDCardsLists.swift in Sources */,
 				8A173D4820691B4300B61219 /* GoalsReview.swift in Sources */,
