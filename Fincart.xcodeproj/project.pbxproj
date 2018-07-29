@@ -108,6 +108,7 @@
 		A82ED976210787E900495207 /* SummaryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82ED96E210787E900495207 /* SummaryDetail.swift */; };
 		A82ED977210787E900495207 /* HeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A82ED96F210787E900495207 /* HeaderCell.xib */; };
 		A82ED978210787E900495207 /* FullViewSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82ED970210787E900495207 /* FullViewSecondVC.swift */; };
+		A840FF5E210E4C8B00B270C3 /* TransactListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A840FF5D210E4C8B00B270C3 /* TransactListVC.swift */; };
 		A841D6EF2102746700B5BFC8 /* Piechart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841D6EE2102746700B5BFC8 /* Piechart.swift */; };
 		BC4682F4204D79C100DC5A6D /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682D6204D79BD00DC5A6D /* EditProfileVC.swift */; };
 		BC4682F5204D79C100DC5A6D /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC4682D7204D79BD00DC5A6D /* ProfileVC.swift */; };
@@ -262,6 +263,7 @@
 		A82ED96E210787E900495207 /* SummaryDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryDetail.swift; sourceTree = "<group>"; };
 		A82ED96F210787E900495207 /* HeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderCell.xib; sourceTree = "<group>"; };
 		A82ED970210787E900495207 /* FullViewSecondVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullViewSecondVC.swift; sourceTree = "<group>"; };
+		A840FF5D210E4C8B00B270C3 /* TransactListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactListVC.swift; sourceTree = "<group>"; };
 		A841D6EE2102746700B5BFC8 /* Piechart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piechart.swift; sourceTree = "<group>"; };
 		A8DAFB14C52BB55555289070 /* Pods_FincartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FincartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4682D6204D79BD00DC5A6D /* EditProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
@@ -767,6 +769,7 @@
 			children = (
 				047C9A76210E11040048442C /* TransactVC.swift */,
 				A82214BF20E2C63E004D5009 /* SipQuestionireVC.swift */,
+				A840FF5D210E4C8B00B270C3 /* TransactListVC.swift */,
 			);
 			name = "Quick SIP";
 			sourceTree = "<group>";
@@ -1193,6 +1196,7 @@
 				8AF3663E204E28D0008F6207 /* Images.swift in Sources */,
 				BC4682F8204D79C100DC5A6D /* KycScanOrManualVC.swift in Sources */,
 				5CE3496B1FB75471006C36ED /* SVProgressHUD.m in Sources */,
+				A840FF5E210E4C8B00B270C3 /* TransactListVC.swift in Sources */,
 				8A3C007E2080D660001A2795 /* FincartGoalCodes.swift in Sources */,
 				A82ED975210787E900495207 /* FullViewThirdVC.swift in Sources */,
 				BC4682FB204D79C100DC5A6D /* DigitalSignatureVC.swift in Sources */,
