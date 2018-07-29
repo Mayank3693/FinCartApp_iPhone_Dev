@@ -681,7 +681,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                 <color key="separatorColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellReuse" id="F4h-BR-8c9">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellReuse" id="F4h-BR-8c9">
                                         <rect key="frame" x="0.0" y="28" width="484" height="37"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F4h-BR-8c9" id="yOY-re-i4g">
@@ -1151,7 +1151,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                 </constraints>
                                 <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellReuseIdentifier" rowHeight="100" id="JFS-Uk-joh" customClass="FinancialPlanningCell" customModule="Fincart" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellReuseIdentifier" rowHeight="100" id="JFS-Uk-joh" customClass="FinancialPlanningCell" customModule="Fincart" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="460" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JFS-Uk-joh" id="LVL-sl-rpl">
@@ -1166,19 +1166,19 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7KE-T2-K2R">
-                                                    <rect key="frame" x="72" y="38" width="418" height="17"/>
+                                                    <rect key="frame" x="72" y="38" width="332" height="17"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilc-Vm-JGH">
-                                                    <rect key="frame" x="72" y="55" width="418" height="14.666666666666671"/>
+                                                    <rect key="frame" x="72" y="55" width="332" height="14.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons_forward" translatesAutoresizingMaskIntoConstraints="NO" id="pXs-Ym-mnf">
-                                                    <rect key="frame" x="506" y="40" width="20" height="20"/>
+                                                    <rect key="frame" x="420" y="40" width="20" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="20" id="8rL-aM-jhg"/>
                                                         <constraint firstAttribute="height" constant="20" id="IXC-9y-U1F"/>
@@ -1365,7 +1365,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="goalsReviewCell" id="wxS-F2-JbJ" customClass="GoalsReviewTableViewCell" customModule="Fincart" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="goalsReviewCell" id="wxS-F2-JbJ" customClass="GoalsReviewTableViewCell" customModule="Fincart" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="30" width="468" height="275"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wxS-F2-JbJ" id="f99-NB-r6b">
@@ -1373,10 +1373,10 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FpA-vq-eOg">
-                                                    <rect key="frame" x="0.0" y="40" width="554" height="235"/>
+                                                    <rect key="frame" x="0.0" y="40" width="468" height="235"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XFk-UF-cNZ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="554" height="235"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="468" height="235"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Eg-S9-txd">
                                                                     <rect key="frame" x="0.0" y="48" width="80" height="17"/>
@@ -1421,34 +1421,34 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="25000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="by8-jg-D7l">
-                                                                    <rect key="frame" x="156" y="8" width="390" height="17"/>
+                                                                    <rect key="frame" x="156" y="8" width="304" height="17"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="12 Months" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4my-Zb-Uo4">
-                                                                    <rect key="frame" x="156" y="33" width="390" height="17"/>
+                                                                    <rect key="frame" x="156" y="33" width="304" height="17"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Axis" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BHt-PB-8MH">
-                                                                    <rect key="frame" x="156" y="58" width="390" height="17"/>
+                                                                    <rect key="frame" x="156" y="58" width="304" height="17"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="1500000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8f8-cp-tNM">
-                                                                    <rect key="frame" x="156" y="83" width="390" height="17"/>
+                                                                    <rect key="frame" x="156" y="83" width="304" height="17"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LMP-Yk-B2B" userLabel="editView">
-                                                                    <rect key="frame" x="0.0" y="108" width="554" height="65"/>
+                                                                    <rect key="frame" x="0.0" y="108" width="468" height="65"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8I-5P-HdV">
-                                                                            <rect key="frame" x="113" y="25" width="433" height="40"/>
+                                                                            <rect key="frame" x="113" y="25" width="347" height="40"/>
                                                                             <state key="normal" title="Button"/>
                                                                             <connections>
                                                                                 <action selector="investmentTypeSelect:" destination="wxS-F2-JbJ" eventType="touchUpInside" id="oVA-iV-0A3"/>
@@ -1465,7 +1465,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investment Type" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDS-m8-RDf">
-                                                                            <rect key="frame" x="134" y="0.0" width="412" height="17"/>
+                                                                            <rect key="frame" x="134" y="0.0" width="326" height="17"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="17" id="MoV-7O-g3w"/>
                                                                             </constraints>
@@ -1486,7 +1486,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                                             </connections>
                                                                         </textField>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monthly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T5D-Ci-Aft">
-                                                                            <rect key="frame" x="113" y="25" width="433" height="40"/>
+                                                                            <rect key="frame" x="113" y="25" width="347" height="40"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
@@ -1514,10 +1514,10 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8e-0u-XEe">
-                                                                    <rect key="frame" x="0.0" y="181" width="554" height="50"/>
+                                                                    <rect key="frame" x="0.0" y="181" width="468" height="50"/>
                                                                     <subviews>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4F-LW-aPV" userLabel="ReCalculate">
-                                                                            <rect key="frame" x="8" y="0.0" width="538" height="50"/>
+                                                                            <rect key="frame" x="8" y="0.0" width="452" height="50"/>
                                                                             <color key="backgroundColor" red="0.039215686274509803" green="0.25098039215686274" blue="0.58823529411764708" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <state key="normal" title="RE-CALCULATE">
                                                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -1540,7 +1540,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                                             </connections>
                                                                         </button>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Lr-lX-anM">
-                                                                            <rect key="frame" x="168" y="0.0" width="378" height="50"/>
+                                                                            <rect key="frame" x="168" y="0.0" width="292" height="50"/>
                                                                             <color key="backgroundColor" red="0.75294117647058822" green="0.039215686274509803" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <state key="normal" title="REMOVE">
                                                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -1731,7 +1731,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                 <rect key="frame" x="20" y="308" width="460" height="446"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="childInfoTableViewCell" rowHeight="206" id="XAM-Vt-4kW" customClass="ChildInfoTableViewCell" customModule="Fincart" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="childInfoTableViewCell" rowHeight="206" id="XAM-Vt-4kW" customClass="ChildInfoTableViewCell" customModule="Fincart" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="460" height="206"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XAM-Vt-4kW" id="Qfe-vU-T6w">
@@ -1739,10 +1739,10 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zZ5-65-nqm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="546" height="206"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="460" height="206"/>
                                                     <subviews>
                                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CHILD NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rjR-Jh-3cB">
-                                                            <rect key="frame" x="0.0" y="0.0" width="546" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="460" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="lt2-Ll-DcG"/>
                                                             </constraints>
@@ -1754,7 +1754,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                             </connections>
                                                         </textField>
                                                         <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8u-gz-Kvw">
-                                                            <rect key="frame" x="0.0" y="86" width="546" height="120"/>
+                                                            <rect key="frame" x="0.0" y="86" width="460" height="120"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <connections>
                                                                 <outlet property="dataSource" destination="XAM-Vt-4kW" id="1Fi-eY-FkD"/>
@@ -1802,23 +1802,23 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                             </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Su7-zA-UiX">
-                                                            <rect key="frame" x="248" y="48" width="298" height="30"/>
+                                                            <rect key="frame" x="248" y="48" width="212" height="30"/>
                                                             <subviews>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9mL-jA-ACj">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="298" height="30"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="212" height="30"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                                     <connections>
                                                                         <action selector="selectChildAge:" destination="XAM-Vt-4kW" eventType="touchUpInside" id="A03-b7-Mhy"/>
                                                                     </connections>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 Years" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ejk-s7-Pti">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="260" height="30"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="174" height="30"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Gzv-wA-PUo">
-                                                                    <rect key="frame" x="268" y="0.0" width="30" height="30"/>
+                                                                    <rect key="frame" x="182" y="0.0" width="30" height="30"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="30" id="XtQ-G8-ZID"/>
                                                                     </constraints>
@@ -1875,7 +1875,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                             <outlet property="pickerView" destination="c8u-gz-Kvw" id="0c5-mO-0vF"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="childPlanningTableViewCell" rowHeight="30" id="hv3-Bx-AiR" customClass="ChildPlanningTableViewCell" customModule="Fincart" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="childPlanningTableViewCell" rowHeight="30" id="hv3-Bx-AiR" customClass="ChildPlanningTableViewCell" customModule="Fincart" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="234" width="460" height="30"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hv3-Bx-AiR" id="4B7-cP-o5n">
@@ -1883,10 +1883,10 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MKd-Zi-6QR">
-                                                    <rect key="frame" x="0.0" y="0.0" width="546" height="29.666666666666668"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="460" height="29.666666666666668"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wb8-nZ-dkS">
-                                                            <rect key="frame" x="0.0" y="0.0" width="487" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="401" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="lp8-uC-Och"/>
                                                             </constraints>
@@ -1895,7 +1895,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fHs-b2-lSG">
-                                                            <rect key="frame" x="495" y="0.0" width="53" height="40"/>
+                                                            <rect key="frame" x="409" y="0.0" width="53" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="BMy-dM-2x2"/>
                                                                 <constraint firstAttribute="width" constant="51" id="PPr-xM-fFa"/>
@@ -1930,7 +1930,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                             <outlet property="switchOutlet" destination="fHs-b2-lSG" id="gPx-9H-5gv"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="childStudyPlansDetailTableViewCell" rowHeight="96" id="f9T-Jh-E3e" customClass="ChildStudyPlansDetailTableViewCell" customModule="Fincart" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="childStudyPlansDetailTableViewCell" rowHeight="96" id="f9T-Jh-E3e" customClass="ChildStudyPlansDetailTableViewCell" customModule="Fincart" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="264" width="460" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="f9T-Jh-E3e" id="hKB-Cp-bka">
@@ -1938,10 +1938,10 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLl-kA-NFU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="546" height="95.666666666666671"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="460" height="95.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQk-Mg-ah2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="546" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="460" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="VEe-jO-Z9C"/>
                                                             </constraints>
@@ -1950,14 +1950,14 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="LEh-wB-Y14">
-                                                            <rect key="frame" x="516" y="48" width="30" height="30"/>
+                                                            <rect key="frame" x="430" y="48" width="30" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" secondItem="LEh-wB-Y14" secondAttribute="height" multiplier="1:1" id="Gyt-G5-g2b"/>
                                                                 <constraint firstAttribute="width" constant="30" id="HaK-Nv-8xA"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USA OR CANADA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wmc-CQ-zJc">
-                                                            <rect key="frame" x="0.0" y="48" width="508" height="30"/>
+                                                            <rect key="frame" x="0.0" y="48" width="422" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="8iR-Ru-ZSj"/>
                                                             </constraints>
@@ -1966,7 +1966,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Azm-Vo-iat">
-                                                            <rect key="frame" x="0.0" y="48" width="546" height="30"/>
+                                                            <rect key="frame" x="0.0" y="48" width="460" height="30"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="sqr-rO-kBk"/>
@@ -2005,7 +2005,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                             <outlet property="studyLocationLabel" destination="Wmc-CQ-zJc" id="8T4-NA-whx"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="childWeddingPlanDetailsTableCell" rowHeight="96" id="alH-nI-Fvx" customClass="ChildWeddingPlanDetailsTableCell" customModule="Fincart" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="childWeddingPlanDetailsTableCell" rowHeight="96" id="alH-nI-Fvx" customClass="ChildWeddingPlanDetailsTableCell" customModule="Fincart" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="360" width="460" height="96"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="alH-nI-Fvx" id="ckE-2Y-MTT">
@@ -2013,10 +2013,10 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eWM-Qw-TAy">
-                                                    <rect key="frame" x="0.0" y="0.0" width="546" height="95.666666666666671"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="460" height="95.666666666666671"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sVZ-cd-vUl">
-                                                            <rect key="frame" x="0.0" y="0.0" width="546" height="40"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="460" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="JAm-gc-gtm"/>
                                                             </constraints>
@@ -2025,14 +2025,14 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="down-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Mls-fK-xR2">
-                                                            <rect key="frame" x="516" y="48" width="30" height="30"/>
+                                                            <rect key="frame" x="430" y="48" width="30" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="30" id="3jI-Q4-uTS"/>
                                                                 <constraint firstAttribute="width" secondItem="Mls-fK-xR2" secondAttribute="height" multiplier="1:1" id="YBZ-Cl-1hq"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIMPLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1KI-4g-LEb">
-                                                            <rect key="frame" x="0.0" y="48" width="508" height="30"/>
+                                                            <rect key="frame" x="0.0" y="48" width="422" height="30"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="UEF-nc-EXI"/>
                                                             </constraints>
@@ -2041,7 +2041,7 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gme-9c-elg">
-                                                            <rect key="frame" x="0.0" y="48" width="546" height="30"/>
+                                                            <rect key="frame" x="0.0" y="48" width="460" height="30"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="30" id="7vS-B4-DAU"/>
@@ -7099,6 +7099,307 @@ Recommends best suited mutual fund scheme to help you achieve your goals Buy mut
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQG-X1-Tda" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2900" y="1410"/>
+        </scene>
+        <!--TransactVC-->
+        <scene sceneID="oo8-pS-WwW">
+            <objects>
+                <viewController storyboardIdentifier="TransactVC" id="Blh-tR-ljY" customClass="TransactVC" customModule="Fincart" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jmO-FO-X6R"/>
+                        <viewControllerLayoutGuide type="bottom" id="XAC-ay-NDQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nxg-lu-UaD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KP3-J6-eO8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="169"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sip" translatesAutoresizingMaskIntoConstraints="NO" id="tTY-qX-csD">
+                                        <rect key="frame" x="147" y="25" width="120" height="120"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="1MI-9J-mw5"/>
+                                            <constraint firstAttribute="height" constant="120" id="qjh-3p-kas"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.30588235289999999" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="tTY-qX-csD" firstAttribute="centerY" secondItem="KP3-J6-eO8" secondAttribute="centerY" id="2tZ-Rf-FS5"/>
+                                    <constraint firstItem="tTY-qX-csD" firstAttribute="centerX" secondItem="KP3-J6-eO8" secondAttribute="centerX" id="Jze-kA-8Lg"/>
+                                    <constraint firstAttribute="height" constant="169" id="Rkc-tA-1S9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFp-wi-XDP">
+                                <rect key="frame" x="20" y="200" width="374" height="220"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frankling India Prima Fund - Growth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBR-13-HB8">
+                                        <rect key="frame" x="0.0" y="14" width="374" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="OlE-Iz-lhQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                        <color key="textColor" red="1" green="0.4785624255" blue="0.39024620059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hmd-cA-R6H">
+                                        <rect key="frame" x="0.0" y="43" width="374" height="128"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Og5-DV-99r">
+                                                <rect key="frame" x="0.0" y="0.0" width="124.66666666666667" height="128"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sip" translatesAutoresizingMaskIntoConstraints="NO" id="9fF-vT-o2Q">
+                                                        <rect key="frame" x="38" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Jp1-35-YEy"/>
+                                                            <constraint firstAttribute="width" constant="50" id="V8m-6Q-RkI"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="After 15 years you will get" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mah-TP-G4U">
+                                                        <rect key="frame" x="0.0" y="60" width="124.66666666666667" height="40.666666666666657"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40.670000000000002" id="9P1-Qf-IMo"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <color key="textColor" red="1" green="0.4785624255" blue="0.39024620059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lgp-vK-dse">
+                                                        <rect key="frame" x="0.0" y="110.66666666666669" width="124.66666666666667" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="9fF-vT-o2Q" firstAttribute="centerX" secondItem="Og5-DV-99r" secondAttribute="centerX" id="E5v-Az-Mv1"/>
+                                                    <constraint firstItem="Mah-TP-G4U" firstAttribute="centerX" secondItem="Og5-DV-99r" secondAttribute="centerX" id="EBs-mq-m4A"/>
+                                                    <constraint firstItem="9fF-vT-o2Q" firstAttribute="top" secondItem="Og5-DV-99r" secondAttribute="top" id="LLQ-Ld-RrP"/>
+                                                    <constraint firstItem="Lgp-vK-dse" firstAttribute="width" secondItem="Og5-DV-99r" secondAttribute="width" id="RDP-Jh-ju3"/>
+                                                    <constraint firstItem="Mah-TP-G4U" firstAttribute="width" secondItem="Og5-DV-99r" secondAttribute="width" id="YeG-SH-daa"/>
+                                                    <constraint firstItem="Mah-TP-G4U" firstAttribute="top" secondItem="9fF-vT-o2Q" secondAttribute="bottom" constant="10" id="dZP-p2-ai9"/>
+                                                    <constraint firstItem="Lgp-vK-dse" firstAttribute="centerX" secondItem="Og5-DV-99r" secondAttribute="centerX" id="li8-q1-hqO"/>
+                                                    <constraint firstAttribute="height" constant="128" id="op0-ol-c8m"/>
+                                                    <constraint firstItem="Lgp-vK-dse" firstAttribute="top" secondItem="Mah-TP-G4U" secondAttribute="bottom" constant="10" id="yeb-eh-umj"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sc1-cj-u2z">
+                                                <rect key="frame" x="124.66666666666666" y="0.0" width="124.66666666666666" height="128"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sip" translatesAutoresizingMaskIntoConstraints="NO" id="47r-d1-KQk">
+                                                        <rect key="frame" x="38" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="5up-W4-bfx"/>
+                                                            <constraint firstAttribute="width" constant="50" id="Nbl-Lx-ymH"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One year return" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMw-WT-5gg">
+                                                        <rect key="frame" x="0.0" y="60" width="124.66666666666667" height="40.666666666666657"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40.670000000000002" id="13L-gy-gPN"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" red="1" green="0.4785624255" blue="0.39024620059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 %" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o1l-3F-KTe">
+                                                        <rect key="frame" x="0.66666666666668561" y="110.66666666666669" width="124" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AMf-D3-lhE">
+                                                        <rect key="frame" x="1" y="0.0" width="1" height="128"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="1" id="6DK-bb-mB5"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="47r-d1-KQk" firstAttribute="top" secondItem="Sc1-cj-u2z" secondAttribute="top" id="4XS-zH-OzJ"/>
+                                                    <constraint firstItem="MMw-WT-5gg" firstAttribute="width" secondItem="Sc1-cj-u2z" secondAttribute="width" id="689-p5-Gyz"/>
+                                                    <constraint firstItem="MMw-WT-5gg" firstAttribute="centerX" secondItem="Sc1-cj-u2z" secondAttribute="centerX" id="Mg8-7g-SsN"/>
+                                                    <constraint firstItem="AMf-D3-lhE" firstAttribute="centerY" secondItem="Sc1-cj-u2z" secondAttribute="centerY" id="OHi-e0-s3B"/>
+                                                    <constraint firstItem="o1l-3F-KTe" firstAttribute="centerX" secondItem="Sc1-cj-u2z" secondAttribute="centerX" id="eSx-zb-dPY"/>
+                                                    <constraint firstItem="o1l-3F-KTe" firstAttribute="top" secondItem="MMw-WT-5gg" secondAttribute="bottom" constant="10" id="eZe-3H-Nso"/>
+                                                    <constraint firstItem="AMf-D3-lhE" firstAttribute="height" secondItem="Sc1-cj-u2z" secondAttribute="height" id="io6-EH-eh5"/>
+                                                    <constraint firstItem="MMw-WT-5gg" firstAttribute="top" secondItem="47r-d1-KQk" secondAttribute="bottom" constant="10" id="naE-n4-YFT"/>
+                                                    <constraint firstItem="AMf-D3-lhE" firstAttribute="leading" secondItem="Sc1-cj-u2z" secondAttribute="leading" constant="1" id="rR0-Br-9oz"/>
+                                                    <constraint firstAttribute="height" constant="128" id="tcl-Ns-DF7"/>
+                                                    <constraint firstItem="47r-d1-KQk" firstAttribute="centerX" secondItem="Sc1-cj-u2z" secondAttribute="centerX" id="uDV-6A-cFN"/>
+                                                    <constraint firstItem="o1l-3F-KTe" firstAttribute="width" secondItem="Sc1-cj-u2z" secondAttribute="width" id="z7x-qo-abd"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gYn-ZH-Hdt">
+                                                <rect key="frame" x="249.33333333333329" y="0.0" width="124.66666666666666" height="128"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sip" translatesAutoresizingMaskIntoConstraints="NO" id="WjD-k3-Swb">
+                                                        <rect key="frame" x="37.666666666666686" y="0.0" width="50" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="Dfx-tG-3fn"/>
+                                                            <constraint firstAttribute="width" constant="50" id="Pae-5W-hyI"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Risk" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leL-wy-T27">
+                                                        <rect key="frame" x="0.0" y="60" width="124.66666666666667" height="40.666666666666657"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40.670000000000002" id="C34-UW-Cet"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                        <color key="textColor" red="1" green="0.4785624255" blue="0.39024620059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UDc-Fy-IEh">
+                                                        <rect key="frame" x="0.0" y="110.66666666666669" width="124.66666666666667" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oOU-nq-xnG">
+                                                        <rect key="frame" x="1" y="0.0" width="1" height="128"/>
+                                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="1" id="vI4-3P-eOT"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="leL-wy-T27" firstAttribute="centerX" secondItem="gYn-ZH-Hdt" secondAttribute="centerX" id="3ui-A2-beO"/>
+                                                    <constraint firstAttribute="height" constant="128" id="4BU-jN-dXY"/>
+                                                    <constraint firstItem="WjD-k3-Swb" firstAttribute="centerX" secondItem="gYn-ZH-Hdt" secondAttribute="centerX" id="9Ce-Wx-GSw"/>
+                                                    <constraint firstItem="leL-wy-T27" firstAttribute="width" secondItem="gYn-ZH-Hdt" secondAttribute="width" id="Ct9-7H-fhL"/>
+                                                    <constraint firstItem="oOU-nq-xnG" firstAttribute="centerY" secondItem="gYn-ZH-Hdt" secondAttribute="centerY" id="R8s-f5-SDV"/>
+                                                    <constraint firstItem="leL-wy-T27" firstAttribute="top" secondItem="WjD-k3-Swb" secondAttribute="bottom" constant="10" id="Yz4-Wt-YJm"/>
+                                                    <constraint firstItem="UDc-Fy-IEh" firstAttribute="top" secondItem="leL-wy-T27" secondAttribute="bottom" constant="10" id="i6K-Ey-2rm"/>
+                                                    <constraint firstItem="WjD-k3-Swb" firstAttribute="top" secondItem="gYn-ZH-Hdt" secondAttribute="top" id="l85-dm-cOi"/>
+                                                    <constraint firstItem="UDc-Fy-IEh" firstAttribute="centerX" secondItem="gYn-ZH-Hdt" secondAttribute="centerX" id="l9g-aD-Ab2"/>
+                                                    <constraint firstItem="oOU-nq-xnG" firstAttribute="height" secondItem="gYn-ZH-Hdt" secondAttribute="height" id="m2W-zh-Kv4"/>
+                                                    <constraint firstItem="oOU-nq-xnG" firstAttribute="leading" secondItem="gYn-ZH-Hdt" secondAttribute="leading" constant="1" id="x1b-zn-uUz"/>
+                                                    <constraint firstItem="UDc-Fy-IEh" firstAttribute="width" secondItem="gYn-ZH-Hdt" secondAttribute="width" id="zHx-kp-EPs"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bGQ-hr-e8z">
+                                        <rect key="frame" x="0.0" y="181" width="374" height="40"/>
+                                        <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="oIl-sX-J4t"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                        <state key="normal" title="Transact">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="transBtnAction:" destination="Blh-tR-ljY" eventType="touchUpInside" id="R4I-Xv-cVz"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="uBR-13-HB8" firstAttribute="width" secondItem="SFp-wi-XDP" secondAttribute="width" id="1cM-2j-ve3"/>
+                                    <constraint firstAttribute="height" constant="220" id="4Rr-65-3GM"/>
+                                    <constraint firstItem="bGQ-hr-e8z" firstAttribute="top" secondItem="hmd-cA-R6H" secondAttribute="bottom" constant="10" id="EQX-vS-pFP"/>
+                                    <constraint firstItem="hmd-cA-R6H" firstAttribute="width" secondItem="SFp-wi-XDP" secondAttribute="width" id="Z12-hm-4kj"/>
+                                    <constraint firstItem="uBR-13-HB8" firstAttribute="top" secondItem="SFp-wi-XDP" secondAttribute="top" constant="14" id="bdV-L1-i17"/>
+                                    <constraint firstItem="uBR-13-HB8" firstAttribute="centerX" secondItem="SFp-wi-XDP" secondAttribute="centerX" id="eh6-zF-ylj"/>
+                                    <constraint firstItem="bGQ-hr-e8z" firstAttribute="centerX" secondItem="SFp-wi-XDP" secondAttribute="centerX" id="m30-N7-vdj"/>
+                                    <constraint firstItem="hmd-cA-R6H" firstAttribute="centerX" secondItem="SFp-wi-XDP" secondAttribute="centerX" id="x4S-EX-4aH"/>
+                                    <constraint firstItem="bGQ-hr-e8z" firstAttribute="width" secondItem="SFp-wi-XDP" secondAttribute="width" id="zLz-9e-RiD"/>
+                                    <constraint firstItem="hmd-cA-R6H" firstAttribute="top" secondItem="uBR-13-HB8" secondAttribute="bottom" constant="8" id="zNO-mk-5RR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hqh-ee-05l">
+                                <rect key="frame" x="20" y="450" width="374" height="170"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s5q-LA-y8f">
+                                        <rect key="frame" x="21.666666666666657" y="8" width="330.66666666666674" height="30"/>
+                                        <color key="backgroundColor" red="0.0" green="0.58823529409999997" blue="0.23137254900000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="qWj-wf-ZEC"/>
+                                        </constraints>
+                                        <state key="normal" title="Proceed">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uEm-11-OKi">
+                                        <rect key="frame" x="21.666666666666657" y="59" width="330.66666666666674" height="85"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not satisfied with this fund?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zc-zL-WfY">
+                                                <rect key="frame" x="0.0" y="8" width="330.66666666666669" height="20"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="20" id="duo-S0-zys"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="thT-Qj-uEJ">
+                                                <rect key="frame" x="16.333333333333343" y="38" width="299.66666666666663" height="40"/>
+                                                <color key="backgroundColor" red="0.0" green="0.30588235289999999" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="5VP-my-3uk"/>
+                                                </constraints>
+                                                <state key="normal" title="Click Here To Find more funds?">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="2Zc-zL-WfY" firstAttribute="width" secondItem="uEm-11-OKi" secondAttribute="width" id="OoV-Fk-bSU"/>
+                                            <constraint firstAttribute="height" constant="85" id="UgQ-dX-eMl"/>
+                                            <constraint firstItem="thT-Qj-uEJ" firstAttribute="top" secondItem="2Zc-zL-WfY" secondAttribute="bottom" constant="10" id="ZJB-tJ-4G0"/>
+                                            <constraint firstItem="thT-Qj-uEJ" firstAttribute="width" secondItem="uEm-11-OKi" secondAttribute="width" multiplier="300/330" id="iuF-Yf-gTG"/>
+                                            <constraint firstItem="thT-Qj-uEJ" firstAttribute="centerX" secondItem="uEm-11-OKi" secondAttribute="centerX" id="mJz-gb-7R6"/>
+                                            <constraint firstItem="2Zc-zL-WfY" firstAttribute="centerX" secondItem="uEm-11-OKi" secondAttribute="centerX" id="oTZ-YT-VtT"/>
+                                            <constraint firstItem="2Zc-zL-WfY" firstAttribute="top" secondItem="uEm-11-OKi" secondAttribute="top" constant="8" id="pay-o1-ylw"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="s5q-LA-y8f" firstAttribute="width" secondItem="Hqh-ee-05l" secondAttribute="width" multiplier="330/374" id="LE0-BI-rcV"/>
+                                    <constraint firstItem="uEm-11-OKi" firstAttribute="width" secondItem="Hqh-ee-05l" secondAttribute="width" multiplier="330/374" id="LR0-xs-JDZ"/>
+                                    <constraint firstAttribute="height" constant="170" id="O0w-lu-Eue"/>
+                                    <constraint firstItem="uEm-11-OKi" firstAttribute="centerX" secondItem="Hqh-ee-05l" secondAttribute="centerX" id="el4-aa-lxz"/>
+                                    <constraint firstItem="uEm-11-OKi" firstAttribute="top" secondItem="s5q-LA-y8f" secondAttribute="bottom" constant="21" id="hIn-V4-bhj"/>
+                                    <constraint firstItem="s5q-LA-y8f" firstAttribute="centerX" secondItem="Hqh-ee-05l" secondAttribute="centerX" id="m5K-mM-7Xn"/>
+                                    <constraint firstItem="s5q-LA-y8f" firstAttribute="top" secondItem="Hqh-ee-05l" secondAttribute="top" constant="8" id="xMR-ys-ZVl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Hqh-ee-05l" firstAttribute="centerX" secondItem="SFp-wi-XDP" secondAttribute="centerX" id="5Ot-7m-iJK"/>
+                            <constraint firstItem="SFp-wi-XDP" firstAttribute="top" secondItem="KP3-J6-eO8" secondAttribute="bottom" constant="31" id="GnI-Zj-arB"/>
+                            <constraint firstItem="SFp-wi-XDP" firstAttribute="leading" secondItem="Nxg-lu-UaD" secondAttribute="leading" constant="20" id="JAH-6T-PAL"/>
+                            <constraint firstItem="Hqh-ee-05l" firstAttribute="width" secondItem="SFp-wi-XDP" secondAttribute="width" id="Y5s-jp-xDC"/>
+                            <constraint firstItem="SFp-wi-XDP" firstAttribute="centerX" secondItem="Nxg-lu-UaD" secondAttribute="centerX" id="giI-xk-glq"/>
+                            <constraint firstItem="KP3-J6-eO8" firstAttribute="leading" secondItem="Nxg-lu-UaD" secondAttribute="leading" id="nwg-x2-Utf"/>
+                            <constraint firstItem="KP3-J6-eO8" firstAttribute="top" secondItem="Nxg-lu-UaD" secondAttribute="top" id="p6I-ib-NM5"/>
+                            <constraint firstAttribute="trailing" secondItem="SFp-wi-XDP" secondAttribute="trailing" constant="20" id="sKw-HF-KRQ"/>
+                            <constraint firstItem="Hqh-ee-05l" firstAttribute="top" secondItem="SFp-wi-XDP" secondAttribute="bottom" constant="30" id="umH-gJ-o5K"/>
+                            <constraint firstAttribute="trailing" secondItem="KP3-J6-eO8" secondAttribute="trailing" id="zYf-qD-2ru"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JmY-Y4-2wW"/>
+                    </view>
+                    <connections>
+                        <outlet property="notSatisfiedMainView" destination="uEm-11-OKi" id="QY9-eM-zqa"/>
+                        <outlet property="proceedBtn" destination="s5q-LA-y8f" id="2cU-Hd-XeN"/>
+                        <outlet property="proceedMainView" destination="Hqh-ee-05l" id="nHA-S1-ZrJ"/>
+                        <outlet property="transBtn" destination="bGQ-hr-e8z" id="lL3-mg-PZJ"/>
+                        <outlet property="transactBtnHeight" destination="oIl-sX-J4t" id="YJt-WJ-HCQ"/>
+                        <outlet property="transactMainViewHeight" destination="4Rr-65-3GM" id="Awb-P7-s3k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ld4-F2-mVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1128.985507246377" y="2044.5652173913045"/>
         </scene>
     </scenes>
     <resources>

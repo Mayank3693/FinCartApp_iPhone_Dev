@@ -147,6 +147,7 @@
 /* Begin PBXFileReference section */
 		0216B997F1163C768497A0D8 /* Pods-Fincart.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fincart.adhoc.xcconfig"; path = "Pods/Target Support Files/Pods-Fincart/Pods-Fincart.adhoc.xcconfig"; sourceTree = "<group>"; };
 		047C9A76210E11040048442C /* TransactVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactVC.swift; sourceTree = "<group>"; };
+		047C9A78210E2F400048442C /* CarbonKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CarbonKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04AC417020E40EDA00E9BE39 /* SipListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SipListVC.swift; sourceTree = "<group>"; };
 		1DAD406C1DF5F2F2064CC8EA /* Pods_Fincart.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fincart.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		588B41935F8415628FB38301 /* Pods-Fincart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fincart.release.xcconfig"; path = "Pods/Target Support Files/Pods-Fincart/Pods-Fincart.release.xcconfig"; sourceTree = "<group>"; };
@@ -497,6 +498,7 @@
 		7BC52A5C444B28F6682894E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				047C9A78210E2F400048442C /* CarbonKit.framework */,
 				8AD5C4AF2004B83B00D69BB1 /* RESideMenu.framework */,
 				6198E6761F80E56500E2EC8C /* Device.framework */,
 				1DAD406C1DF5F2F2064CC8EA /* Pods_Fincart.framework */,
