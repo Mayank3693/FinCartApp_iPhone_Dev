@@ -36,6 +36,13 @@ class FinCartViewController: UIViewController{
     override var preferredStatusBarStyle: UIStatusBarStyle{
         return UIStatusBarStyle.lightContent
     }
+    //<--- Shadow effect on view ---->
+    func setOpacity(view : UIView){
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOffset = CGSize(width: 0, height: 1)
+        view.layer.shadowOpacity = 0.9
+        view.layer.shadowRadius = 5
+    }
     
     func setupOpaqueNavigationBar(){
         self.navigationController?.navigationBar.isOpaque = true
