@@ -72,24 +72,22 @@ class SipListVC: FinCartViewController,UITableViewDelegate,UITableViewDataSource
             cell.currentLabel.text = String(format: "₹ %@", goalArr[indexPath.row]["CurrentAmount"] as! String)
             cell.investLabel.text = String(format: "₹ %@", goalArr[indexPath.row]["InvestedAmount"] as! String)
             cell.pendingLabel.text = String(format: "₹ %@", goalArr[indexPath.row]["PendingAmount"] as! String)
-              let kycStatus = FinCartUserDefaults.sharedInstance.retrieveKycStatus()
+            let kycStatus = FinCartUserDefaults.sharedInstance.retrieveKycStatus()
             
             cell.activateBtn.tag = indexPath.row
             
             if(kycStatus == "Y"){
                 
-                cell.activateBtn.addTarget(self, action: #selector(activateSipAction), for: .touchUpInside)
-                
+                //cell.activateBtn.addTarget(self, action: #selector(activateSipAction(_:)), for: .touchUpInside)
+                cell.activateBtn.addTarget(self, action: #selector(activateSipAction(_:)) , for: .touchUpInside)
                 cell.activateBtn.setTitle("ACTIVATE", for: UIControlState.normal)
                 
             }
             else{
                  cell.activateBtn.addTarget(self, action: #selector(completeProfileAction), for: .touchUpInside)
-                cell.activateBtn.setTitle("COMPLETE PROFILE", for: UIControlState.normal)
+                 cell.activateBtn.setTitle("COMPLETE PROFILE", for: UIControlState.normal)
                 
             }
-            
-            
             
 //            saveKycStatus((self.userDetailsServiceResponse?.cafDetails!["kycStatus"])!)
             
@@ -114,9 +112,9 @@ class SipListVC: FinCartViewController,UITableViewDelegate,UITableViewDataSource
         self.goalView.isHidden   =  true
     }
     
-    @objc func activateSipAction() {
-        
-        let contentVC=self.storyboard?.instantiateViewController(withIdentifier: "TransactListVC") as! TransactListVC
+    @objc func activateSipAction(_ sender: Any) {
+        let contentVC        =    self.storyboard?.instantiateViewController(withIdentifier: "TransactListVC") as! TransactListVC
+        contentVC.sipData    =    self.goalArr[(sender as AnyObject).tag]
         self.navigationController?.pushViewController(contentVC, animated: true)
 //        self.present(contentVC!, animated: true, completion: nil)
         

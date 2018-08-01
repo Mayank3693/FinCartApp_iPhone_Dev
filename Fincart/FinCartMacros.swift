@@ -48,6 +48,7 @@ class FinCartMacros{
     static let kMapPortfolioList = "api/invest/snapshot/all"
     static let kMapOneViewList = "api/invest/transactions/all"
     static let kMapAllocationList = "api/invest/assetallocation/all"
+    static let kTransactDataList    = "api/invest/fincartrecommendedscheme"
     //MARKS:- API's params and user defaults keys
     static let kIsUserRegistered = "isUserRegistered"
     static let kIsUserLoggedIn = "isUserLoggedIn"
