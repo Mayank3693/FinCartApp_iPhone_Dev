@@ -42,7 +42,8 @@ class TransactListVC: FinCartViewController,UITableViewDelegate,UITableViewDataS
         return  self.tableView.frame.size.height*0.55
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let contentVC           =    self.storyboard?.instantiateViewController(withIdentifier: "TransactVC") as! TransactVC
+        let story               =   UIStoryboard.init(name: "SIP", bundle: nil)
+        let contentVC           =   story.instantiateViewController(withIdentifier: "TransactVC") as! TransactVC
         contentVC.sipObjData    =    self.sipData
         contentVC.sipArrObj     =    self.transactList[indexPath.row]
         self.navigationController?.pushViewController(contentVC, animated: true)

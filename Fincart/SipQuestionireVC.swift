@@ -353,8 +353,8 @@ class SipQuestionireVC: FinCartViewController, UITextFieldDelegate, UIGestureRec
                 if httpResponse.statusCode == 200{
                     DispatchQueue.main.async(execute: {
                         SVProgressHUD.dismiss()
-                        
-                        let sipList: SipListVC! = self.storyboard?.instantiateViewController(withIdentifier: "SipListVC") as! SipListVC
+                        let story       =   UIStoryboard.init(name: "SIP", bundle: nil)
+                        let sipList: SipListVC! = story.instantiateViewController(withIdentifier: "SipListVC") as! SipListVC
                         self.navigationController?.pushViewController(sipList, animated: true)
 //                        self.appDelegate.showDashboardScreen()
                     })

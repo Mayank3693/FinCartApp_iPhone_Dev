@@ -86,6 +86,13 @@ class TransactVC: FinCartViewController {
         }
     }
     
+    @IBAction func proceedBtnAct(_ sender: Any) {
+        let story               =   UIStoryboard.init(name: "SIP", bundle: nil)
+        let contentVC           =   story.instantiateViewController(withIdentifier: "AddToCartVC") as! AddToCartVC
+        contentVC.sipObjData    =    self.sipObjData
+        contentVC.sipArrObj     =    self.sipArrObj
+        self.navigationController?.pushViewController(contentVC, animated: true)
+    }
     
  
 //    @IBAction func transBtnAction(_ sender: Any) {

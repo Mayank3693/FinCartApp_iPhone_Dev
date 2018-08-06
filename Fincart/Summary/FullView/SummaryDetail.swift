@@ -28,6 +28,7 @@ class SummaryDetail: UIViewController,CarbonTabSwipeNavigationDelegate {
     
 
     func carbonTabSwipeNavigation(_ carbonTabSwipeNavigation: CarbonTabSwipeNavigation, viewControllerAt index: UInt) -> UIViewController {
+        let story     =   UIStoryboard.init(name: "SIP", bundle: nil)
         guard let storyboard = storyboard else { return UIViewController() }
         if index == 0 {
             return storyboard.instantiateViewController(withIdentifier: "FullViewFirstVC")
