@@ -36,10 +36,10 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
     
     var investArr  = [[String : Any]]()
     var accountArr = [[String : Any]]()
-    var mandateArr = [String]()
+    var mandateArr = [[String : Any]]()
     var bankArr    = [[String : Any]]()
     var folioArr   = [[String : Any]]()
-    var dividentArr = [String]()
+    var dividentArr = [[String : Any]]()
     var sipDateArr = [String]()
     var sipTilArr = [String]()
     let datePicker = UIDatePicker()
@@ -53,10 +53,10 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
         
       //  investArr = ["a","b","c"]
       //  accountArr = ["d","e","f"]
-        mandateArr = ["g","h","i"]
+      //  mandateArr = ["g","h","i"]
      //   bankArr = ["j","k","l"]
      //   folioArr = ["m","n","o"]
-        dividentArr = ["p","q","r"]
+     //   dividentArr = ["p","q","r"]
         sipDateArr = ["s","t","u"]
         sipTilArr = ["v","w","x"]
         
@@ -83,6 +83,20 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
         self.getAfterRs.text             =  self.sipObjData["Amount"] as? String ?? ""
         self.headerLabel.text            =  self.sipArrObj["SchName"] as? String ?? ""
         self.returnPercen.text            =   "\(self.convertValue(amount: self.sipArrObj["ReturnYear1"] as? String ?? "0")) %"
+        if self.sipArrObj["Type"] as? String ?? "" == "G" {
+            let devidentDic  : [String : Any]  =   [ "dividend" : "N/A"]
+            self.dividentArr.append(devidentDic)
+        }else{
+            let devidentDic  : [String : Any]  =   [ "dividend" : "Re-Invest"]
+            //            var dictionaryA = [
+            //                "dividend": "N/A",
+            //                ]
+            let dictionaryB = [
+                "dividend" : "Payout"
+                ]
+            self.dividentArr.append(devidentDic)
+            self.dividentArr.append(dictionaryB)
+        }
     }
     
     func convertValue(amount : String)-> Int{
@@ -170,18 +184,12 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
                                     if let memIddata : [[String : Any]] = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
                                         self.callGetSipApi(urlStr: FinCartMacros.kAccountList + "/\(memIddata[0]["memberId"] as! String)", apiName: "Account")
                                     }
-                                    
                                 }else if apiName == "Account"{
                                     self.accountArr   =  jsonDict
-//                                    if let memIddata  = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
-//                                        self.callGetSipApi(urlStr: FinCartMacros.kAccountList + "\(memIddata[0]["memberId"] as! String)", apiName: "Account")
-//                                    }
-                                    
                                 }else if apiName == "Mandate"{
-                                    
+                                    self.mandateArr   =  jsonDict
                                 }else if apiName == "Bank"{
                                    self.bankArr   =  jsonDict
-                                    
                                 }else if apiName == "Folio"{
                                     self.folioArr   =  jsonDict
                                 }else{
@@ -253,12 +261,14 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
         else if textField == fromAccountTF {
             CommonPicker.sharedInstance.myPickerViewSetup(textField: textField, withArray: (accountArr as?  [[String : Any]])! , andTextFieldIndex: TextFieldTag(rawValue: TextFieldTag.Account_TF_Tag.rawValue)!, withVC: self)
             if let memIddata : [[String : Any]] = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
-                self.callGetSipApi(urlStr: FinCartMacros.kBankList + "/\(memIddata[0]["memberId"] as! String)", apiName: "Bank")
+                self.callGetSipApi(urlStr: FinCartMacros.kMandateList + "/\(memIddata[0]["memberId"] as! String)/\(memIddata[0]["profileId"] as! String)/Y", apiName: "Mandate")
             }
         }
         else if textField == mandateTF {
             CommonPicker.sharedInstance.myPickerViewSetup(textField: textField, withArray: (mandateArr as?  [[String : Any]])! , andTextFieldIndex: TextFieldTag(rawValue: TextFieldTag.Mandate_TF_Tag.rawValue)!, withVC: self)
-            
+            if let memIddata : [[String : Any]] = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
+                self.callGetSipApi(urlStr: FinCartMacros.kBankList + "/\(memIddata[0]["memberId"] as! String)", apiName: "Bank")
+            }
         }
         else if textField == bankTF {
             CommonPicker.sharedInstance.myPickerViewSetup(textField: textField, withArray: (bankArr as?  [[String : Any]])! , andTextFieldIndex: TextFieldTag(rawValue: TextFieldTag.Bank_TF_Tag.rawValue)!, withVC: self)
@@ -271,7 +281,7 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
             
         }
         else if textField == dividendTF {
-//            CommonPicker.sharedInstance.myPickerViewSetup(textField: textField, withArray: dividentArr as  [String] , andTextFieldIndex: TextFieldTag(rawValue: TextFieldTag.Divident_TF_Tag.rawValue)!, withVC: self)
+            CommonPicker.sharedInstance.myPickerViewSetup(textField: textField, withArray: (dividentArr as?  [[String : Any]])! , andTextFieldIndex: TextFieldTag(rawValue: TextFieldTag.Divident_TF_Tag.rawValue)!, withVC: self)
             
         }
         else if textField == sipTF {

@@ -126,7 +126,7 @@ class CommonPicker:UIPickerView,UIPickerViewDelegate,UIPickerViewDataSource {
             return "\(currentArray[row]["FirstApplicant"] as? String ?? "N/A") - Joint1 - \(currentArray[row]["SecondApplicant"] as? String ?? "N/A") - Joint2 - \(currentArray[row]["ThirdApplicant"] as? String ?? "N/A")"
             
         case TextFieldTag(rawValue: TextFieldTag.Mandate_TF_Tag.rawValue)!.rawValue:
-            return currentArray[row][""] as? String ?? ""
+            return "\(currentArray[row]["MandateID"] as? String ?? "N/A")-\(currentArray[row]["Bank"] as? String ?? "N/A")"
             
         case TextFieldTag(rawValue: TextFieldTag.Bank_TF_Tag.rawValue)!.rawValue:
             return "\(currentArray[row]["Bank_Name"] as? String ?? "N/A") - \(currentArray[row]["Acc_no"] as? String ?? "N/A")"
@@ -136,7 +136,7 @@ class CommonPicker:UIPickerView,UIPickerViewDelegate,UIPickerViewDataSource {
             
             
         case TextFieldTag(rawValue: TextFieldTag.Divident_TF_Tag.rawValue)!.rawValue:
-            return currentArray[row][""] as? String ?? ""
+            return currentArray[row]["dividend"] as? String ?? ""
             
         case TextFieldTag(rawValue: TextFieldTag.SipDate_TF_Tag.rawValue)!.rawValue:
             return currentArray[row][""] as? String ?? ""
@@ -178,7 +178,7 @@ class CommonPicker:UIPickerView,UIPickerViewDelegate,UIPickerViewDataSource {
             
             
         case TextFieldTag(rawValue: TextFieldTag.Mandate_TF_Tag.rawValue)!.rawValue:
-            dataString = currentArray[index][""] as? String ?? ""
+            dataString = "\(currentArray[index]["MandateID"] as? String ?? "N/A")-\(currentArray[index]["Bank"] as? String ?? "N/A")"
             break
             
             
@@ -192,7 +192,7 @@ class CommonPicker:UIPickerView,UIPickerViewDelegate,UIPickerViewDataSource {
             break
             
         case TextFieldTag(rawValue: TextFieldTag.Divident_TF_Tag.rawValue)!.rawValue:
-            dataString = currentArray[index][""] as? String ?? ""
+            dataString = currentArray[index]["dividend"] as? String ?? ""
             break
             
             
