@@ -41,11 +41,11 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
     var folioArr   = [[String : Any]]()
     var dividentArr = [[String : Any]]()
     var sipDateArr = [String]()
-    var sipTilArr = [String]()
     let datePicker = UIDatePicker()
-    var controller   = String()
+    var controller   =   String()
     var sipObjData   =   [String : Any]()
     var sipArrObj    =   [String : Any]()
+    var sipTill      =   [[String : Any]]()
     var amount : Int!
     
     override func viewDidLoad() {
@@ -58,7 +58,7 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
      //   folioArr = ["m","n","o"]
      //   dividentArr = ["p","q","r"]
         sipDateArr = ["s","t","u"]
-        sipTilArr = ["v","w","x"]
+    //    sipTilArr = ["v","w","x"]
         
         amount = 1500
         amuntTF.text = String(amount)
@@ -72,9 +72,21 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
+    func setsipTillArray(){
+        var sipVal   =  0.5
+        for i in 1...99 {
+            sipVal   =  sipVal + 0.5
+            let devidentDic  : [String : Any]  =   [ "sipTill" : "\(sipVal) Years"]
+            self.sipTill.append(devidentDic)
+        }
+        print(sipTill)
+    }
+    
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
           NotificationCenter.default.addObserver(self, selector: #selector(self.updateValue(_:)), name: NSNotification.Name(rawValue: kSearchPickerData), object: nil)
+        self.setsipTillArray()
         self.setData()
     }
     
@@ -88,9 +100,6 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
             self.dividentArr.append(devidentDic)
         }else{
             let devidentDic  : [String : Any]  =   [ "dividend" : "Re-Invest"]
-            //            var dictionaryA = [
-            //                "dividend": "N/A",
-            //                ]
             let dictionaryB = [
                 "dividend" : "Payout"
                 ]
@@ -181,48 +190,73 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
                             if let jsonDict = json as? [[String: Any]] {
                                 if apiName == "InvestAs"{
                                     self.investArr   =  jsonDict
+                                    self.investTF.text = self.investArr.first!["username"] as? String ?? "N/A"
                                     if let memIddata : [[String : Any]] = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
                                         self.callGetSipApi(urlStr: FinCartMacros.kAccountList + "/\(memIddata[0]["memberId"] as! String)", apiName: "Account")
                                     }
                                 }else if apiName == "Account"{
                                     self.accountArr   =  jsonDict
+                                    
+                                    self.fromAccountTF.text  =      "\(self.accountArr.first!["FirstApplicant"] as? String ?? "N/A") - Joint1 - \(self.accountArr.first!["SecondApplicant"] as? String ?? "N/A") - Joint2 - \(self.accountArr.first!["ThirdApplicant"] as? String ?? "N/A")"
+                                    
+                                    if let memIddata : [[String : Any]] = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
+                                        self.callGetSipApi(urlStr: FinCartMacros.kMandateList + "/\(memIddata[0]["memberId"] as! String)/\(memIddata[0]["profileId"] as! String)/Y", apiName: "Mandate")
+                                    }
+                                    
+                                    
                                 }else if apiName == "Mandate"{
                                     self.mandateArr   =  jsonDict
+                                    
+                                    self.mandateTF.text =       "\(self.mandateArr.first!["MandateID"] as? String ?? "N/A")-\(self.mandateArr.first!["Bank"] as? String ?? "N/A")"
+                                    
+                                    if let memIddata : [[String : Any]] = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
+                                        self.callGetSipApi(urlStr: FinCartMacros.kBankList + "/\(memIddata[0]["memberId"] as! String)", apiName: "Bank")
+                                    }
+                                    
                                 }else if apiName == "Bank"{
-                                   self.bankArr   =  jsonDict
+                                    self.bankArr   =  jsonDict
+                                    self.bankTF.text =     "\(self.bankArr.first!["Bank_Name"] as? String ?? "N/A") - \(self.bankArr.first!["Acc_no"] as? String ?? "N/A")"
+                                    
+                                    if let memIddata : [[String : Any]] = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
+                                        self.callGetSipApi(urlStr: FinCartMacros.kFolioList + "/\(memIddata[0]["memberId"] as! String)/\(memIddata[0]["profileId"] as! String)/\(memIddata[0]["fundCode"] as! String)", apiName: "Folio")
+                                    }
                                 }else if apiName == "Folio"{
                                     self.folioArr   =  jsonDict
+                                    self.folioTF.text =      self.folioArr.first!["FolioNo"] as? String ?? "N/A"
+                                    
+                                    self.dividendTF.text =  self.dividentArr.first!["dividend"] as? String ?? "N/A"
+                                    
                                 }else{
                                     
                                 }
                             } else {
-//                                if apiName == "MapList"{
-//                                    self.goalView.isHidden    =  false
-//                                    self.emptyView.isHidden   =  false
-//                                    self.mapGoalBtn.isHidden  =  true
-//                                    self.mapTableView.reloadData()
-//                                }
+                                //                                if apiName == "MapList"{
+                                //                                    self.goalView.isHidden    =  false
+                                //                                    self.emptyView.isHidden   =  false
+                                //                                    self.mapGoalBtn.isHidden  =  true
+                                //                                    self.mapTableView.reloadData()
+                                //                                }
                                 print("Error in parsing")
                             }
                         }
                         else{
-//                            if apiName == "MapList"{
-//                                self.goalView.isHidden   =  false
-//                                self.emptyView.isHidden   =  false
-//                                self.mapTableView.reloadData()
-//                            }
+                            //                            if apiName == "MapList"{
+                            //                                self.goalView.isHidden   =  false
+                            //                                self.emptyView.isHidden   =  false
+                            //                                self.mapTableView.reloadData()
+                            //                            }
                             //SSCommonClass.ToastShowMessage(msg: "SERVER SIDE ERROR!",viewController: nil)
                             print("SERVER SIDE ERROR!")
                         }
                     })
                 }
                 else if (httpResponse.statusCode == 401){
-//                    print("ahjdsgfge")
-//                    if apiName == "MapList"{
-//                        self.goalView.isHidden   =  false
-//                        self.emptyView.isHidden   =  false
-//                        self.mapTableView.reloadData()
-//                    }
+                    //                    print("ahjdsgfge")
+                    //                    if apiName == "MapList"{
+                    //                        self.goalView.isHidden   =  false
+                    //                        self.emptyView.isHidden   =  false
+                    //                        self.mapTableView.reloadData()
+                    //                    }
                     // self.refreshAccessToken("save")
                 }else{
                     DispatchQueue.main.async(execute: {
@@ -238,6 +272,50 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
             })
         }
     }
+    
+    
+    func saveQuickSipDetails(){
+        FinCartMacros.showSVProgressHUD()
+        let access_token = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
+        var detailsDictionary = Dictionary<String, String>()
+        detailsDictionary.updateValue("", forKey: "GoalCode")
+        detailsDictionary.updateValue("AAPP", forKey: "Device")
+        detailsDictionary.updateValue("", forKey: "BrowserIp")
+        detailsDictionary.updateValue(FinCartUserDefaults.sharedInstance.retrieveUserName()!, forKey: "CreatedByEmail")
+        detailsDictionary.updateValue(FinCartUserDefaults.sharedInstance.retrieveMobile()!, forKey: "CreatedByMobile")
+        detailsDictionary.updateValue("", forKey: "Desc")
+        detailsDictionary.updateValue("", forKey: "AnswerType")
+        detailsDictionary.updateValue("", forKey: "Device_Version")
+        detailsDictionary.updateValue("", forKey: "BrowserId")
+        detailsDictionary.updateValue("", forKey: "CreatedDatetime")
+        detailsDictionary.updateValue("", forKey: "UpdatedByEmail")
+        detailsDictionary.updateValue("", forKey: "UpdatedByMobile")
+        detailsDictionary.updateValue("", forKey: "UpdatedDatetime")
+        detailsDictionary.updateValue("", forKey: "Status")
+        detailsDictionary.updateValue("", forKey: "Code")
+        detailsDictionary.updateValue(answerString, forKey: "Answer")
+        APIManager.sharedInstance.savePersonalInfoData(access_token!, personalDetails: detailsDictionary, success: { (response, data) in
+            if let httpResponse = response as? HTTPURLResponse{
+                if httpResponse.statusCode == 200{
+                    DispatchQueue.main.async(execute: {
+                        
+                        self.callReviewDataApi()
+                    })
+                }
+                else
+                {
+                    SVProgressHUD.dismiss()
+                    self.alertController("Error", message: "Something didn't go as expected")
+                }
+            }
+        }) { (error) in
+            DispatchQueue.main.async(execute: {
+                SVProgressHUD.dismiss()
+                self.alertController("Error", message: error.localizedDescription)
+            })
+        }
+    }
+    
     
     private func alertController(_ title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
@@ -260,21 +338,21 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
         }
         else if textField == fromAccountTF {
             CommonPicker.sharedInstance.myPickerViewSetup(textField: textField, withArray: (accountArr as?  [[String : Any]])! , andTextFieldIndex: TextFieldTag(rawValue: TextFieldTag.Account_TF_Tag.rawValue)!, withVC: self)
-            if let memIddata : [[String : Any]] = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
-                self.callGetSipApi(urlStr: FinCartMacros.kMandateList + "/\(memIddata[0]["memberId"] as! String)/\(memIddata[0]["profileId"] as! String)/Y", apiName: "Mandate")
-            }
+            //            if let memIddata : [[String : Any]] = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
+            //                self.callGetSipApi(urlStr: FinCartMacros.kMandateList + "/\(memIddata[0]["memberId"] as! String)/\(memIddata[0]["profileId"] as! String)/Y", apiName: "Mandate")
+            //            }
         }
         else if textField == mandateTF {
             CommonPicker.sharedInstance.myPickerViewSetup(textField: textField, withArray: (mandateArr as?  [[String : Any]])! , andTextFieldIndex: TextFieldTag(rawValue: TextFieldTag.Mandate_TF_Tag.rawValue)!, withVC: self)
-            if let memIddata : [[String : Any]] = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
-                self.callGetSipApi(urlStr: FinCartMacros.kBankList + "/\(memIddata[0]["memberId"] as! String)", apiName: "Bank")
-            }
+            //            if let memIddata : [[String : Any]] = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
+            //                self.callGetSipApi(urlStr: FinCartMacros.kBankList + "/\(memIddata[0]["memberId"] as! String)", apiName: "Bank")
+            //            }
         }
         else if textField == bankTF {
             CommonPicker.sharedInstance.myPickerViewSetup(textField: textField, withArray: (bankArr as?  [[String : Any]])! , andTextFieldIndex: TextFieldTag(rawValue: TextFieldTag.Bank_TF_Tag.rawValue)!, withVC: self)
-            if let memIddata : [[String : Any]] = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
-                self.callGetSipApi(urlStr: FinCartMacros.kFolioList + "/\(memIddata[0]["memberId"] as! String)/\(memIddata[0]["profileId"] as! String)/\(memIddata[0]["fundCode"] as! String)", apiName: "Folio")
-            }
+            //            if let memIddata : [[String : Any]] = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
+            //                self.callGetSipApi(urlStr: FinCartMacros.kFolioList + "/\(memIddata[0]["memberId"] as! String)/\(memIddata[0]["profileId"] as! String)/\(memIddata[0]["fundCode"] as! String)", apiName: "Folio")
+            //            }
         }
         if textField == folioTF {
             CommonPicker.sharedInstance.myPickerViewSetup(textField: textField, withArray: (folioArr as? [[String : Any]])! , andTextFieldIndex: TextFieldTag(rawValue: TextFieldTag.Folio_TF_Tag.rawValue)!, withVC: self)
@@ -285,11 +363,11 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
             
         }
         else if textField == sipTF {
-           setUpDatePicker()
+            setUpDatePicker()
             
         }
         else if textField == sipTilTF {
-//            CommonPicker.sharedInstance.myPickerViewSetup(textField: textField, withArray: sipTilArr as  [String] , andTextFieldIndex: TextFieldTag(rawValue: TextFieldTag.SipTill_TF_Tag.rawValue)!, withVC: self)
+            CommonPicker.sharedInstance.myPickerViewSetup(textField: textField, withArray: (sipTill as?  [[String : Any]])! , andTextFieldIndex: TextFieldTag(rawValue: TextFieldTag.SipTill_TF_Tag.rawValue)!, withVC: self)
             
         }
         

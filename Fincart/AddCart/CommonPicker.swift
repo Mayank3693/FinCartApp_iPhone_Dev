@@ -142,7 +142,7 @@ class CommonPicker:UIPickerView,UIPickerViewDelegate,UIPickerViewDataSource {
             return currentArray[row][""] as? String ?? ""
             
         case TextFieldTag(rawValue: TextFieldTag.SipTill_TF_Tag.rawValue)!.rawValue:
-            return currentArray[row][""] as? String ?? ""
+            return currentArray[row]["sipTill"] as? String ?? ""
             
         default:
             return ""
@@ -202,7 +202,7 @@ class CommonPicker:UIPickerView,UIPickerViewDelegate,UIPickerViewDataSource {
             
             
         case TextFieldTag(rawValue: TextFieldTag.SipTill_TF_Tag.rawValue)!.rawValue:
-            dataString = currentArray[index][""] as? String ?? ""
+            dataString = currentArray[index]["sipTill"] as? String ?? ""
             break
             
             
