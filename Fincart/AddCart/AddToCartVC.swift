@@ -273,7 +273,7 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
         }
     }
     
-    
+    /*
     func saveQuickSipDetails(){
         FinCartMacros.showSVProgressHUD()
         let access_token = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
@@ -315,7 +315,8 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
             })
         }
     }
-    
+ 
+ */
     
     private func alertController(_ title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)

@@ -79,6 +79,9 @@ class FinCartSideMenuVC : RESideMenu, RESideMenuDelegate, FinCartLeftMenuVCDeleg
         case 1:
             GoalList()
             break
+        case 4:
+            CartList()
+            break
         case 6:
             showKYC()
             break
@@ -118,7 +121,13 @@ class FinCartSideMenuVC : RESideMenu, RESideMenuDelegate, FinCartLeftMenuVCDeleg
         self.setContentViewController(contentVC, animated: true)
         self.hideViewController()
     }
-    
+    private func CartList()
+    {
+        let story      =  UIStoryboard.init(name: "SIP", bundle: nil)
+        let contentVC  =  story.instantiateViewController(withIdentifier: "CartVC")
+        self.setContentViewController(contentVC, animated: true)
+        self.hideViewController()
+    }
     private func showGoals()
     {
         let contentVC=self.storyboard?.instantiateViewController(withIdentifier: "finCartGoalsNavigationVC")

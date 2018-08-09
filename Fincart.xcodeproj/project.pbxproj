@@ -106,6 +106,8 @@
 		A82ED978210787E900495207 /* FullViewSecondVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82ED970210787E900495207 /* FullViewSecondVC.swift */; };
 		A840FF5E210E4C8B00B270C3 /* TransactListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A840FF5D210E4C8B00B270C3 /* TransactListVC.swift */; };
 		A841D6EF2102746700B5BFC8 /* Piechart.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841D6EE2102746700B5BFC8 /* Piechart.swift */; };
+		A8533662211CE06F006F7F1E /* CommanPicker2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8533660211CE06E006F7F1E /* CommanPicker2.swift */; };
+		A8533663211CE06F006F7F1E /* CartVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8533661211CE06E006F7F1E /* CartVC.swift */; };
 		A8EE420F2117078F00458858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EE420E2117078F00458858 /* AppDelegate.swift */; };
 		A8EE42112117087500458858 /* AccessTokenServiceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EE42102117087500458858 /* AccessTokenServiceResponse.swift */; };
 		A8EE4213211708C400458858 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8EE4212211708C400458858 /* APIManager.swift */; };
@@ -264,6 +266,8 @@
 		A82ED970210787E900495207 /* FullViewSecondVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullViewSecondVC.swift; sourceTree = "<group>"; };
 		A840FF5D210E4C8B00B270C3 /* TransactListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactListVC.swift; sourceTree = "<group>"; };
 		A841D6EE2102746700B5BFC8 /* Piechart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Piechart.swift; sourceTree = "<group>"; };
+		A8533660211CE06E006F7F1E /* CommanPicker2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommanPicker2.swift; sourceTree = "<group>"; };
+		A8533661211CE06E006F7F1E /* CartVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartVC.swift; sourceTree = "<group>"; };
 		A8DAFB14C52BB55555289070 /* Pods_FincartTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FincartTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8EE420E2117078F00458858 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A8EE42102117087500458858 /* AccessTokenServiceResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessTokenServiceResponse.swift; sourceTree = "<group>"; };
@@ -820,6 +824,8 @@
 			children = (
 				A8EE421921170BC300458858 /* CommonPicker.swift */,
 				A8EE421721170BBD00458858 /* AddToCartVC.swift */,
+				A8533661211CE06E006F7F1E /* CartVC.swift */,
+				A8533660211CE06E006F7F1E /* CommanPicker2.swift */,
 			);
 			path = AddCart;
 			sourceTree = "<group>";
@@ -1183,7 +1189,9 @@
 				8AEE526B2063988700E834B5 /* FincartCommon.swift in Sources */,
 				A82214C020E2C63E004D5009 /* SipQuestionireVC.swift in Sources */,
 				8AF0152D1FFD076800A60957 /* FinancialPlanningCell.swift in Sources */,
+				A8533662211CE06F006F7F1E /* CommanPicker2.swift in Sources */,
 				8A8976C82073981900915327 /* SingleGoalList.swift in Sources */,
+				A8533663211CE06F006F7F1E /* CartVC.swift in Sources */,
 				5CC3B6D51FB73875007458F4 /* StringConstants.swift in Sources */,
 				BC4682F9204D79C100DC5A6D /* KYCScanVC.swift in Sources */,
 				BC46830A204D79C100DC5A6D /* OccupationsList.swift in Sources */,
