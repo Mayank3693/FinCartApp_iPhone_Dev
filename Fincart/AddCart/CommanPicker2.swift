@@ -27,8 +27,8 @@ class CommanPicker2:UIPickerView,UIPickerViewDelegate,UIPickerViewDataSource {
     
     //MARK:- ################# Class Variable ################################
     
-    var currentArray = [String]()
-    var currentTextField = UITextField()
+    var currentArray     =   [[String : Any]]()
+    var currentTextField =   UITextField()
     var _categoryTextFieldIndex: Int = 0
     let _newPickerView = UIPickerView()
     
@@ -41,7 +41,7 @@ class CommanPicker2:UIPickerView,UIPickerViewDelegate,UIPickerViewDataSource {
     
     //MARK:- ###################  Calling method for ViewControllers #########
     
-    func myPickerViewSetup(textField:UITextField, withArray pickerArray:[String], andTextFieldIndex textFieldIndex:TextFieldTag2, withVC vc:Any) -> Void {
+    func myPickerViewSetup(textField:UITextField, withArray pickerArray:[[String : Any]], andTextFieldIndex textFieldIndex:TextFieldTag2, withVC vc:Any) -> Void {
         
         
         currentArray = pickerArray
@@ -114,11 +114,11 @@ class CommanPicker2:UIPickerView,UIPickerViewDelegate,UIPickerViewDataSource {
          
             
         case TextFieldTag2(rawValue: TextFieldTag2.First_TF_Tag.rawValue)!.rawValue:
-            return currentArray[row]
+            return currentArray[row]["username"] as? String ?? "N/A"
             
             
         case TextFieldTag2(rawValue: TextFieldTag2.Second_TF_Tag.rawValue)!.rawValue:
-            return currentArray[row]
+            return "\(currentArray[row]["FirstApplicant"] as? String ?? "N/A") - Joint1 - \(currentArray[row]["SecondApplicant"] as? String ?? "N/A") - Joint2 - \(currentArray[row]["ThirdApplicant"] as? String ?? "N/A")"
             
         
             
@@ -135,16 +135,19 @@ class CommanPicker2:UIPickerView,UIPickerViewDelegate,UIPickerViewDataSource {
     }
     
     func selectData(textFieldIndex :Int ,index :Int) {
-   
+        var invest   =  0
+        var account  =  0
         var dataString : String = ""
         
         switch textFieldIndex {
         case TextFieldTag2(rawValue: TextFieldTag2.First_TF_Tag.rawValue)!.rawValue:
-            dataString = currentArray[index]
+            invest     =  index
+            dataString = currentArray[index]["username"] as? String ?? "N/A"
             break
             
         case TextFieldTag2(rawValue: TextFieldTag2.Second_TF_Tag.rawValue)!.rawValue:
-           dataString = currentArray[index]
+            account    =  index
+           dataString = "\(currentArray[index]["FirstApplicant"] as? String ?? "N/A") - Joint1 - \(currentArray[index]["SecondApplicant"] as? String ?? "N/A") - Joint2 - \(currentArray[index]["ThirdApplicant"] as? String ?? "N/A")"
             break
       
             
@@ -153,7 +156,7 @@ class CommanPicker2:UIPickerView,UIPickerViewDelegate,UIPickerViewDataSource {
         }
         
         
-        let  dict:[String :Any] = ["dataField": dataString,"indexTag":textFieldIndex]
+        let  dict:[String :Any] = ["dataField": dataString,"indexTag":textFieldIndex,"InvestIndex" : invest,"AccountIndex" : account]
         
         NotificationCenter.default.post(name:NSNotification.Name(rawValue: kSearchPickerData2) , object: nil, userInfo: dict)
         

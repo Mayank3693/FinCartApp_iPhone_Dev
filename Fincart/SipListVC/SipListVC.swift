@@ -19,6 +19,7 @@ class SipListVC: FinCartViewController,UITableViewDelegate,UITableViewDataSource
     let COMPLETE_PROFILE_TAG = 1
     let ACTIVATE_SIP_TAG = 2
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var userserviceResponse  :  UserGoalStatusServiceResponse!
     var goalArr    =   [[String:Any]]()
     var mapArray   =   [[String : Any]]()
@@ -60,8 +61,6 @@ class SipListVC: FinCartViewController,UITableViewDelegate,UITableViewDataSource
             let cell = mapTableView.dequeueReusableCell(withIdentifier: "MapCell") as! MapCell
             return cell
         }else{
-            
-//            FinCartUserDefaults.sharedInstance.saveKycStatus((self.userDetailsServiceResponse?.cafDetails!["kycStatus"])!)
            let cell = sipListTableView.dequeueReusableCell(withIdentifier: "SipListCell") as! SipListCell
             cell.delegate  =   self
             cell.tag       =   indexPath.row
@@ -77,10 +76,18 @@ class SipListVC: FinCartViewController,UITableViewDelegate,UITableViewDataSource
             cell.activateBtn.tag = indexPath.row
             
             if(kycStatus == "Y"){
-                
+                if let investedAmnt  =  goalArr[indexPath.row]["InvestedAmount"] as? String{
+                    if Int(investedAmnt)! > 0{
+                        cell.activateBtn.addTarget(self, action: #selector(activateSipAction(_:)) , for: .touchUpInside)
+                        cell.activateBtn.setTitle("ACTIVATE", for: UIControlState.normal)
+                    }else{
+                        cell.activateBtn.addTarget(self, action: #selector(activateSipAction(_:)) , for: .touchUpInside)
+                        cell.activateBtn.setTitle("Invest Mode", for: UIControlState.normal)
+                    }
+                }
                 //cell.activateBtn.addTarget(self, action: #selector(activateSipAction(_:)), for: .touchUpInside)
-                cell.activateBtn.addTarget(self, action: #selector(activateSipAction(_:)) , for: .touchUpInside)
-                cell.activateBtn.setTitle("ACTIVATE", for: UIControlState.normal)
+//                cell.activateBtn.addTarget(self, action: #selector(activateSipAction(_:)) , for: .touchUpInside)
+//                cell.activateBtn.setTitle("ACTIVATE", for: UIControlState.normal)
                 
             }
             else{
@@ -180,7 +187,7 @@ class SipListVC: FinCartViewController,UITableViewDelegate,UITableViewDataSource
                         self.emptyView.isHidden   =  false
                         self.mapTableView.reloadData()
                     }
-                    // self.refreshAccessToken("save")
+                     self.refreshAccessToken()
                 }else{
                     DispatchQueue.main.async(execute: {
                         SVProgressHUD.dismiss()
@@ -196,6 +203,46 @@ class SipListVC: FinCartViewController,UITableViewDelegate,UITableViewDataSource
         }
     }
     
+    private func refreshAccessToken()
+    {
+        FincartCommon.refreshAccessToken(success: { (responseCode) in
+            if responseCode != 200{
+                self.getAccessToken()
+            }
+        }) { (error) in
+            DispatchQueue.main.async(execute: {
+                SVProgressHUD.dismiss()
+                self.alertController("Error", message: error.localizedDescription)
+            })
+        }
+    }
+    
+    private func getAccessToken()
+    {
+        FincartCommon.getAccessToken(success: { (responseCode) in
+            if responseCode != 200{
+                DispatchQueue.main.async(execute: {
+                    SVProgressHUD.dismiss()
+                    let alert = UIAlertController(title: "Session Expired", message: "Please login again. ", preferredStyle: UIAlertControllerStyle.alert)
+                    let alertAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.cancel) { (alertAction) in
+                        alert.dismiss(animated: true)
+                        FinCartUserDefaults.sharedInstance.saveAccessToken(nil)
+                        FinCartUserDefaults.sharedInstance.saveRefershToken(nil)
+                        FinCartUserDefaults.sharedInstance.saveTokenType(nil)
+                        self.appDelegate.showLoginScreen()
+                    }
+                    alert.addAction(alertAction)
+                    self.present(alert, animated: true)
+                })
+                
+            }
+        }) { (error) in
+            DispatchQueue.main.async(execute: {
+                SVProgressHUD.dismiss()
+                self.alertController("Error", message: error.localizedDescription)
+            })
+        }
+    }
     private func alertController(_ title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         let alertAction = UIAlertAction.init(title: "Cancel", style: UIAlertActionStyle.cancel) { (alertAction) in

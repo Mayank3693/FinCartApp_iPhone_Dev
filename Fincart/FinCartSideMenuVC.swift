@@ -124,7 +124,7 @@ class FinCartSideMenuVC : RESideMenu, RESideMenuDelegate, FinCartLeftMenuVCDeleg
     private func CartList()
     {
         let story      =  UIStoryboard.init(name: "SIP", bundle: nil)
-        let contentVC  =  story.instantiateViewController(withIdentifier: "CartVC")
+        let contentVC  =  story.instantiateViewController(withIdentifier: "AddCartNavigation")
         self.setContentViewController(contentVC, animated: true)
         self.hideViewController()
     }

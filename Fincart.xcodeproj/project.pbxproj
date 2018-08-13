@@ -1427,7 +1427,7 @@
 					"-l\"z\"",
 					"-l\"c++\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.TheToothFairy.TheToothFairy;
+				PRODUCT_BUNDLE_IDENTIFIER = fincart.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "92393864-53be-4581-8e26-1ed3606c633f";
 				PROVISIONING_PROFILE_SPECIFIER = com.dev.com;
@@ -1458,7 +1458,7 @@
 					"-l\"z\"",
 					"-l\"c++\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.TheToothFairy.TheToothFairy;
+				PRODUCT_BUNDLE_IDENTIFIER = fincart.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "92393864-53be-4581-8e26-1ed3606c633f";
 				PROVISIONING_PROFILE_SPECIFIER = com.dev.com;
@@ -1571,7 +1571,7 @@
 					"-l\"z\"",
 					"-l\"c++\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.TheToothFairy.TheToothFairy;
+				PRODUCT_BUNDLE_IDENTIFIER = fincart.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "92393864-53be-4581-8e26-1ed3606c633f";
 				PROVISIONING_PROFILE_SPECIFIER = "";

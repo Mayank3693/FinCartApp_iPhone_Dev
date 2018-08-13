@@ -216,8 +216,9 @@ class FinCartDashboardVC: FinCartViewController, UITableViewDataSource, UITableV
                 self.getAccessToken()
             }
         }) { (error) in
+           
             DispatchQueue.main.async(execute: {
-                SVProgressHUD.dismiss()
+                 SVProgressHUD.dismiss()
                 self.alertController("Error", message: error.localizedDescription)
             })
         }
@@ -230,6 +231,7 @@ class FinCartDashboardVC: FinCartViewController, UITableViewDataSource, UITableV
                 self.resetTaggedQuestions()
             }else{
                 DispatchQueue.main.async(execute: {
+                    SVProgressHUD.dismiss()
                     let alert = UIAlertController(title: "Session Expired", message: "Please login again. ", preferredStyle: UIAlertControllerStyle.alert)
                     let alertAction = UIAlertAction.init(title: "Ok", style: UIAlertActionStyle.cancel) { (alertAction) in
                         alert.dismiss(animated: true)

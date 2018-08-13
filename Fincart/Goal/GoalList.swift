@@ -61,12 +61,32 @@ class GoalList: FinCartViewController,UITableViewDelegate,UITableViewDataSource 
             cell.tag       =   indexPath.row
             cell.cellHeader.text = "\(goalArr[indexPath.row]["GoalName"] as! String) Achieved: \(goalArr[indexPath.row]["GoalAchieved"] as! String)%"
             cell.desLabel.text   =  "You will get ₹ \(goalArr[indexPath.row]["GetAmount"] as! String) after completion of goal."
-            if let achives = goalArr[indexPath.row]["GoalAchieved"] as? String{
-                cell.cellHeader.text = String(format: "Other Achieved: %@%", achives)
-            }
+//            if let achives = goalArr[indexPath.row]["GoalAchieved"] as? String{
+//                cell.cellHeader.text = String(format: "Other Achieved: %@%", achives)
+//            }
             cell.currentLabel.text = String(format: "₹ %@", goalArr[indexPath.row]["CurrentAmount"] as! String)
             cell.investLabel.text = String(format: "₹ %@", goalArr[indexPath.row]["InvestedAmount"] as! String)
             cell.pendingLabel.text = String(format: "₹ %@", goalArr[indexPath.row]["PendingAmount"] as! String)
+            let kycStatus = FinCartUserDefaults.sharedInstance.retrieveKycStatus()
+        if(kycStatus == "Y"){
+            if let investedAmnt  =  goalArr[indexPath.row]["InvestedAmount"] as? String{
+                if Int(investedAmnt) == 0{
+                    cell.activateBtn.addTarget(self, action: #selector(activateSipAction(_:)) , for: .touchUpInside)
+                    cell.activateBtn.setTitle("ACTIVATE", for: UIControlState.normal)
+                }else{
+                    cell.activateBtn.addTarget(self, action: #selector(activateSipAction(_:)) , for: .touchUpInside)
+                    cell.activateBtn.setTitle("Invest Mode", for: UIControlState.normal)
+                }
+            }
+            //cell.activateBtn.addTarget(self, action: #selector(activateSipAction(_:)), for: .touchUpInside)
+            
+            
+        }
+        else{
+            cell.activateBtn.addTarget(self, action: #selector(completeProfileAction), for: .touchUpInside)
+            cell.activateBtn.setTitle("COMPLETE PROFILE", for: UIControlState.normal)
+            
+        }
             return cell
     }
 //    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -79,6 +99,19 @@ class GoalList: FinCartViewController,UITableViewDelegate,UITableViewDataSource 
         self.goalView.isHidden   =  true
     }
     
+    @objc func activateSipAction(_ sender: Any) {
+        print("Commented")
+       /* let story            =    UIStoryboard.init(name: "SIP", bundle: nil)
+        let contentVC        =    story.instantiateViewController(withIdentifier: "TransactListVC") as! TransactListVC
+        contentVC.sipData    =    self.goalArr[(sender as AnyObject).tag]
+        self.navigationController?.pushViewController(contentVC, animated: true)
+ */
+        //        self.present(contentVC!, animated: true, completion: nil)
+    }
+    @objc func completeProfileAction() {
+        let contentVC=self.storyboard?.instantiateViewController(withIdentifier: "FinCartKYCCheckNavigationVC")
+        self.present(contentVC!, animated: true, completion: nil)
+    }
     // Pankaj Comitted
     
     func callGetSipApi(urlStr : String,apiName : String){

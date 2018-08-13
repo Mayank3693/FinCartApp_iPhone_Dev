@@ -33,6 +33,7 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
     @IBOutlet weak var riskImg: UIImageView!
     @IBOutlet weak var riskLabel: UILabel!
     @IBOutlet weak var riskPrice: UILabel!
+    @IBOutlet weak var addCartBtn: UIButton!
     
     var investArr  = [[String : Any]]()
     var accountArr = [[String : Any]]()
@@ -135,19 +136,31 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
                     
                 case TextFieldTag(rawValue: TextFieldTag.Invest_TF_Tag.rawValue)!.rawValue:
                     investTF.text = data["dataField"] as? String
+                    if let memIddata : [[String : Any]] = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
+                        self.callGetSipApi(urlStr: FinCartMacros.kAccountList + "/\(memIddata[0]["memberId"] as! String)", apiName: "Account")
+                    }
                     break
                     
                 case TextFieldTag(rawValue: TextFieldTag.Account_TF_Tag.rawValue)!.rawValue:
                     fromAccountTF.text = data["dataField"] as? String
+                    if let memIddata : [[String : Any]] = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
+                        self.callGetSipApi(urlStr: FinCartMacros.kMandateList + "/\(memIddata[0]["memberId"] as! String)/\(memIddata[0]["profileId"] as! String)/Y", apiName: "Mandate")
+                    }
                     break
                     
                 case TextFieldTag(rawValue: TextFieldTag.Mandate_TF_Tag.rawValue)!.rawValue:
                     mandateTF.text = data["dataField"] as? String
+                    if let memIddata : [[String : Any]] = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
+                        self.callGetSipApi(urlStr: FinCartMacros.kBankList + "/\(memIddata[0]["memberId"] as! String)", apiName: "Bank")
+                    }
                     break
                     
                     
                 case TextFieldTag(rawValue: TextFieldTag.Bank_TF_Tag.rawValue)!.rawValue:
                     bankTF.text = data["dataField"] as? String
+                    if let memIddata : [[String : Any]] = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
+                        self.callGetSipApi(urlStr: FinCartMacros.kFolioList + "/\(memIddata[0]["memberId"] as! String)/\(memIddata[0]["profileId"] as! String)/\(memIddata[0]["fundCode"] as! String)", apiName: "Folio")
+                    }
                     break
                 case TextFieldTag(rawValue: TextFieldTag.Folio_TF_Tag.rawValue)!.rawValue:
                     folioTF.text = data["dataField"] as? String
@@ -178,6 +191,10 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
         
     }
     
+    @IBAction func addCartBtnAct(_ sender: Any) {
+        //self.saveCartDetails()
+    }
+    
     func callGetSipApi(urlStr : String,apiName : String){
         FinCartMacros.showSVProgressHUD()
         let accessToken = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
@@ -206,7 +223,11 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
                                     
                                 }else if apiName == "Mandate"{
                                     self.mandateArr   =  jsonDict
-                                    
+                                    if self.mandateArr.count>0{
+                                        self.addCartBtn.titleLabel   =  "Sip Generate"
+                                    }else{
+                                        self.addCartBtn.titleLabel   =  "Add To Cart"
+                                    }
                                     self.mandateTF.text =       "\(self.mandateArr.first!["MandateID"] as? String ?? "N/A")-\(self.mandateArr.first!["Bank"] as? String ?? "N/A")"
                                     
                                     if let memIddata : [[String : Any]] = self.sipObjData["UserGoalInvestmentData"] as? [[String : Any]]{
@@ -273,12 +294,12 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
         }
     }
     
-    /*
-    func saveQuickSipDetails(){
+/*
+    func saveCartDetails(){
         FinCartMacros.showSVProgressHUD()
         let access_token = FinCartUserDefaults.sharedInstance.retrieveAccessToken()
         var detailsDictionary = Dictionary<String, String>()
-        detailsDictionary.updateValue("", forKey: "GoalCode")
+        detailsDictionary.updateValue("", forKey: "UserId")
         detailsDictionary.updateValue("AAPP", forKey: "Device")
         detailsDictionary.updateValue("", forKey: "BrowserIp")
         detailsDictionary.updateValue(FinCartUserDefaults.sharedInstance.retrieveUserName()!, forKey: "CreatedByEmail")
@@ -315,8 +336,8 @@ class AddToCartVC: UIViewController,UITextFieldDelegate {
             })
         }
     }
- 
  */
+ 
     
     private func alertController(_ title: String, message: String){
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)

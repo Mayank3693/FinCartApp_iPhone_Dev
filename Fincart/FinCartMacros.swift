@@ -43,6 +43,9 @@ class FinCartMacros{
     static let kUpdateEditGoal = "api/goal/update/app"
     static let kFetchSavedGoalsCode = "/api/goal/fetchSavedGoalCodes"
     static let kFetchSipList = "api/goal/fetch/quicksip/all"
+    
+    static let kOneTime        = "api/invest/lumpsum/cart"
+    static let kMonthly        = "api/invest/sip/cart"
     static let kMapDataList    = "api/goal/fetch/0/0"
     static let kMapSummaryList = "api/invest/snapshot"
     static let kMapPortfolioList = "api/invest/snapshot/all"
